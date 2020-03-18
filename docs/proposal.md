@@ -5,7 +5,7 @@ March 16, 2020
 
 ## Need Statement
 
-Quantum Fidelity, a tech startup, is looking to make a synthesizer module not dissimilar to classic systems such as the Moog, Yamaha DX7, and Korg synths. Except, in this case, instead of a built in keyboard, the system is controlled via MIDI protocol.
+Quantum Fidelity, a tech startup, is looking to make a synthesizer module not dissimilar to classic systems such as the Moog, Yamaha DX7, and Korg synths. Except, in this case, instead of a built in keyboard, the system is controlled via MIDI protocol. The engineer in question is also musically inclined and would love to build an test this using his own equipment.
 
 ## Marketing Requirements
 
