@@ -3,25 +3,7 @@ A final project plan for CE446 by Daria Solovey
 
 April 8, 2020
 
-- [Skrach - An FM Synthesizer](#skrach---an-fm-synthesizer)
-  - [Proposal](#proposal)
-    - [Need Statement](#need-statement)
-    - [Marketing Requirements](#marketing-requirements)
-    - [Level-0 Description](#level-0-description)
-  - [Detailed Architecture](#detailed-architecture)
-    - [Level-1 Description](#level-1-description)
-    - [Datapath and Control](#datapath-and-control)
-  - [Calculations](#calculations)
-    - [MicroBlaze](#microblaze)
-    - [Synth Module](#synth-module)
-    - [MIDI Controller](#midi-controller)
-  - [Techinical Requirements](#techinical-requirements)
-  - [Bill of Materials](#bill-of-materials)
-  - [Milestone 1](#milestone-1)
-  - [Milestone 2](#milestone-2)
-  - [Functionality](#functionality)
-    - [B-Level](#b-level)
-    - [A-Level](#a-level)
+[TOC]
 
 ## Proposal
 
@@ -70,7 +52,7 @@ Just unnecessary but cool and what I'd love to do functionality:
 |          | 2. Use switches to change type of signal (sine, square, etc) |
 |          | 3. MIDI signals from MIDI peripheral maps to certain functionality in Synth, namely keyboard keys to pitch of the signal |
 
-*Note: Module will need to be split into the relative modules, such as a function generator that generates clean signals, a frequency modulator that changes and combines signals, a UART communication module that interfaces with a Microblaze for control and debug, a video module to do video output.
+*Note: Module will need to be split into the relative modules, such as a function generator that generates clean signals, a frequency modulator that changes and combines signals, a UART communication module that interfaces with a MicroBlaze for control and debug, a video module to do video output.
 
 ## Detailed Architecture
 
@@ -103,7 +85,7 @@ If possible, a filter system and or envelope will also be implemented that allow
 
 The MIDI controller doesn't have much for calculation other than decoding the UART signal as it comes it. The signal is an 8 big scan code control signal signifying changes on the MIDI Device with a start and stop bit, meaning a total of 10 bits per key press. A state machine will have to be devised to read this properly and accurately. Either that, or an already available UART controller such as the UART Lite modified to work with the MIDI protocol.
 
-## Techinical Requirements
+## Technical Requirements
 
 The basic technical requirements of this system is as follows:
 
@@ -130,16 +112,18 @@ Given the first milestone is reached, lab4 IP will be used and the MicroBlaze fu
 
 ## Functionality
 
-Required functionality will be MIDI controller decode with scan code input to MicroBlaze, and then pitch shifting to meet the correct frequency using lab 4 as the synth module. Amplitude control should also be implemented via a fade wheel or other interface on the MIDI controller. This can be easily tested by seeing scan codes decoded over UART on the MicroBlaze, and an oscilloscope can show the frequency of the system when a key is pressed.
+Required functionality will be MIDI controller decode with scan code input to MicroBlaze, and then pitch shifting to meet the correct frequency using lab 4 as the synth module. Amplitude control should also be implemented via a fade wheel or other interface on the MIDI controller. 
+
+This can be easily tested by seeing scan codes decoded on the MicroBlaze over console, and an oscilloscope can show the frequency of the system when a key is pressed, which can be verified using known frequencies of keyboard keys.
 
 ### B-Level
 
-B-Level functionality will consist of implementing higher level functionality of the Synth Module. This means implementing more oscillators (or signal types) to be able to have more sounds to choose from and also building into the next form of functionality as well as a filter and or envelope system.
+B-Level functionality will consist of implementing higher level functionality of the Synth Module. This means implementing more oscillators (or signal types) to be able to have more sounds to choose from and also implementing a filter and or envelope system, building a foundation for FM Synthesis.
 
-While not as easy to test, this can be also show via oscilloscope showing how the signal changes with envelope/filter on or off, as well as audibly by hearing how the signal characteristic is changed. A virtual synth can also be used on computer to verify whether the filter/envelope sounds the same or creates the same waves hape on the oscilloscope.
+While not as easy to test, this can be done via oscilloscope showing how the signal changes with envelope/filter on or off, as well as audibly by hearing how the signal characteristic as it's changed. A virtual synth can also be used on computer to verify whether the filter/envelope sounds the same or creates the same waves as the hardware, being verified via oscilloscope.
 
 ### A-Level
 
-A-Level functionality will consist of finishing the synth module to properly implement FM Modulation, meaning an operator will use multiple oscillators, a carrier and modulator, to create a unique and rich sound as output, similar to the Yamaha DX7.
+A-Level functionality will consist of finishing the synth module to properly implement FM Modulation, meaning an operator will use multiple oscillators (a carrier and modulator) to create a unique and rich sound as output, similar to a Yamaha DX7.
 
-Again, something difficult to test, but I have a virtual synth that can perform FM synthesis, and as such, can be compared with the functionality of the hardware.
+Again, this is something difficult to test, but I have a virtual synth that can perform FM synthesis. The output of the virtual synth can be compared with the output of the hardware on an oscilloscope.
