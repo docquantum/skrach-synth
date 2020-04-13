@@ -1,0 +1,26 @@
+vhdl xil_defaultlib  \
+"../../../bd/lab4_design/ip/lab4_design_microblaze_0_5/sim/lab4_design_microblaze_0_5.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_dlmb_v10_5/sim/lab4_design_dlmb_v10_5.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_ilmb_v10_5/sim/lab4_design_ilmb_v10_5.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_dlmb_bram_if_cntlr_5/sim/lab4_design_dlmb_bram_if_cntlr_5.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_ilmb_bram_if_cntlr_5/sim/lab4_design_ilmb_bram_if_cntlr_5.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_mdm_1_5/sim/lab4_design_mdm_1_5.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_rst_clk_wiz_1_100M_5/sim/lab4_design_rst_clk_wiz_1_100M_5.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_axi_uartlite_0_5/sim/lab4_design_axi_uartlite_0_5.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_rst_mig_7series_0_100M_6/sim/lab4_design_rst_mig_7series_0_100M_6.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/Audio_Codec_Wrapper.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/TWICtl.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/addr_counter.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/btn_reader.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/i2s_ctl.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/lab4_controlunit.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/lab4_parts.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/lab4_datapath.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/hdl/lab4_ip_v1_0_S00_AXI.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/src/phase_ampl_manager.vhd" \
+"../../../bd/lab4_design/ipshared/8b06/hdl/lab4_ip_v1_0.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_lab4_ip_0_6/sim/lab4_design_lab4_ip_0_6.vhd" \
+"../../../bd/lab4_design/ip/lab4_design_axi_uartlite_1_3/sim/lab4_design_axi_uartlite_1_3.vhd" \
+"../../../bd/lab4_design/sim/lab4_design.vhd" \
+
+nosort

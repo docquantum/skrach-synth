@@ -1,0 +1,72 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port usb_uart -pg 1 -lvl 6 -x 1880 -y 890 -defaultsOSRD
+preplace port DDR3_0 -pg 1 -lvl 6 -x 1880 -y 70 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x 0 -y 880 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x 0 -y 970 -defaultsOSRD
+preplace port ac_lrclk_0 -pg 1 -lvl 6 -x 1880 -y 470 -defaultsOSRD
+preplace port ac_bclk_0 -pg 1 -lvl 6 -x 1880 -y 450 -defaultsOSRD
+preplace port ac_dac_sdata_0 -pg 1 -lvl 6 -x 1880 -y 430 -defaultsOSRD
+preplace port sda_0 -pg 1 -lvl 6 -x 1880 -y 510 -defaultsOSRD
+preplace port scl_0 -pg 1 -lvl 6 -x 1880 -y 490 -defaultsOSRD
+preplace port ac_mclk_0 -pg 1 -lvl 6 -x 1880 -y 410 -defaultsOSRD
+preplace port ac_adc_sdata_0 -pg 1 -lvl 0 -x 0 -y 570 -defaultsOSRD
+preplace port rx_0 -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
+preplace portBus btn_0 -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace portBus switch_0 -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 3 -x 890 -y 710 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 4 -x 1340 -y 720 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 2 -x 440 -y 710 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 120 -y 960 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 440 -y 940 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 4 -x 1340 -y 400 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 5 -x 1710 -y 110 -defaultsOSRD
+preplace inst rst_mig_7series_0_100M -pg 1 -lvl 3 -x 890 -y 110 -defaultsOSRD
+preplace inst lab4_ip_0 -pg 1 -lvl 5 -x 1710 -y 460 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 5 -x 1710 -y 900 -defaultsOSRD
+preplace inst axi_uartlite_1 -pg 1 -lvl 5 -x 1710 -y 630 -defaultsOSRD
+preplace netloc microblaze_0_Clk 1 1 4 240 800 640 800 1160 800 1560
+preplace netloc clk_wiz_1_locked 1 1 1 N 980
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 1 650 740n
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 2 NJ 920 1190
+preplace netloc mdm_1_debug_sys_rst 1 1 2 260 840 620
+preplace netloc reset_1 1 0 5 20 880 250 830 NJ 830 NJ 830 1520
+preplace netloc sys_clock_1 1 0 1 NJ 970
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 3 NJ 980 1170 810 1570
+preplace netloc mig_7series_0_ui_clk 1 2 4 630 210 1180 210 NJ 210 1860
+preplace netloc mig_7series_0_mmcm_locked 1 2 4 650 220 NJ 220 NJ 220 1850
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 2 4 620 10 NJ 10 NJ 10 1860
+preplace netloc rst_mig_7series_0_100M_peripheral_aresetn 1 3 2 1190 140 NJ
+preplace netloc clk_wiz_1_clk_out2 1 1 4 230J 610 NJ 610 NJ 610 1490
+preplace netloc lab4_ip_0_ac_lrclk 1 5 1 NJ 470
+preplace netloc btn_0_1 1 0 5 NJ 590 NJ 590 NJ 590 NJ 590 1530J
+preplace netloc switch_0_1 1 0 5 NJ 610 220J 600 NJ 600 NJ 600 1550J
+preplace netloc lab4_ip_0_ac_bclk 1 5 1 NJ 450
+preplace netloc lab4_ip_0_ac_dac_sdata 1 5 1 NJ 430
+preplace netloc Net 1 5 1 NJ 510
+preplace netloc Net1 1 5 1 NJ 490
+preplace netloc lab4_ip_0_ac_mclk 1 5 1 NJ 410
+preplace netloc ac_adc_sdata_0_1 1 0 5 NJ 570 NJ 570 NJ 570 1150J 580 1510J
+preplace netloc rx_0_1 1 0 6 NJ 780 NJ 780 630J 620 1130J 820 NJ 820 1850
+preplace netloc microblaze_0_ilmb_1 1 3 1 N 710
+preplace netloc microblaze_0_dlmb_1 1 3 1 N 690
+preplace netloc microblaze_0_debug 1 2 1 N 700
+preplace netloc axi_uartlite_0_UART 1 5 1 NJ 890
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 4 1 1540 370n
+preplace netloc microblaze_0_M_AXI_DP 1 3 1 1140 280n
+preplace netloc mig_7series_0_DDR3 1 5 1 NJ 70
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 4 1 1500 80n
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 4 1 N 410
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 4 1 1500 430n
+levelinfo -pg 1 0 120 440 890 1340 1710 1880
+pagesize -pg 1 -db -bbox -sgen -170 0 2050 1040
+"
+}
+{
+   "da_axi4_cnt":"23",
+   "da_board_cnt":"41",
+   "da_clkrst_cnt":"7",
+   "da_mb_cnt":"6"
+}

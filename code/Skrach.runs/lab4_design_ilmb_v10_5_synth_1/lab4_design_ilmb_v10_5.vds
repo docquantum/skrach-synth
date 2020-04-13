@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Apr 12 23:33:48 2020
+# Process ID: 4074377
+# Current directory: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/lab4_design_ilmb_v10_5_synth_1
+# Command line: vivado -log lab4_design_ilmb_v10_5.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab4_design_ilmb_v10_5.tcl
+# Log file: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/lab4_design_ilmb_v10_5_synth_1/lab4_design_ilmb_v10_5.vds
+# Journal file: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/lab4_design_ilmb_v10_5_synth_1/vivado.jou
+#-----------------------------------------------------------
+source lab4_design_ilmb_v10_5.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/docquantum/homework/ce446_solovey/final/code/ip_repo/axi_uartlite_v2_1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/docquantum/homework/ce446_solovey/lab/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP lab4_design_ilmb_v10_5, cache-ID = 68aa917ff7d99e84.
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 12 23:34:08 2020...

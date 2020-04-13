@@ -1,0 +1,424 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Sun Apr 12 23:43:55 2020
+| Host         : QuantumNet-L4 running 64-bit Arch Linux
+| Command      : report_methodology -file lab4_design_wrapper_methodology_drc_routed.rpt -pb lab4_design_wrapper_methodology_drc_routed.pb -rpx lab4_design_wrapper_methodology_drc_routed.rpx
+| Design       : lab4_design_wrapper
+| Device       : xc7a200tsbg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 76
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 6          |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 12         |
+| TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
+| TIMING-16 | Warning          | Large setup violation                              | 17         |
+| TIMING-18 | Warning          | Missing input or output delay                      | 21         |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects        | 1          |
+| REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF                  | 16         |
++-----------+------------------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_in1 is defined downstream of clock clk_out1_lab4_design_clk_wiz_1_5 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_in1 is created on an inappropriate internal pin lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/phase_ampl_inst/Data_Out_int[18]_i_5, with 2 or more inputs, drives asynchronous preset/clear pin(s) lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_cntr_btn/btn_current_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_cntr_btn/btn_old_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_cntr_btn/btn_press_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_cntr_btn/ff1_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_cntr_btn/ff2_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_down_btn/btn_current_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_down_btn/btn_old_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_down_btn/btn_press_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_down_btn/ff1_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_down_btn/ff2_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_left_btn/btn_current_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_left_btn/btn_old_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_left_btn/btn_press_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_left_btn/ff1_reg/CLR, lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/inst_left_btn/ff2_reg/CLR (the first 15 of 25 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell lab4_design_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) lab4_design_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell lab4_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_Serial_Unified_Completion.completion_status[15]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[0]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[10]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[26]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[3]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_0/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_1/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_10/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_11/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_12/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_2/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_3/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_4/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_5/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_6/CLR (the first 15 of 23 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell lab4_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_Serial_Unified_Completion.completion_status[15]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[0]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[1]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[2]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[3]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[0]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[1]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[2]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[3]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[0]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[1]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[2]/CLR, lab4_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[3]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rstdiv2_sync_r[11]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__0/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__1/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__10/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__11/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__12/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__13/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__14/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__15/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__16/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__17/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__18/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__19/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__2/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__3/PRE (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rstdiv2_sync_r[11]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][0]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][10]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][11]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][12]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][13]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][14]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][1]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][2]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][3]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][4]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][5]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][6]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][7]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][8]/PRE, lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][9]/PRE (the first 15 of 15 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X81Y172 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X80Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X80Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X78Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X80Y178 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X82Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X79Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X81Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X83Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X81Y178 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X79Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X79Y178 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.231 ns between lab4_design_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Performance_Debug_Control.dbg_stop_if_delay_i_reg/C (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/ADDRBWRADDR[14] (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -30.483 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[15]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -31.768 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[17]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -31.790 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[16]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -31.831 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[18]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -31.981 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[19]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -32.006 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[21]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -32.081 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[22]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -32.094 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[23]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -32.105 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[20]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -32.119 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[25]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -32.194 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[26]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -32.197 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[27]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -32.218 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[24]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -32.228 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[29]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -32.301 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[30]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -32.326 ns between lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/bram_inst_sine/sdp_bl.ramb18_dp_bl.ram18_bl/CLKARDCLK (clocked by clk_out1_lab4_design_clk_wiz_1_5) and lab4_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audio_inout/Data_Out_int_reg[28]/D (clocked by clk_out1_lab4_design_clk_wiz_1_5). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on btn_0[0] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on btn_0[1] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on btn_0[2] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on btn_0[3] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on btn_0[4] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on reset relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on rx_0 relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on switch_0[0] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on switch_0[1] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on switch_0[2] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on switch_0[3] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on switch_0[4] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on switch_0[5] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on switch_0[6] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on switch_0[7] relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on usb_uart_rxd relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on DDR3_0_reset_n relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on ac_bclk_0 relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on ac_dac_sdata_0 relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on ac_lrclk_0 relative to clock(s) sys_clock
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on usb_uart_txd relative to clock(s) sys_clock
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '22' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/lab4_design/ip/lab4_design_mig_7series_0_7/lab4_design_mig_7series_0_7/user_design/constraints/lab4_design_mig_7series_0_7.xdc (Line: 354)
+Related violations: <none>
+
+REQP-1959#1 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#2 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#3 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#4 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#5 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#6 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#7 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#8 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#9 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#10 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#11 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#12 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#13 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#14 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#15 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#16 Advisory
+connects_SERDES_RST_driver_not_FF  
+lab4_design_i/mig_7series_0/u_lab4_design_mig_7series_0_7_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+
