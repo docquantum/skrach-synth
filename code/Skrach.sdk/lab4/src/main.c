@@ -65,7 +65,8 @@ int main(void){
 	setup_terminal();
 
 	while(running){
-		handle_input();
+		//handle_input();
+		read_midi_msg();
 	}
 
 	return 0;
@@ -266,6 +267,7 @@ MidiMsg read_midi_msg(void){
 	msg.ch = XUartLite_RecvByte(midiReg);
 	msg.op = XUartLite_RecvByte(midiReg);
 	msg.vel = XUartLite_RecvByte(midiReg);
+	xil_printf("_______________\n\r");
 	xil_printf("> ch : %x\n\r", msg.ch);
 	xil_printf("> op : %x\n\r", msg.op);
 	xil_printf("> vel: %x\n\r", msg.vel);

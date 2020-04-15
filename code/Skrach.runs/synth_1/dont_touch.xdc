@@ -3,61 +3,79 @@
 
 # XDC: imports/new/lab4.xdc
 
-# Block Designs: bd/lab4_design/lab4_design.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design || ORIG_REF_NAME==lab4_design} -quiet] -quiet
+# Block Designs: bd/skrach_design/skrach_design.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design || ORIG_REF_NAME==skrach_design} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_microblaze_0_5/lab4_design_microblaze_0_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_microblaze_0_5 || ORIG_REF_NAME==lab4_design_microblaze_0_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_microblaze_0_0/skrach_design_microblaze_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_microblaze_0_0 || ORIG_REF_NAME==skrach_design_microblaze_0_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_dlmb_v10_5/lab4_design_dlmb_v10_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_dlmb_v10_5 || ORIG_REF_NAME==lab4_design_dlmb_v10_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_dlmb_v10_0/skrach_design_dlmb_v10_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_dlmb_v10_0 || ORIG_REF_NAME==skrach_design_dlmb_v10_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_ilmb_v10_5/lab4_design_ilmb_v10_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_ilmb_v10_5 || ORIG_REF_NAME==lab4_design_ilmb_v10_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_ilmb_v10_0/skrach_design_ilmb_v10_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_ilmb_v10_0 || ORIG_REF_NAME==skrach_design_ilmb_v10_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_dlmb_bram_if_cntlr_5/lab4_design_dlmb_bram_if_cntlr_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_dlmb_bram_if_cntlr_5 || ORIG_REF_NAME==lab4_design_dlmb_bram_if_cntlr_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_dlmb_bram_if_cntlr_0/skrach_design_dlmb_bram_if_cntlr_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_dlmb_bram_if_cntlr_0 || ORIG_REF_NAME==skrach_design_dlmb_bram_if_cntlr_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_ilmb_bram_if_cntlr_5/lab4_design_ilmb_bram_if_cntlr_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_ilmb_bram_if_cntlr_5 || ORIG_REF_NAME==lab4_design_ilmb_bram_if_cntlr_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_ilmb_bram_if_cntlr_0/skrach_design_ilmb_bram_if_cntlr_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_ilmb_bram_if_cntlr_0 || ORIG_REF_NAME==skrach_design_ilmb_bram_if_cntlr_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_lmb_bram_5/lab4_design_lmb_bram_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_lmb_bram_5 || ORIG_REF_NAME==lab4_design_lmb_bram_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_lmb_bram_0/skrach_design_lmb_bram_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_lmb_bram_0 || ORIG_REF_NAME==skrach_design_lmb_bram_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_mdm_1_5/lab4_design_mdm_1_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_mdm_1_5 || ORIG_REF_NAME==lab4_design_mdm_1_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_xbar_0/skrach_design_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_xbar_0 || ORIG_REF_NAME==skrach_design_xbar_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_clk_wiz_1_5/lab4_design_clk_wiz_1_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_clk_wiz_1_5 || ORIG_REF_NAME==lab4_design_clk_wiz_1_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_microblaze_0_axi_periph_0/skrach_design_microblaze_0_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_microblaze_0_axi_periph_0 || ORIG_REF_NAME==skrach_design_microblaze_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_rst_clk_wiz_1_100M_5/lab4_design_rst_clk_wiz_1_100M_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_rst_clk_wiz_1_100M_5 || ORIG_REF_NAME==lab4_design_rst_clk_wiz_1_100M_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_microblaze_0_axi_intc_0/skrach_design_microblaze_0_axi_intc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_microblaze_0_axi_intc_0 || ORIG_REF_NAME==skrach_design_microblaze_0_axi_intc_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_axi_uartlite_0_5/lab4_design_axi_uartlite_0_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_axi_uartlite_0_5 || ORIG_REF_NAME==lab4_design_axi_uartlite_0_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_microblaze_0_xlconcat_0/skrach_design_microblaze_0_xlconcat_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_microblaze_0_xlconcat_0 || ORIG_REF_NAME==skrach_design_microblaze_0_xlconcat_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_xbar_5/lab4_design_xbar_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_xbar_5 || ORIG_REF_NAME==lab4_design_xbar_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_mdm_1_0/skrach_design_mdm_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_mdm_1_0 || ORIG_REF_NAME==skrach_design_mdm_1_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_microblaze_0_axi_periph_5/lab4_design_microblaze_0_axi_periph_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_microblaze_0_axi_periph_5 || ORIG_REF_NAME==lab4_design_microblaze_0_axi_periph_5} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_clk_wiz_1_0/skrach_design_clk_wiz_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_clk_wiz_1_0 || ORIG_REF_NAME==skrach_design_clk_wiz_1_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_mig_7series_0_7/lab4_design_mig_7series_0_7.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_mig_7series_0_7 || ORIG_REF_NAME==lab4_design_mig_7series_0_7} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_rst_clk_wiz_1_100M_0/skrach_design_rst_clk_wiz_1_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_rst_clk_wiz_1_100M_0 || ORIG_REF_NAME==skrach_design_rst_clk_wiz_1_100M_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_rst_mig_7series_0_100M_6/lab4_design_rst_mig_7series_0_100M_6.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_rst_mig_7series_0_100M_6 || ORIG_REF_NAME==lab4_design_rst_mig_7series_0_100M_6} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_axi_uartlite_0_0/skrach_design_axi_uartlite_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_axi_uartlite_0_0 || ORIG_REF_NAME==skrach_design_axi_uartlite_0_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_lab4_ip_0_6/lab4_design_lab4_ip_0_6.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_lab4_ip_0_6 || ORIG_REF_NAME==lab4_design_lab4_ip_0_6} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_axi_uartlite_1_0/skrach_design_axi_uartlite_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_axi_uartlite_1_0 || ORIG_REF_NAME==skrach_design_axi_uartlite_1_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_axi_uartlite_1_3/lab4_design_axi_uartlite_1_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_axi_uartlite_1_3 || ORIG_REF_NAME==lab4_design_axi_uartlite_1_3} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_mig_7series_0_0/skrach_design_mig_7series_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_mig_7series_0_0 || ORIG_REF_NAME==skrach_design_mig_7series_0_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_auto_cc_0/lab4_design_auto_cc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_auto_cc_0 || ORIG_REF_NAME==lab4_design_auto_cc_0} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_rst_mig_7series_0_100M_0/skrach_design_rst_mig_7series_0_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_rst_mig_7series_0_100M_0 || ORIG_REF_NAME==skrach_design_rst_mig_7series_0_100M_0} -quiet] -quiet
 
-# IP: bd/lab4_design/ip/lab4_design_auto_pc_0/lab4_design_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lab4_design_auto_pc_0 || ORIG_REF_NAME==lab4_design_auto_pc_0} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_lab4_ip_0_0/skrach_design_lab4_ip_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_lab4_ip_0_0 || ORIG_REF_NAME==skrach_design_lab4_ip_0_0} -quiet] -quiet
 
-# XDC: bd/lab4_design/lab4_design_ooc.xdc
+# IP: bd/skrach_design/ip/skrach_design_auto_pc_4/skrach_design_auto_pc_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_auto_pc_4 || ORIG_REF_NAME==skrach_design_auto_pc_4} -quiet] -quiet
+
+# IP: bd/skrach_design/ip/skrach_design_auto_pc_0/skrach_design_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_auto_pc_0 || ORIG_REF_NAME==skrach_design_auto_pc_0} -quiet] -quiet
+
+# IP: bd/skrach_design/ip/skrach_design_auto_pc_1/skrach_design_auto_pc_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_auto_pc_1 || ORIG_REF_NAME==skrach_design_auto_pc_1} -quiet] -quiet
+
+# IP: bd/skrach_design/ip/skrach_design_auto_pc_2/skrach_design_auto_pc_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_auto_pc_2 || ORIG_REF_NAME==skrach_design_auto_pc_2} -quiet] -quiet
+
+# IP: bd/skrach_design/ip/skrach_design_auto_cc_0/skrach_design_auto_cc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_auto_cc_0 || ORIG_REF_NAME==skrach_design_auto_cc_0} -quiet] -quiet
+
+# IP: bd/skrach_design/ip/skrach_design_auto_pc_3/skrach_design_auto_pc_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_auto_pc_3 || ORIG_REF_NAME==skrach_design_auto_pc_3} -quiet] -quiet
+
+# XDC: bd/skrach_design/skrach_design_ooc.xdc
