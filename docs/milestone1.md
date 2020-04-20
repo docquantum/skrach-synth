@@ -7,7 +7,7 @@ April 15, 2020
 
 ## Milestone I
 
-My Monday April 13, I was only able to have gotten the circuit built and tested through a logic analyzer that did decode. After spending some more time Tuesday April 14, I was able to get it to read codes and decode status, pitch, and velocity through the MicroBlaze system, thus, more or less reaching a majority of Milestone 1 goals. However, more work needs to be done to be able to implement more controller functionality so that things like faders and knobs can also be properly used. A data structure also has to be implemented to be able to easily properly pass around MIDI events within the processor.
+By Monday April 13, I was only able to have gotten the circuit built and tested through a logic analyzer that did decode. After spending some more time Tuesday April 14, I was able to get it to read codes and decode status, pitch, and velocity through the MicroBlaze system, thus, more or less reaching a majority of Milestone 1 goals. However, more work needs to be done to be able to implement more controller functionality so that things like faders and knobs can also be properly used. A data structure also has to be implemented to be able to easily properly pass around MIDI events within the processor.
 
 ### Detailed Architecture
 

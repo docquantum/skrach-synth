@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Tue Apr 14 22:18:23 2020
+// Date        : Mon Apr 20 14:03:26 2020
 // Host        : QuantumNet-L4 running 64-bit Arch Linux
-// Command     : write_verilog -force -mode synth_stub -rename_top skrach_design_auto_cc_0 -prefix
-//               skrach_design_auto_cc_0_ skrach_design_auto_cc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_auto_cc_0/skrach_design_auto_cc_0_stub.v
 // Design      : skrach_design_auto_cc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a200tsbg484-1

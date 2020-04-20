@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1586920971">
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1587409292">
   <File Type="VDS-TIMING-PB" Name="skrach_design_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="skrach_design_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="skrach_design_wrapper.dcp"/>
@@ -24,10 +24,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/skrach_design/ip/skrach_design_mig_7series_0_0/board.prj">
+    <File Path="$PSRCDIR/sources_1/bd/skrach_design/ip/skrach_design_mig_7series_0_2/board.prj">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="ScopedToCell" Val="skrach_design_mig_7series_0_0"/>
+        <Attr Name="ScopedToCell" Val="skrach_design_mig_7series_0_2"/>
       </FileInfo>
     </File>
     <Config>
@@ -57,13 +57,20 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_microblaze_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_axi_uartlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_clk_wiz_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_lmb_bram_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_auto_pc_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_auto_pc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_auto_cc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_clk_wiz_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_mig_7series_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_lmb_bram_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_microblaze_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_xbar_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_microblaze_0_axi_intc_2"/>
 </GenRun>

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Tue Apr 14 22:28:03 2020
+| Date         : Mon Apr 20 14:06:46 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_utilization -file skrach_design_wrapper_utilization_synth.rpt -pb skrach_design_wrapper_utilization_synth.pb
 | Design       : skrach_design_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   22 |     0 |       285 |  7.72 |
+| Bonded IOB                  |    4 |     0 |       285 |  1.40 |
 | Bonded IPADs                |    0 |     0 |        14 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         8 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        10 |  0.00 |
@@ -149,8 +149,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   17 |                  IO |
-| OBUF     |    5 |                  IO |
+| IBUF     |    3 |                  IO |
+| OBUF     |    1 |                  IO |
 +----------+------+---------------------+
 
 
@@ -160,23 +160,21 @@ Table of Contents
 +----------------------------------------+------+
 |                Ref Name                | Used |
 +----------------------------------------+------+
-| skrach_design_xbar_0                   |    1 |
-| skrach_design_rst_mig_7series_0_100M_0 |    1 |
-| skrach_design_rst_clk_wiz_1_100M_0     |    1 |
-| skrach_design_mig_7series_0_0          |    1 |
-| skrach_design_microblaze_0_axi_intc_0  |    1 |
-| skrach_design_microblaze_0_0           |    1 |
-| skrach_design_mdm_1_0                  |    1 |
-| skrach_design_lmb_bram_0               |    1 |
-| skrach_design_lab4_ip_0_0              |    1 |
-| skrach_design_ilmb_v10_0               |    1 |
-| skrach_design_ilmb_bram_if_cntlr_0     |    1 |
-| skrach_design_dlmb_v10_0               |    1 |
-| skrach_design_dlmb_bram_if_cntlr_0     |    1 |
-| skrach_design_clk_wiz_1_0              |    1 |
-| skrach_design_axi_uartlite_1_0         |    1 |
-| skrach_design_axi_uartlite_0_0         |    1 |
-| skrach_design_auto_pc_4                |    1 |
+| skrach_design_xbar_2                   |    1 |
+| skrach_design_rst_mig_7series_0_100M_2 |    1 |
+| skrach_design_rst_clk_wiz_1_100M_2     |    1 |
+| skrach_design_mig_7series_0_2          |    1 |
+| skrach_design_microblaze_0_axi_intc_2  |    1 |
+| skrach_design_microblaze_0_2           |    1 |
+| skrach_design_mdm_1_2                  |    1 |
+| skrach_design_lmb_bram_2               |    1 |
+| skrach_design_ilmb_v10_2               |    1 |
+| skrach_design_ilmb_bram_if_cntlr_2     |    1 |
+| skrach_design_dlmb_v10_2               |    1 |
+| skrach_design_dlmb_bram_if_cntlr_2     |    1 |
+| skrach_design_clk_wiz_1_2              |    1 |
+| skrach_design_axi_uartlite_1_2         |    1 |
+| skrach_design_axi_uartlite_0_2         |    1 |
 | skrach_design_auto_pc_3                |    1 |
 | skrach_design_auto_pc_2                |    1 |
 | skrach_design_auto_pc_1                |    1 |

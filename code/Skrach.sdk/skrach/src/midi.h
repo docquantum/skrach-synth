@@ -1,8 +1,6 @@
-
-
-typedef enum
+typedef enum StatusType
 {
-	INVALID            	= 0x0,
+	INVALID            = 0x00,
 	// Standard Message
 	NOTE_OFF           = 0x80,
 	NOTE_ON            = 0x90,
@@ -45,3 +43,5 @@ MidiMsg read_midi_msg(void);
 char * status_type_to_string(StatusType status);
 
 char * pitch_to_string(int pitch);
+
+float pitch_to_freq(int pitch);

@@ -1,8 +1,8 @@
-
-
 #include <stdio.h>
 #include "utils.h"
 #include "midi.h"
+#include "synth.h"
+#include "xintc.h"
 
 
 int main()
@@ -13,7 +13,11 @@ int main()
 
     while(1)
     {
-    	read_midi_msg();
+    	MidiMsg msg = read_midi_msg();
+    	if(msg.status == NOTE_ON)
+    	{
+    		//freq_to_phase(pitch_to_freq(msg.pitch));
+    	}
     }
 
     teardown();
