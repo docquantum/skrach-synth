@@ -1,3 +1,10 @@
+#ifndef MIDI_H   /* prevent circular inclusions */
+#define MIDI_H   /* by using protection macros */
+
+#include "xparameters.h"
+
+#define	MIDI_REG		XPAR_AXI_UARTLITE_1_BASEADDR
+
 typedef enum StatusType
 {
 	INVALID            = 0x00,
@@ -45,3 +52,5 @@ char * status_type_to_string(StatusType status);
 char * pitch_to_string(int pitch);
 
 float pitch_to_freq(int pitch);
+
+#endif /* end of protection macro */

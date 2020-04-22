@@ -1,4 +1,3 @@
-#include "xparameters.h"
 #include "xil_cache.h"
 
 #include "utils.h"
@@ -20,7 +19,7 @@ void disable_caches()
 void setup()
 {
     enable_caches();
-    //setup_synth();
+    setup_synth();
 }
 
 void teardown()

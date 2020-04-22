@@ -14,8 +14,6 @@ vlib questa_lib/msim/fifo_generator_v13_2_4
 vlib questa_lib/msim/axi_data_fifo_v2_1_18
 vlib questa_lib/msim/axi_crossbar_v2_1_20
 vlib questa_lib/msim/axi_lite_ipif_v3_0_4
-vlib questa_lib/msim/axi_intc_v4_1_13
-vlib questa_lib/msim/xlconcat_v2_1_3
 vlib questa_lib/msim/mdm_v3_2_16
 vlib questa_lib/msim/lib_cdc_v1_0_2
 vlib questa_lib/msim/proc_sys_reset_v5_0_13
@@ -38,8 +36,6 @@ vmap fifo_generator_v13_2_4 questa_lib/msim/fifo_generator_v13_2_4
 vmap axi_data_fifo_v2_1_18 questa_lib/msim/axi_data_fifo_v2_1_18
 vmap axi_crossbar_v2_1_20 questa_lib/msim/axi_crossbar_v2_1_20
 vmap axi_lite_ipif_v3_0_4 questa_lib/msim/axi_lite_ipif_v3_0_4
-vmap axi_intc_v4_1_13 questa_lib/msim/axi_intc_v4_1_13
-vmap xlconcat_v2_1_3 questa_lib/msim/xlconcat_v2_1_3
 vmap mdm_v3_2_16 questa_lib/msim/mdm_v3_2_16
 vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_13 questa_lib/msim/proc_sys_reset_v5_0_13
@@ -49,7 +45,7 @@ vmap axi_uartlite_v2_0_23 questa_lib/msim/axi_uartlite_v2_0_23
 vmap axi_protocol_converter_v2_1_19 questa_lib/msim/axi_protocol_converter_v2_1_19
 vmap axi_clock_converter_v2_1_18 questa_lib/msim/axi_clock_converter_v2_1_18
 
-vlog -work xil_defaultlib -64 -sv "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work xil_defaultlib -64 -sv "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
@@ -76,53 +72,41 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/skrach_design/ip/skrach_design_dlmb_bram_if_cntlr_2/sim/skrach_design_dlmb_bram_if_cntlr_2.vhd" \
 "../../../bd/skrach_design/ip/skrach_design_ilmb_bram_if_cntlr_2/sim/skrach_design_ilmb_bram_if_cntlr_2.vhd" \
 
-vlog -work blk_mem_gen_v8_4_3 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work blk_mem_gen_v8_4_3 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c001/simulation/blk_mem_gen_v8_4.v" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../bd/skrach_design/ip/skrach_design_lmb_bram_2/sim/skrach_design_lmb_bram_2.v" \
 
-vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
-vlog -work axi_infrastructure_v1_1_0 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work axi_infrastructure_v1_1_0 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 
-vlog -work axi_register_slice_v2_1_19 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work axi_register_slice_v2_1_19 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/4d88/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
-vlog -work fifo_generator_v13_2_4 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work fifo_generator_v13_2_4 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/1f5a/simulation/fifo_generator_vlog_beh.v" \
 
 vcom -work fifo_generator_v13_2_4 -64 -93 \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/1f5a/hdl/fifo_generator_v13_2_rfs.vhd" \
 
-vlog -work fifo_generator_v13_2_4 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work fifo_generator_v13_2_4 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/1f5a/hdl/fifo_generator_v13_2_rfs.v" \
 
-vlog -work axi_data_fifo_v2_1_18 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work axi_data_fifo_v2_1_18 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/5b9c/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 
-vlog -work axi_crossbar_v2_1_20 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work axi_crossbar_v2_1_20 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../bd/skrach_design/ip/skrach_design_xbar_2/sim/skrach_design_xbar_2.v" \
 
 vcom -work axi_lite_ipif_v3_0_4 -64 -93 \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
-
-vcom -work axi_intc_v4_1_13 -64 -93 \
-"../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c0fe/hdl/axi_intc_v4_1_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/skrach_design/ip/skrach_design_microblaze_0_axi_intc_2/sim/skrach_design_microblaze_0_axi_intc_2.vhd" \
-
-vlog -work xlconcat_v2_1_3 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
-"../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
-"../../../bd/skrach_design/ip/skrach_design_microblaze_0_xlconcat_2/sim/skrach_design_microblaze_0_xlconcat_2.v" \
 
 vcom -work mdm_v3_2_16 -64 -93 \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/550e/hdl/mdm_v3_2_vh_rfs.vhd" \
@@ -130,7 +114,7 @@ vcom -work mdm_v3_2_16 -64 -93 \
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/skrach_design/ip/skrach_design_mdm_1_2/sim/skrach_design_mdm_1_2.vhd" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../bd/skrach_design/ip/skrach_design_clk_wiz_1_2/skrach_design_clk_wiz_1_2_clk_wiz.v" \
 "../../../bd/skrach_design/ip/skrach_design_clk_wiz_1_2/skrach_design_clk_wiz_1_2.v" \
 
@@ -156,7 +140,7 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/skrach_design/ip/skrach_design_axi_uartlite_0_2/sim/skrach_design_axi_uartlite_0_2.vhd" \
 "../../../bd/skrach_design/ip/skrach_design_axi_uartlite_1_2/sim/skrach_design_axi_uartlite_1_2.vhd" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../bd/skrach_design/ip/skrach_design_mig_7series_0_2/skrach_design_mig_7series_0_2/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v" \
 "../../../bd/skrach_design/ip/skrach_design_mig_7series_0_2/skrach_design_mig_7series_0_2/user_design/rtl/ui/mig_7series_v4_2_ui_cmd.v" \
 "../../../bd/skrach_design/ip/skrach_design_mig_7series_0_2/skrach_design_mig_7series_0_2/user_design/rtl/ui/mig_7series_v4_2_ui_rd_data.v" \
@@ -262,38 +246,37 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skra
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/skrach_design/ip/skrach_design_rst_mig_7series_0_100M_2/sim/skrach_design_rst_mig_7series_0_100M_2.vhd" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
-"../../../bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1/audio_clk_wiz_clk_wiz.v" \
-"../../../bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1/audio_clk_wiz.v" \
-"../../../bd/skrach_design/ipshared/31a1/src/audio_init.v" \
+vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
+"../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0/clk_wiz_0.v" \
+"../../../bd/skrach_design/ipshared/e9d8/src/audio_init.v" \
 
 vcom -work xil_defaultlib -64 -93 \
-"../../../bd/skrach_design/ipshared/31a1/src/Audio_Codec_Wrapper.vhd" \
-"../../../bd/skrach_design/ipshared/31a1/src/TWICtl.vhd" \
-"../../../bd/skrach_design/ipshared/31a1/src/addr_counter.vhd" \
-"../../../bd/skrach_design/ipshared/31a1/src/i2s_ctl.vhd" \
-"../../../bd/skrach_design/ipshared/31a1/src/lab4_controlunit.vhd" \
-"../../../bd/skrach_design/ipshared/31a1/src/lab4_parts.vhd" \
-"../../../bd/skrach_design/ipshared/31a1/src/lab4_datapath.vhd" \
-"../../../bd/skrach_design/ipshared/31a1/hdl/lab4_ip_v1_0_S00_AXI.vhd" \
-"../../../bd/skrach_design/ipshared/31a1/hdl/lab4_ip_v1_0.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/src/Audio_Codec_Wrapper.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/src/TWICtl.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/src/addr_counter.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/src/i2s_ctl.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/src/lab4_controlunit.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/src/lab4_parts.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/src/lab4_datapath.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/hdl/lab4_ip_v1_0_S00_AXI.vhd" \
+"../../../bd/skrach_design/ipshared/e9d8/hdl/lab4_ip_v1_0.vhd" \
 "../../../bd/skrach_design/ip/skrach_design_lab4_ip_0_0/sim/skrach_design_lab4_ip_0_0.vhd" \
 
-vlog -work axi_protocol_converter_v2_1_19 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work axi_protocol_converter_v2_1_19 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
-"../../../bd/skrach_design/ip/skrach_design_auto_pc_4/sim/skrach_design_auto_pc_4.v" \
+vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
+"../../../bd/skrach_design/ip/skrach_design_auto_pc_3/sim/skrach_design_auto_pc_3.v" \
 "../../../bd/skrach_design/ip/skrach_design_auto_pc_0/sim/skrach_design_auto_pc_0.v" \
 "../../../bd/skrach_design/ip/skrach_design_auto_pc_1/sim/skrach_design_auto_pc_1.v" \
-"../../../bd/skrach_design/ip/skrach_design_auto_pc_2/sim/skrach_design_auto_pc_2.v" \
 
-vlog -work axi_clock_converter_v2_1_18 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work axi_clock_converter_v2_1_18 -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ac9d/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+vlog -work xil_defaultlib -64 "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" "+incdir+../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" "+incdir+../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../bd/skrach_design/ip/skrach_design_auto_cc_0/sim/skrach_design_auto_cc_0.v" \
-"../../../bd/skrach_design/ip/skrach_design_auto_pc_3/sim/skrach_design_auto_pc_3.v" \
+"../../../bd/skrach_design/ip/skrach_design_auto_pc_2/sim/skrach_design_auto_pc_2.v" \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/skrach_design/sim/skrach_design.vhd" \

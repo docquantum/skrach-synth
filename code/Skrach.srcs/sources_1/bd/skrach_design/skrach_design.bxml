@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="skrach_design" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1587409289"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1587409289"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1587409289"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1587409289"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1587444809"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1587444809"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1587444809"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1587444809"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/skrach_design_microblaze_0_2/skrach_design_microblaze_0_2.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -71,22 +71,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/skrach_design_microblaze_0_axi_intc_2/skrach_design_microblaze_0_axi_intc_2.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_intc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/skrach_design_microblaze_0_xlconcat_2/skrach_design_microblaze_0_xlconcat_2.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_xlconcat"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/skrach_design_mdm_1_2/skrach_design_mdm_1_2.xci" Type="IP">
         <Instance HierarchyPath="mdm_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -143,14 +127,12 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth/skrach_design.vhd" Type="VHDL">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip/skrach_design_lab4_ip_0_0/skrach_design_lab4_ip_0_0.xci" Type="IP">
+        <Instance HierarchyPath="lab4_ip_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
-      </File>
-      <File Name="sim/skrach_design.vhd" Type="VHDL">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/skrach_design_auto_pc_3/skrach_design_auto_pc_3.xci" Type="IP">
@@ -162,14 +144,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/skrach_design_auto_pc_0/skrach_design_auto_pc_0.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m00_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/skrach_design_auto_pc_1/skrach_design_auto_pc_1.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph/m01_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -177,7 +151,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/skrach_design_auto_pc_2/skrach_design_auto_pc_2.xci" Type="IP">
+      <File Name="ip/skrach_design_auto_pc_1/skrach_design_auto_pc_1.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph/m02_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -191,6 +165,24 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/skrach_design_auto_pc_2/skrach_design_auto_pc_2.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph/m04_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth/skrach_design.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+      </File>
+      <File Name="sim/skrach_design.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="skrach_design.bmm" Type="BMM">

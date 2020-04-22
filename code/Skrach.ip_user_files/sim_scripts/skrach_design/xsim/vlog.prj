@@ -1,7 +1,6 @@
-verilog xil_defaultlib --include "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" --include "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" --include "../../../../Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1" \
+verilog xil_defaultlib --include "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ec67/hdl" --include "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c923" --include "../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0" \
 "../../../bd/skrach_design/ip/skrach_design_lmb_bram_2/sim/skrach_design_lmb_bram_2.v" \
 "../../../bd/skrach_design/ip/skrach_design_xbar_2/sim/skrach_design_xbar_2.v" \
-"../../../bd/skrach_design/ip/skrach_design_microblaze_0_xlconcat_2/sim/skrach_design_microblaze_0_xlconcat_2.v" \
 "../../../bd/skrach_design/ip/skrach_design_clk_wiz_1_2/skrach_design_clk_wiz_1_2_clk_wiz.v" \
 "../../../bd/skrach_design/ip/skrach_design_clk_wiz_1_2/skrach_design_clk_wiz_1_2.v" \
 "../../../bd/skrach_design/ip/skrach_design_mig_7series_0_2/skrach_design_mig_7series_0_2/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v" \
@@ -105,15 +104,14 @@ verilog xil_defaultlib --include "../../../../Skrach.srcs/sources_1/bd/skrach_de
 "../../../bd/skrach_design/ip/skrach_design_mig_7series_0_2/skrach_design_mig_7series_0_2/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_axi.v" \
 "../../../bd/skrach_design/ip/skrach_design_mig_7series_0_2/skrach_design_mig_7series_0_2/user_design/rtl/skrach_design_mig_7series_0_2_mig_sim.v" \
 "../../../bd/skrach_design/ip/skrach_design_mig_7series_0_2/skrach_design_mig_7series_0_2/user_design/rtl/skrach_design_mig_7series_0_2.v" \
-"../../../bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1/audio_clk_wiz_clk_wiz.v" \
-"../../../bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1/audio_clk_wiz.v" \
-"../../../bd/skrach_design/ipshared/31a1/src/audio_init.v" \
-"../../../bd/skrach_design/ip/skrach_design_auto_pc_4/sim/skrach_design_auto_pc_4.v" \
+"../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0/clk_wiz_0.v" \
+"../../../bd/skrach_design/ipshared/e9d8/src/audio_init.v" \
+"../../../bd/skrach_design/ip/skrach_design_auto_pc_3/sim/skrach_design_auto_pc_3.v" \
 "../../../bd/skrach_design/ip/skrach_design_auto_pc_0/sim/skrach_design_auto_pc_0.v" \
 "../../../bd/skrach_design/ip/skrach_design_auto_pc_1/sim/skrach_design_auto_pc_1.v" \
-"../../../bd/skrach_design/ip/skrach_design_auto_pc_2/sim/skrach_design_auto_pc_2.v" \
 "../../../bd/skrach_design/ip/skrach_design_auto_cc_0/sim/skrach_design_auto_cc_0.v" \
-"../../../bd/skrach_design/ip/skrach_design_auto_pc_3/sim/skrach_design_auto_pc_3.v" \
+"../../../bd/skrach_design/ip/skrach_design_auto_pc_2/sim/skrach_design_auto_pc_2.v" \
 
 verilog xil_defaultlib "glbl.v"
 

@@ -3,12 +3,12 @@
 // SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 // Vivado v2019.1 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-// Created on Monday April 20, 2020 - 01:11:43 pm, from:
+// Created on Monday April 20, 2020 - 11:53:40 pm, from:
 //
 //     Map file     - /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/skrach_design.bmm
 //     Data file(s) - /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_microblaze_0_2/data/mb_bootloop_le.elf
 //
-// Address space 'skrach_design_i_microblaze_0.skrach_design_i_microblaze_0_local_memory_lmb_bram_128K_4_ADDR_SPACE', bit lane [31:0].
+// Address space 'skrach_design_i_microblaze_0.skrach_design_i_microblaze_0_local_memory_lmb_bram_128K_7_ADDR_SPACE', bit lane [31:0].
 //
 // Bus width = 32 bits, number of bus blocks = 1.
 

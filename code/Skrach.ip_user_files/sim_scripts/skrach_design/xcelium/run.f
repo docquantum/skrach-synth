@@ -61,18 +61,6 @@
 -makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
   "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 -endlib
--makelib xcelium_lib/axi_intc_v4_1_13 \
-  "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c0fe/hdl/axi_intc_v4_1_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/skrach_design/ip/skrach_design_microblaze_0_axi_intc_2/sim/skrach_design_microblaze_0_axi_intc_2.vhd" \
--endlib
--makelib xcelium_lib/xlconcat_v2_1_3 \
-  "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/skrach_design/ip/skrach_design_microblaze_0_xlconcat_2/sim/skrach_design_microblaze_0_xlconcat_2.v" \
--endlib
 -makelib xcelium_lib/mdm_v3_2_16 \
   "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/550e/hdl/mdm_v3_2_vh_rfs.vhd" \
 -endlib
@@ -212,37 +200,36 @@
   "../../../bd/skrach_design/ip/skrach_design_rst_mig_7series_0_100M_2/sim/skrach_design_rst_mig_7series_0_100M_2.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1/audio_clk_wiz_clk_wiz.v" \
-  "../../../bd/skrach_design/ip/skrach_design_lab4_ip_0_0/src/audio_clk_wiz_1/audio_clk_wiz.v" \
-  "../../../bd/skrach_design/ipshared/31a1/src/audio_init.v" \
+  "../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+  "../../../../Skrach.srcs/sources_1/bd/final/code/ip_repo/clk_wiz_0/clk_wiz_0.v" \
+  "../../../bd/skrach_design/ipshared/e9d8/src/audio_init.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/skrach_design/ipshared/31a1/src/Audio_Codec_Wrapper.vhd" \
-  "../../../bd/skrach_design/ipshared/31a1/src/TWICtl.vhd" \
-  "../../../bd/skrach_design/ipshared/31a1/src/addr_counter.vhd" \
-  "../../../bd/skrach_design/ipshared/31a1/src/i2s_ctl.vhd" \
-  "../../../bd/skrach_design/ipshared/31a1/src/lab4_controlunit.vhd" \
-  "../../../bd/skrach_design/ipshared/31a1/src/lab4_parts.vhd" \
-  "../../../bd/skrach_design/ipshared/31a1/src/lab4_datapath.vhd" \
-  "../../../bd/skrach_design/ipshared/31a1/hdl/lab4_ip_v1_0_S00_AXI.vhd" \
-  "../../../bd/skrach_design/ipshared/31a1/hdl/lab4_ip_v1_0.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/src/Audio_Codec_Wrapper.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/src/TWICtl.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/src/addr_counter.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/src/i2s_ctl.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/src/lab4_controlunit.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/src/lab4_parts.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/src/lab4_datapath.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/hdl/lab4_ip_v1_0_S00_AXI.vhd" \
+  "../../../bd/skrach_design/ipshared/e9d8/hdl/lab4_ip_v1_0.vhd" \
   "../../../bd/skrach_design/ip/skrach_design_lab4_ip_0_0/sim/skrach_design_lab4_ip_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_19 \
   "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/skrach_design/ip/skrach_design_auto_pc_4/sim/skrach_design_auto_pc_4.v" \
+  "../../../bd/skrach_design/ip/skrach_design_auto_pc_3/sim/skrach_design_auto_pc_3.v" \
   "../../../bd/skrach_design/ip/skrach_design_auto_pc_0/sim/skrach_design_auto_pc_0.v" \
   "../../../bd/skrach_design/ip/skrach_design_auto_pc_1/sim/skrach_design_auto_pc_1.v" \
-  "../../../bd/skrach_design/ip/skrach_design_auto_pc_2/sim/skrach_design_auto_pc_2.v" \
 -endlib
 -makelib xcelium_lib/axi_clock_converter_v2_1_18 \
   "../../../../Skrach.srcs/sources_1/bd/skrach_design/ipshared/ac9d/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/skrach_design/ip/skrach_design_auto_cc_0/sim/skrach_design_auto_cc_0.v" \
-  "../../../bd/skrach_design/ip/skrach_design_auto_pc_3/sim/skrach_design_auto_pc_3.v" \
+  "../../../bd/skrach_design/ip/skrach_design_auto_pc_2/sim/skrach_design_auto_pc_2.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/skrach_design/sim/skrach_design.vhd" \

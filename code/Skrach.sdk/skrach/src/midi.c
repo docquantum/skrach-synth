@@ -1,11 +1,11 @@
-#include "utils.h"
 #include "midi.h"
+#include "xil_printf.h"
+#include <xuartlite_l.h>
 #include <math.h>
 
 MidiMsg read_midi_msg(void)
 {
 	MidiMsg msg;
-	XUartLite_SendByte(UART_REG,'a');
 	msg.status = XUartLite_RecvByte(MIDI_REG);
 	msg.pitch = XUartLite_RecvByte(MIDI_REG);
 	msg.velocity = XUartLite_RecvByte(MIDI_REG);

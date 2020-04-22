@@ -1,4 +1,5 @@
 set_false_path -through [get_ports "Reset"]
+set_false_path -through [get_ports "Interrupt"]
 create_waiver -internal -quiet -user microblaze -tags 12436 -type CDC -id CDC-26 -description "Invalid LUTRAM collision warning" \
   -to [get_pins -quiet "LOCKSTEP_Out_reg\[*\]/R"]
 create_waiver -internal -quiet -user microblaze -tags 12436 -type CDC -id CDC-26 -description "Invalid LUTRAM collision warning" \
