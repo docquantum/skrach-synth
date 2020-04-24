@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1587444867">
+<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1587689736">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="skrach_design_wrapper.drc"/>
   <File Type="BG-BGN" Name="skrach_design_wrapper.bgn"/>
@@ -84,10 +84,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/skrach_design/ip/skrach_design_mig_7series_0_2/board.prj">
+    <File Path="$PSRCDIR/sources_1/bd/skrach_design/ip/skrach_design_mig_7series_0_3/board.prj">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="ScopedToCell" Val="skrach_design_mig_7series_0_2"/>
+        <Attr Name="ScopedToCell" Val="skrach_design_mig_7series_0_3"/>
       </FileInfo>
     </File>
     <Config>
@@ -128,4 +128,12 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_lab4_ip_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_microblaze_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_dlmb_bram_if_cntlr_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_lmb_bram_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_ilmb_bram_if_cntlr_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_xbar_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_clk_wiz_1_3"/>
 </GenRun>

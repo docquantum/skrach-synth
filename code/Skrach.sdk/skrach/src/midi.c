@@ -2,6 +2,10 @@
 #include "xil_printf.h"
 #include <xuartlite_l.h>
 #include <math.h>
+#include <stdio.h>
+#include "xparameters.h"
+
+#define	MIDI_REG		XPAR_AXI_UARTLITE_1_BASEADDR
 
 MidiMsg read_midi_msg(void)
 {
@@ -13,6 +17,7 @@ MidiMsg read_midi_msg(void)
 	xil_printf("> status  : 0x%x\n\r", msg.status);
 	xil_printf("> S_type  : %s\n\r", status_type_to_string(msg.status));
 	xil_printf("> pitch   : 0x%x\n\r", msg.pitch);
+	printf("> freq    : %fHz\n\r", pitch_to_freq(msg.pitch));
 	xil_printf("> key     : %s%d\n\r", pitch_to_string(msg.pitch), (msg.pitch/12)-1);
 	xil_printf("> velocity: %d\n\r", msg.velocity);
 	return msg;

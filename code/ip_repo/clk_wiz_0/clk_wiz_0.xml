@@ -1312,7 +1312,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a4bba804</spirit:value>
+            <spirit:value>9:5340944f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2444,31 +2444,31 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLKOUT1_DRIVES</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT1_DRIVES" spirit:order="235">BUFGCE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT1_DRIVES" spirit:order="235">BUFG</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLKOUT2_DRIVES</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT2_DRIVES" spirit:order="236">BUFGCE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT2_DRIVES" spirit:order="236">BUFG</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLKOUT3_DRIVES</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT3_DRIVES" spirit:order="237">BUFGCE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT3_DRIVES" spirit:order="237">BUFG</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLKOUT4_DRIVES</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT4_DRIVES" spirit:order="238">BUFGCE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT4_DRIVES" spirit:order="238">BUFG</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLKOUT5_DRIVES</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT5_DRIVES" spirit:order="239">BUFGCE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT5_DRIVES" spirit:order="239">BUFG</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLKOUT6_DRIVES</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT6_DRIVES" spirit:order="240">BUFGCE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT6_DRIVES" spirit:order="240">BUFG</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_CLKOUT7_DRIVES</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT7_DRIVES" spirit:order="241">BUFGCE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CLKOUT7_DRIVES" spirit:order="241">BUFG</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_INCLK_SUM_ROW0</spirit:name>
@@ -2689,7 +2689,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_USE_SAFE_CLOCK_STARTUP</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_USE_SAFE_CLOCK_STARTUP" spirit:order="500">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_USE_SAFE_CLOCK_STARTUP" spirit:order="500">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_USE_CLOCK_SEQUENCING</spirit:name>
@@ -3437,10 +3437,6 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_list_1abc57fd</spirit:name>
-      <spirit:enumeration>BUFGCE</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_1d3de01d</spirit:name>
       <spirit:enumeration>WAVEFORM</spirit:enumeration>
       <spirit:enumeration>LATENCY</spirit:enumeration>
@@ -3508,6 +3504,14 @@
       <spirit:enumeration spirit:text="EXTERNAL">EXTERNAL</spirit:enumeration>
       <spirit:enumeration spirit:text="INTERNAL">INTERNAL</spirit:enumeration>
       <spirit:enumeration spirit:text="BUF IN">BUF_IN</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_66e4c81f</spirit:name>
+      <spirit:enumeration spirit:text="BUFG">BUFG</spirit:enumeration>
+      <spirit:enumeration spirit:text="BUFH">BUFH</spirit:enumeration>
+      <spirit:enumeration spirit:text="BUFGCE">BUFGCE</spirit:enumeration>
+      <spirit:enumeration spirit:text="BUFHCE">BUFHCE</spirit:enumeration>
+      <spirit:enumeration spirit:text="No buffer">No_buffer</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_77d3d587</spirit:name>
@@ -4096,31 +4100,31 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT1_DRIVES</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT1_DRIVES" spirit:choiceRef="choice_list_1abc57fd" spirit:order="86" spirit:configGroups="0 NoDisplay">BUFGCE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT1_DRIVES" spirit:choiceRef="choice_pairs_66e4c81f" spirit:order="86" spirit:configGroups="0 NoDisplay">BUFG</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT2_DRIVES</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT2_DRIVES" spirit:choiceRef="choice_list_1abc57fd" spirit:order="87" spirit:configGroups="0 NoDisplay">BUFGCE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT2_DRIVES" spirit:choiceRef="choice_pairs_66e4c81f" spirit:order="87" spirit:configGroups="0 NoDisplay">BUFG</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT3_DRIVES</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT3_DRIVES" spirit:choiceRef="choice_list_1abc57fd" spirit:order="88" spirit:configGroups="0 NoDisplay">BUFGCE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT3_DRIVES" spirit:choiceRef="choice_pairs_66e4c81f" spirit:order="88" spirit:configGroups="0 NoDisplay">BUFG</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT4_DRIVES</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT4_DRIVES" spirit:choiceRef="choice_list_1abc57fd" spirit:order="89" spirit:configGroups="0 NoDisplay">BUFGCE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT4_DRIVES" spirit:choiceRef="choice_pairs_66e4c81f" spirit:order="89" spirit:configGroups="0 NoDisplay">BUFG</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT5_DRIVES</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT5_DRIVES" spirit:choiceRef="choice_list_1abc57fd" spirit:order="90" spirit:configGroups="0 NoDisplay">BUFGCE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT5_DRIVES" spirit:choiceRef="choice_pairs_66e4c81f" spirit:order="90" spirit:configGroups="0 NoDisplay">BUFG</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT6_DRIVES</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT6_DRIVES" spirit:choiceRef="choice_list_1abc57fd" spirit:order="91" spirit:configGroups="0 NoDisplay">BUFGCE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT6_DRIVES" spirit:choiceRef="choice_pairs_66e4c81f" spirit:order="91" spirit:configGroups="0 NoDisplay">BUFG</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT7_DRIVES</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT7_DRIVES" spirit:choiceRef="choice_list_1abc57fd" spirit:order="92" spirit:configGroups="0 NoDisplay">BUFGCE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLKOUT7_DRIVES" spirit:choiceRef="choice_pairs_66e4c81f" spirit:order="92" spirit:configGroups="0 NoDisplay">BUFG</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>FEEDBACK_SOURCE</spirit:name>
@@ -4533,7 +4537,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>USE_SAFE_CLOCK_STARTUP</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USE_SAFE_CLOCK_STARTUP" spirit:order="85.5" spirit:configGroups="0; NoDisplay">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USE_SAFE_CLOCK_STARTUP" spirit:order="85.5" spirit:configGroups="0; NoDisplay">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>USE_CLOCK_SEQUENCING</spirit:name>
@@ -4733,6 +4737,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.WUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT1_DRIVES" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT1_JITTER" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT1_PHASE_ERROR" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT1_REQUESTED_OUT_FREQ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT2_DRIVES" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT2_JITTER" xilinx:valueSource="user"/>
@@ -4746,6 +4751,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT7_DRIVES" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLK_IN1_BOARD_INTERFACE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.FEEDBACK_SOURCE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.MMCM_CLKFBOUT_MULT_F" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.MMCM_CLKOUT0_DIVIDE_F" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.MMCM_CLKOUT1_DIVIDE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.NUM_OUT_CLKS" xilinx:valueSource="user"/>

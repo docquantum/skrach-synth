@@ -1,4 +1,0 @@
-SET_ERROR_CODE 0
-SET_XMDF_PATH ./skrach_design_mig_7series_0_2_xmdf.tcl
-SET_PARAMETER component_name skrach_design_mig_7series_0_2
-SET_PARAMETER xml_input_file  ./skrach_design_mig_7series_0_2/mig.prj

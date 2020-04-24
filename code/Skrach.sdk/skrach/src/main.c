@@ -10,13 +10,16 @@ int main()
 	xil_printf("Setup complete, welcome!\n\r");
 	xil_printf("> Freq : %u\n\r", phase_to_freq());
 
+
     while(1)
     {
     	MidiMsg msg = read_midi_msg();
     	if(msg.status == NOTE_ON)
     	{
+    		xil_printf("> Freq : %u\n\r", phase_to_freq());
     		freq_to_phase(pitch_to_freq(msg.pitch));
     	}
+
     }
 
     teardown();

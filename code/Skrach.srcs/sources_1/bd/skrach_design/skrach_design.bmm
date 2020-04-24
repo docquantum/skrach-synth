@@ -5,7 +5,7 @@ DEFINE_MEMORY_TYPE microblaze_0_local_memory_lmb_bram_128K_7_MEM_DEVICE [0x00020
 ADDRESS_MAP microblaze_0 MICROBLAZE-LE 100 microblaze_0
    ADDRESS_SPACE microblaze_0_local_memory_lmb_bram_128K_7_ADDR_SPACE microblaze_0_local_memory_lmb_bram_128K_7_MEM_DEVICE  [0x00000000:0x0001FFFF] microblaze_0_local_memory/dlmb_bram_if_cntlr
      BUS_BLOCK
-      microblaze_0_local_memory_lmb_bram_128K_7_BUS_BLK [31:0] INPUT = "skrach_design_lmb_bram_2.mem";
+      microblaze_0_local_memory_lmb_bram_128K_7_BUS_BLK [31:0] INPUT = "skrach_design_lmb_bram_3.mem";
      END_BUS_BLOCK;
    END_ADDRESS_SPACE;
 END_ADDRESS_MAP;

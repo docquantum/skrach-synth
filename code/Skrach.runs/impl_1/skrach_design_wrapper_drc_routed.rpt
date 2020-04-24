@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Tue Apr 21 00:09:56 2020
+| Date         : Thu Apr 23 20:00:12 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_drc -file skrach_design_wrapper_drc_routed.rpt -pb skrach_design_wrapper_drc_routed.pb -rpx skrach_design_wrapper_drc_routed.rpx
 | Design       : skrach_design_wrapper
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 16
+             Violations found: 18
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
@@ -34,6 +34,7 @@ Table of Contents
 | DPOP-1    | Warning  | PREG Output pipelining                              | 2          |
 | DPOP-2    | Warning  | MREG Output pipelining                              | 1          |
 | REQP-1709 | Warning  | Clock output buffering                              | 1          |
+| RPBF-3    | Warning  | IO port buffering is incomplete                     | 2          |
 | RTSTAT-10 | Warning  | No routable loads                                   | 1          |
 +-----------+----------+-----------------------------------------------------+------------+
 
@@ -122,9 +123,19 @@ Clock output buffering
 PLLE2_ADV connectivity violation. The signal skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/pll_clk3_out on the skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
 Related violations: <none>
 
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port scl_0 expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#2 Warning
+IO port buffering is incomplete  
+Device port sda_0 expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
 RTSTAT-10#1 Warning
 No routable loads  
-15 net(s) have no routable loads. The problem bus(es) and/or net(s) are skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/user_valid, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/user_valid, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/user_valid, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/user_valid, skrach_design_i/microblaze_0_axi_periph/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/user_valid (the first 15 of 15 listed).
+2 net(s) have no routable loads. The problem bus(es) and/or net(s) are skrach_design_i/axi_smc/inst/m00_nodes/m00_b_node/inst/s_sc_areset, skrach_design_i/axi_smc/inst/m00_nodes/m00_r_node/inst/s_sc_areset.
 Related violations: <none>
 
 

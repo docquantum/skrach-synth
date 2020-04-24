@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Tue Apr 21 00:03:38 2020
+| Date         : Thu Apr 23 19:57:41 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_drc -file skrach_design_wrapper_drc_opted.rpt -pb skrach_design_wrapper_drc_opted.pb -rpx skrach_design_wrapper_drc_opted.rpx
 | Design       : skrach_design_wrapper
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 15
+             Violations found: 17
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
@@ -34,6 +34,7 @@ Table of Contents
 | DPOP-1    | Warning  | PREG Output pipelining                              | 2          |
 | DPOP-2    | Warning  | MREG Output pipelining                              | 1          |
 | REQP-1709 | Warning  | Clock output buffering                              | 1          |
+| RPBF-3    | Warning  | IO port buffering is incomplete                     | 2          |
 +-----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -119,6 +120,16 @@ Related violations: <none>
 REQP-1709#1 Warning
 Clock output buffering  
 PLLE2_ADV connectivity violation. The signal skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/pll_clk3_out on the skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port scl_0 expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#2 Warning
+IO port buffering is incomplete  
+Device port sda_0 expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 

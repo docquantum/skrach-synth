@@ -1,10 +1,6 @@
 #ifndef MIDI_H   /* prevent circular inclusions */
 #define MIDI_H   /* by using protection macros */
 
-#include "xparameters.h"
-
-#define	MIDI_REG		XPAR_AXI_UARTLITE_1_BASEADDR
-
 typedef enum StatusType
 {
 	INVALID            = 0x00,

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Tue Apr 21 00:10:52 2020
+| Date             : Thu Apr 23 20:00:27 2020
 | Host             : QuantumNet-L4 running 64-bit Arch Linux
 | Command          : report_power -file skrach_design_wrapper_power_routed.rpt -pb skrach_design_wrapper_power_summary_routed.pb -rpx skrach_design_wrapper_power_routed.rpx
 | Design           : skrach_design_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.223        |
+| Total On-Chip Power (W)  | 1.252        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.068        |
+| Dynamic (W)              | 1.097        |
 | Device Static (W)        | 0.155        |
 | Effective TJA (C/W)      | 3.3          |
 | Max Ambient (C)          | 80.9         |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.067 |       30 |       --- |             --- |
-| Slice Logic              |     0.022 |    26986 |       --- |             --- |
-|   LUT as Logic           |     0.019 |    10542 |    133800 |            7.88 |
-|   Register               |    <0.001 |    10369 |    267600 |            3.87 |
-|   CARRY4                 |    <0.001 |      398 |     33450 |            1.19 |
-|   LUT as Distributed RAM |    <0.001 |      760 |     46200 |            1.65 |
-|   F7/F8 Muxes            |    <0.001 |      279 |    133800 |            0.21 |
-|   LUT as Shift Register  |    <0.001 |      427 |     46200 |            0.92 |
-|   Others                 |    <0.001 |     1393 |       --- |             --- |
-| Signals                  |     0.031 |    19936 |       --- |             --- |
-| Block RAM                |     0.091 |       67 |       365 |           18.36 |
+| Clocks                   |     0.074 |       29 |       --- |             --- |
+| Slice Logic              |     0.028 |    29714 |       --- |             --- |
+|   LUT as Logic           |     0.024 |    10789 |    133800 |            8.06 |
+|   LUT as Distributed RAM |     0.002 |     1014 |     46200 |            2.19 |
+|   Register               |     0.002 |    12065 |    267600 |            4.51 |
+|   CARRY4                 |    <0.001 |      302 |     33450 |            0.90 |
+|   LUT as Shift Register  |    <0.001 |      478 |     46200 |            1.03 |
+|   F7/F8 Muxes            |    <0.001 |      183 |    133800 |            0.14 |
+|   Others                 |    <0.001 |     1477 |       --- |             --- |
+| Signals                  |     0.043 |    21459 |       --- |             --- |
+| Block RAM                |     0.096 |       69 |       365 |           18.90 |
 | MMCM                     |     0.324 |        3 |        10 |           30.00 |
 | PLL                      |     0.092 |        1 |        10 |           10.00 |
-| DSPs                     |     0.002 |        5 |       740 |            0.68 |
-| I/O                      |     0.300 |       59 |       285 |           20.70 |
+| DSPs                     |     0.003 |        5 |       740 |            0.68 |
+| I/O                      |     0.298 |       59 |       285 |           20.70 |
 | PHASER                   |     0.134 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.155 |          |           |                 |
-| Total                    |     1.223 |          |           |                 |
+| Total                    |     1.252 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,9 +80,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.286 |       0.250 |      0.037 |
+| Vccint    |       1.000 |     0.317 |       0.280 |      0.037 |
 | Vccaux    |       1.800 |     0.373 |       0.342 |      0.031 |
-| Vcco33    |       3.300 |     0.006 |       0.001 |      0.005 |
+| Vcco33    |       3.300 |     0.005 |       0.000 |      0.005 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.131 |       0.126 |      0.005 |
@@ -136,14 +136,13 @@ Table of Contents
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 | Clock                                                                                                                                                     | Domain                                                                                                                                                                                                                               | Constraint (ns) |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| clk_out1_clk_wiz_0_1                                                                                                                                      | skrach_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_out1_clk_wiz_0                                                                                                            |            81.4 |
-| clk_out1_skrach_design_clk_wiz_1_2                                                                                                                        | skrach_design_i/clk_wiz_1/inst/clk_out1                                                                                                                                                                                              |            10.0 |
-| clk_out1_skrach_design_clk_wiz_1_2                                                                                                                        | skrach_design_i/clk_wiz_1/inst/clk_out1_skrach_design_clk_wiz_1_2                                                                                                                                                                    |            10.0 |
-| clk_out2_clk_wiz_0_1                                                                                                                                      | skrach_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_out2_clk_wiz_0                                                                                                            |            20.0 |
-| clk_out2_skrach_design_clk_wiz_1_2                                                                                                                        | skrach_design_i/clk_wiz_1/inst/clk_out2_skrach_design_clk_wiz_1_2                                                                                                                                                                    |             5.0 |
+| clk_out1_audio_clk_wiz_1                                                                                                                                  | skrach_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_out1_audio_clk_wiz                                                                                                        |            81.4 |
+| clk_out1_skrach_design_clk_wiz_1_3                                                                                                                        | skrach_design_i/clk_wiz_1/inst/clk_out1                                                                                                                                                                                              |            10.0 |
+| clk_out1_skrach_design_clk_wiz_1_3                                                                                                                        | skrach_design_i/clk_wiz_1/inst/clk_out1_skrach_design_clk_wiz_1_3                                                                                                                                                                    |            10.0 |
+| clk_out2_skrach_design_clk_wiz_1_3                                                                                                                        | skrach_design_i/clk_wiz_1/inst/clk_out2_skrach_design_clk_wiz_1_3                                                                                                                                                                    |             5.0 |
 | clk_pll_i                                                                                                                                                 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                    |            10.0 |
-| clkfbout_clk_wiz_0_1                                                                                                                                      | skrach_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clkfbout_clk_wiz_0                                                                                                            |            10.0 |
-| clkfbout_skrach_design_clk_wiz_1_2                                                                                                                        | skrach_design_i/clk_wiz_1/inst/clkfbout_skrach_design_clk_wiz_1_2                                                                                                                                                                    |            10.0 |
+| clkfbout_audio_clk_wiz_1                                                                                                                                  | skrach_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clkfbout_audio_clk_wiz                                                                                                        |            10.0 |
+| clkfbout_skrach_design_clk_wiz_1_3                                                                                                                        | skrach_design_i/clk_wiz_1/inst/clkfbout_skrach_design_clk_wiz_1_3                                                                                                                                                                    |            10.0 |
 | freq_refclk                                                                                                                                               | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/freq_refclk                                                                                                                                  |             1.2 |
 | iserdes_clkdiv                                                                                                                                            | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv       |            10.0 |
 | iserdes_clkdiv_1                                                                                                                                          | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clkdiv       |            10.0 |
@@ -176,24 +175,20 @@ Table of Contents
 +-------------------------------------------+-----------+
 | Name                                      | Power (W) |
 +-------------------------------------------+-----------+
-| skrach_design_wrapper                     |     1.068 |
-|   skrach_design_i                         |     1.065 |
+| skrach_design_wrapper                     |     1.097 |
+|   skrach_design_i                         |     1.095 |
+|     axi_smc                               |     0.040 |
+|       inst                                |     0.040 |
 |     clk_wiz_1                             |     0.107 |
 |       inst                                |     0.107 |
-|     lab4_ip_0                             |     0.131 |
-|       U0                                  |     0.131 |
-|     microblaze_0                          |     0.107 |
-|       U0                                  |     0.107 |
-|     microblaze_0_axi_periph               |     0.015 |
-|       m01_couplers                        |     0.002 |
-|       m02_couplers                        |     0.002 |
-|       m03_couplers                        |     0.006 |
-|       m04_couplers                        |     0.002 |
-|       xbar                                |     0.004 |
-|     microblaze_0_local_memory             |     0.014 |
-|       lmb_bram                            |     0.014 |
-|     mig_7series_0                         |     0.687 |
-|       u_skrach_design_mig_7series_0_2_mig |     0.687 |
+|     lab4_ip_0                             |     0.126 |
+|       U0                                  |     0.126 |
+|     microblaze_0                          |     0.127 |
+|       U0                                  |     0.127 |
+|     microblaze_0_local_memory             |     0.007 |
+|       lmb_bram                            |     0.007 |
+|     mig_7series_0                         |     0.683 |
+|       u_skrach_design_mig_7series_0_2_mig |     0.683 |
 +-------------------------------------------+-----------+
 
 

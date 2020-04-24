@@ -16,7 +16,7 @@
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="32767"/>
           <Parity ON="false" NumBits="0"/>
-          <MemFile Name="skrach_design_lmb_bram_2.mem"/>
+          <MemFile Name="skrach_design_lmb_bram_3.mem"/>
         </BitLane>
       </BusBlock>
     </AddressSpace>
