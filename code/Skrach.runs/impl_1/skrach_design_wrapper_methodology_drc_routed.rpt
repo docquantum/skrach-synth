@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Apr 23 20:00:19 2020
+| Date         : Mon Apr 27 08:57:08 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_methodology -file skrach_design_wrapper_methodology_drc_routed.rpt -pb skrach_design_wrapper_methodology_drc_routed.pb -rpx skrach_design_wrapper_methodology_drc_routed.rpx
 | Design       : skrach_design_wrapper
@@ -23,120 +23,594 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 45
-+-----------+------------------+----------------------------------------------------+------------+
-| Rule      | Severity         | Description                                        | Violations |
-+-----------+------------------+----------------------------------------------------+------------+
-| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
-| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 5          |
-| PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 12         |
-| TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
-| TIMING-18 | Warning          | Missing input or output delay                      | 8          |
-| XDCB-5    | Warning          | Runtime inefficient way to find pin objects        | 1          |
-| REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF                  | 16         |
-+-----------+------------------+----------------------------------------------------+------------+
+             Violations found: 137
++-----------+----------+-------------------------------------------------+------------+
+| Rule      | Severity | Description                                     | Violations |
++-----------+----------+-------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                    | 6          |
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain | 13         |
+| TIMING-9  | Warning  | Unknown CDC Logic                               | 1          |
+| TIMING-16 | Warning  | Large setup violation                           | 95         |
+| TIMING-18 | Warning  | Missing input or output delay                   | 5          |
+| XDCB-5    | Warning  | Runtime inefficient way to find pin objects     | 1          |
+| REQP-1959 | Advisory | connects_SERDES_RST_driver_not_FF               | 16         |
++-----------+----------+-------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-4#1 Critical Warning
-Invalid primary clock redefinition on a clock tree  
-Invalid clock redefinition on a clock tree. The primary clock skrach_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_in1 is defined downstream of clock clk_out1_skrach_design_clk_wiz_1_3 and overrides its insertion delay and/or waveform definition
-Related violations: <none>
-
-TIMING-27#1 Critical Warning
-Invalid primary clock on hierarchical pin  
-A primary clock skrach_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_in1 is created on an inappropriate internal pin skrach_design_i/lab4_ip_0/U0/lab4_ip_v1_0_S00_AXI_inst/dp_inst/audio_inst/audiocodec_master_clock/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
-Related violations: <none>
-
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell skrach_design_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell skrach_design_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Dbg_Shift_31_INST_0_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/clk_wiz_1/inst/seq_reg1_reg[0]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg1_reg[1]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg1_reg[2]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg1_reg[3]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg1_reg[4]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg1_reg[5]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg1_reg[6]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg1_reg[7]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg2_reg[0]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg2_reg[1]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg2_reg[2]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg2_reg[3]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg2_reg[4]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg2_reg[5]/CLR, skrach_design_i/clk_wiz_1/inst/seq_reg2_reg[6]/CLR (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell skrach_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_Serial_Unified_Completion.completion_status[15]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[0]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[10]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[26]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[3]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_0/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_1/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_10/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_11/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_12/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_2/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_3/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_4/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_5/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_6/CLR (the first 15 of 23 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell skrach_design_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell skrach_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_Serial_Unified_Completion.completion_status[15]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[0]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[1]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[2]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[3]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[0]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[1]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[2]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[3]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[0]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[1]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[2]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[3]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell skrach_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_Serial_Unified_Completion.completion_status[15]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[0]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[10]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[26]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[3]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_0/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_1/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_10/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_11/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_12/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_2/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_3/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_4/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_5/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_c_6/CLR (the first 15 of 23 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
-LUT cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rstdiv2_sync_r[11]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__0/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__1/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__10/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__11/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__12/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__13/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__14/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__15/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__16/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__17/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__18/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__19/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__2/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__3/PRE (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell skrach_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_Serial_Unified_Completion.completion_status[15]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[0]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[1]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[2]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_1_reg[3]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[0]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[1]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[2]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[3]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[0]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[1]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[2]/CLR, skrach_design_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.TDI_Shifter_reg[3]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rstdiv2_sync_r[11]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__0/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__1/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__10/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__11/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__12/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__13/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__14/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__15/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__16/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__17/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__18/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__19/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__2/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__3/PRE (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
 LUT drives async reset alert  
 LUT cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rstdiv2_sync_r[11]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][0]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][10]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][11]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][12]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][13]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][14]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][1]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][2]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][3]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][4]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][5]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][6]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][7]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][8]/PRE, skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][9]/PRE (the first 15 of 15 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X80Y172 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+The FDCE cell skrach_design_i/clk_wiz_1/inst/seq_reg4_reg[7] in site SLICE_X83Y146 is part of a synchronized register chain that is suboptimally placed as the load FDCE cell skrach_design_i/clk_wiz_1/inst/seq_reg3_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X83Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X68Y170 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X80Y179 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X71Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X78Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X69Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X82Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X70Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X81Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X68Y172 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X80Y177 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X67Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X81Y170 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X72Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X78Y177 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X68Y177 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X80Y169 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X66Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X82Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X70Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X78Y171 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X66Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#13 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X69Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_2_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning
 Unknown CDC Logic  
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.056 ns between skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int[26]_i_1_psdsp/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[26]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.114 ns between skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int[25]_i_1_psdsp/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[25]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.153 ns between skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int[17]_i_1_psdsp/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[17]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.155 ns between skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int[16]_i_1_psdsp/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[16]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.165 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[15]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.167 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.169 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[19]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.170 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[29]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.172 ns between skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/LRCLK_reg/C (clocked by clk_out3_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/lr_clk_sync_inst/sreg_reg[0]/D (clocked by clk_out1_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.183 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[31]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.190 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/LRCLK_reg/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.197 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/BCLK_int_reg/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.199 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[28]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.201 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.204 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.226 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[15]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.226 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[17]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.226 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.226 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[29]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.232 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[24]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -1.237 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[23]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -1.244 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[18]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -1.336 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -1.350 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[30]/D (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -1.391 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -1.391 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -1.417 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[16]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -1.417 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[28]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -1.417 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[30]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -1.485 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[18]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -1.485 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[19]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -1.485 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -1.485 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[31]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -1.506 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[26]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -1.506 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[27]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -1.506 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[28]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -1.506 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[29]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -1.506 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[8]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -1.506 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[9]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -1.516 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[23]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -1.516 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[24]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -1.516 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[25]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -1.516 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[26]/CE (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -1.549 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[1]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -1.549 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[22]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -1.549 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[23]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -1.549 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[24]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -1.549 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[2]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -1.549 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[3]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -1.549 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[4]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -1.549 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[5]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -1.644 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[11]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -1.644 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[12]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -1.644 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[18]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -1.644 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[19]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -1.644 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[20]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -1.644 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[25]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -1.644 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[6]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -1.644 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[7]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -1.676 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[2]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -1.676 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[3]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -1.676 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[4]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -1.676 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[5]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -1.676 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[6]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -1.676 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[7]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -1.676 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[8]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -1.676 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[9]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[0]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[10]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[11]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[12]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[13]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[14]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[15]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/D_L_O_int_reg[1]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -1.741 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[0]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -1.741 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[10]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -1.741 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[17]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -1.828 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Lrclk_reg[0]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#80 Warning
+Large setup violation  
+There is a large setup violation of -1.828 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Lrclk_reg[1]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#81 Warning
+Large setup violation  
+There is a large setup violation of -1.828 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Lrclk_reg[2]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#82 Warning
+Large setup violation  
+There is a large setup violation of -1.828 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Lrclk_reg[3]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#83 Warning
+Large setup violation  
+There is a large setup violation of -1.828 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Lrclk_reg[4]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#84 Warning
+Large setup violation  
+There is a large setup violation of -1.877 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[0]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#85 Warning
+Large setup violation  
+There is a large setup violation of -1.877 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#86 Warning
+Large setup violation  
+There is a large setup violation of -1.877 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[2]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -1.877 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[3]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -1.877 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[4]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -1.881 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[13]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -1.881 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[14]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -1.881 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[15]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -1.881 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[16]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#93 Warning
+Large setup violation  
+There is a large setup violation of -1.881 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[21]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#94 Warning
+Large setup violation  
+There is a large setup violation of -1.881 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[30]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#95 Warning
+Large setup violation  
+There is a large setup violation of -1.881 ns between skrach_design_i/rst_clk_wiz_1_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica/C (clocked by clk_out1_skrach_design_clk_wiz_1_3) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/Data_In_int_reg[31]/R (clocked by clk_out3_skrach_design_clk_wiz_1_3). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -161,27 +635,12 @@ Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on ac_bclk_0 relative to clock(s) sys_clock
-Related violations: <none>
-
-TIMING-18#6 Warning
-Missing input or output delay  
-An output delay is missing on ac_dac_sdata_0 relative to clock(s) sys_clock
-Related violations: <none>
-
-TIMING-18#7 Warning
-Missing input or output delay  
-An output delay is missing on ac_lrclk_0 relative to clock(s) sys_clock
-Related violations: <none>
-
-TIMING-18#8 Warning
-Missing input or output delay  
 An output delay is missing on usb_uart_txd relative to clock(s) sys_clock
 Related violations: <none>
 
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
-The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '23' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '24' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
 Current XDC: /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_mig_7series_0_3/skrach_design_mig_7series_0_3/user_design/constraints/skrach_design_mig_7series_0_3.xdc (Line: 354)
 Related violations: <none>
 

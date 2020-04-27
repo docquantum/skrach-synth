@@ -23,8 +23,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/ip_repo/axi_uartlite_v2_1"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../lab/ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -43,13 +42,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="17"/>
-    <Option Name="WTModelSimExportSim" Val="17"/>
-    <Option Name="WTQuestaExportSim" Val="17"/>
-    <Option Name="WTIesExportSim" Val="17"/>
-    <Option Name="WTVcsExportSim" Val="17"/>
-    <Option Name="WTRivieraExportSim" Val="17"/>
-    <Option Name="WTActivehdlExportSim" Val="17"/>
+    <Option Name="WTXSimExportSim" Val="27"/>
+    <Option Name="WTModelSimExportSim" Val="27"/>
+    <Option Name="WTQuestaExportSim" Val="27"/>
+    <Option Name="WTIesExportSim" Val="27"/>
+    <Option Name="WTVcsExportSim" Val="27"/>
+    <Option Name="WTRivieraExportSim" Val="27"/>
+    <Option Name="WTActivehdlExportSim" Val="27"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -70,29 +69,29 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3.xci">
-          <Proxy FileSetName="skrach_design_clk_wiz_1_3"/>
+        <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_skrach_core_0_1/skrach_design_skrach_core_0_1.xci">
+          <Proxy FileSetName="skrach_design_skrach_core_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_xbar_3/skrach_design_xbar_3.xci">
           <Proxy FileSetName="skrach_design_xbar_3"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_ilmb_bram_if_cntlr_3/skrach_design_ilmb_bram_if_cntlr_3.xci">
-          <Proxy FileSetName="skrach_design_ilmb_bram_if_cntlr_3"/>
+        <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_microblaze_0_3/skrach_design_microblaze_0_3.xci">
+          <Proxy FileSetName="skrach_design_microblaze_0_3"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_dlmb_bram_if_cntlr_3/skrach_design_dlmb_bram_if_cntlr_3.xci">
           <Proxy FileSetName="skrach_design_dlmb_bram_if_cntlr_3"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_ilmb_bram_if_cntlr_3/skrach_design_ilmb_bram_if_cntlr_3.xci">
+          <Proxy FileSetName="skrach_design_ilmb_bram_if_cntlr_3"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_lmb_bram_3/skrach_design_lmb_bram_3.xci">
           <Proxy FileSetName="skrach_design_lmb_bram_3"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_microblaze_0_3/skrach_design_microblaze_0_3.xci">
-          <Proxy FileSetName="skrach_design_microblaze_0_3"/>
+        <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3.xci">
+          <Proxy FileSetName="skrach_design_clk_wiz_1_3"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0.xci">
           <Proxy FileSetName="skrach_design_axi_smc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="skrach_design.bd" FileRelPathName="ip/skrach_design_lab4_ip_0_1/skrach_design_lab4_ip_0_1.xci">
-          <Proxy FileSetName="skrach_design_lab4_ip_0_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/skrach_design/hdl/skrach_design_wrapper.vhd">
@@ -187,9 +186,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="skrach_design_lab4_ip_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/skrach_design_lab4_ip_0_1">
+    <FileSet Name="skrach_design_skrach_core_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/skrach_design_skrach_core_0_1">
       <Config>
-        <Option Name="TopModule" Val="skrach_design_lab4_ip_0_1"/>
+        <Option Name="TopModule" Val="skrach_design_skrach_core_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -230,9 +229,7 @@
     </Run>
     <Run Id="skrach_design_clk_wiz_1_3_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_clk_wiz_1_3" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_clk_wiz_1_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_clk_wiz_1_3_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -241,9 +238,7 @@
     </Run>
     <Run Id="skrach_design_xbar_3_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_xbar_3" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_xbar_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_xbar_3_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -252,9 +247,7 @@
     </Run>
     <Run Id="skrach_design_ilmb_bram_if_cntlr_3_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_ilmb_bram_if_cntlr_3" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_ilmb_bram_if_cntlr_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_ilmb_bram_if_cntlr_3_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -263,9 +256,7 @@
     </Run>
     <Run Id="skrach_design_dlmb_bram_if_cntlr_3_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_dlmb_bram_if_cntlr_3" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_dlmb_bram_if_cntlr_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_dlmb_bram_if_cntlr_3_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -274,9 +265,7 @@
     </Run>
     <Run Id="skrach_design_lmb_bram_3_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_lmb_bram_3" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_lmb_bram_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_lmb_bram_3_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -285,9 +274,7 @@
     </Run>
     <Run Id="skrach_design_microblaze_0_3_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_microblaze_0_3" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_microblaze_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_microblaze_0_3_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -296,20 +283,16 @@
     </Run>
     <Run Id="skrach_design_axi_smc_0_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_axi_smc_0" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_axi_smc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_axi_smc_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="skrach_design_lab4_ip_0_1_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_lab4_ip_0_1" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_lab4_ip_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_lab4_ip_0_1_synth_1" IncludeInArchive="true">
+    <Run Id="skrach_design_skrach_core_0_1_synth_1" Type="Ft3:Synth" SrcSet="skrach_design_skrach_core_0_1" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_skrach_core_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/skrach_design_skrach_core_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -335,9 +318,7 @@
     </Run>
     <Run Id="skrach_design_clk_wiz_1_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_clk_wiz_1_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_clk_wiz_1_3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -353,9 +334,7 @@
     </Run>
     <Run Id="skrach_design_xbar_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_xbar_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_xbar_3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -371,9 +350,7 @@
     </Run>
     <Run Id="skrach_design_ilmb_bram_if_cntlr_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_ilmb_bram_if_cntlr_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_ilmb_bram_if_cntlr_3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -389,9 +366,7 @@
     </Run>
     <Run Id="skrach_design_dlmb_bram_if_cntlr_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_dlmb_bram_if_cntlr_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_dlmb_bram_if_cntlr_3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -407,9 +382,7 @@
     </Run>
     <Run Id="skrach_design_lmb_bram_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_lmb_bram_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_lmb_bram_3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -425,9 +398,7 @@
     </Run>
     <Run Id="skrach_design_microblaze_0_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_microblaze_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_microblaze_0_3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -443,9 +414,7 @@
     </Run>
     <Run Id="skrach_design_axi_smc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_axi_smc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_axi_smc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -459,11 +428,9 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="skrach_design_lab4_ip_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_lab4_ip_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_lab4_ip_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="skrach_design_skrach_core_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-1" ConstrsSet="skrach_design_skrach_core_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="skrach_design_skrach_core_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

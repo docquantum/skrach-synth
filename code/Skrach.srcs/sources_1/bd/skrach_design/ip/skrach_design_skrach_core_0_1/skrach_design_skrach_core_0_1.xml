@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>skrach_design_skrach_core_0_1</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S_AXI"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_NUM_REG</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">10</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH">32</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PROTOCOL</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.PROTOCOL">AXI4LITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ADDR_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH">6</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>AWUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.AWUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ARUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ARUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>BUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>READ_WRITE_MODE</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE">READ_WRITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_BURST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_LOCK</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_LOCK">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_PROT</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_PROT">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_CACHE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_QOS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_QOS">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_REGION</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_REGION">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_WSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_RRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MAX_BURST_LENGTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.PHASE">0.0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN">/clk_wiz_1_clk_out1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_READ_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S_AXI.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S_AXI_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S_AXI_RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S_AXI_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_CLK.ASSOCIATED_BUSIF">S_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_CLK.ASSOCIATED_RESET">s_axi_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_CLK.PHASE">0.0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_CLK.CLK_DOMAIN">/clk_wiz_1_clk_out1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S_AXI_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S_AXI</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S_AXI_reg</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S_AXI.S_AXI_REG.OFFSET_BASE_PARAM">C_S_AXI_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S_AXI.S_AXI_REG.OFFSET_HIGH_PARAM">C_S_AXI_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:modelName>skrach_core_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Apr 27 13:45:28 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:69a52729</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:69a52729</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesiswrapper</spirit:name>
+        <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>skrach_design_skrach_core_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Apr 27 13:45:28 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:69a52729</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:modelName>skrach_core_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Apr 27 13:45:28 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:9ded5790</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsimulationwrapper</spirit:name>
+        <spirit:displayName>VHDL Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>skrach_design_skrach_core_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Apr 27 13:45:28 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:9ded5790</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Apr 27 13:46:38 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:69a52729</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk_12</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_50</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ac_mclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ac_adc_sdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ac_dac_sdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ac_bclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ac_lrclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>scl</spirit:name>
+        <spirit:wire>
+          <spirit:direction>inout</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sda</spirit:name>
+        <spirit:wire>
+          <spirit:direction>inout</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH&apos;)) - 1)">5</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH&apos;)) - 1)">5</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">6</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/audio_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/Sync_ff.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/TWICtl.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/adsr.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/audio_codec_wrapper.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/counter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/i2s_ctl.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/mixer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/skrach_parts.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/operator.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/oscillator.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/skrach_core.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/hdl/skrach_core_v1_0_S_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/hdl/skrach_core_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/skrach_design_skrach_core_0_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/audio_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/Sync_ff.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/TWICtl.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/adsr.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/audio_codec_wrapper.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/counter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/i2s_ctl.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/mixer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/skrach_parts.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/operator.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/oscillator.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/src/skrach_core.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/hdl/skrach_core_v1_0_S_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7094/hdl/skrach_core_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/skrach_design_skrach_core_0_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>skrach_design_skrach_core_0_1.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>skrach_design_skrach_core_0_1_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>skrach_design_skrach_core_0_1_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>skrach_design_skrach_core_0_1_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>skrach_design_skrach_core_0_1_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Skrach Synch HW Core</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">6</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">skrach_design_skrach_core_0_1</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>skrach_core_v1.0</xilinx:displayName>
+      <xilinx:xpmLibraries>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+      </xilinx:xpmLibraries>
+      <xilinx:coreRevision>14</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@218a9d32_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ae1e87_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68fd6168_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@206b4853_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59b930ec_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a2cd06a_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ee0e893_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7737d36c_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79a2401c_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5952ab89_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@395dc99c_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cba0890_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a65a036_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4802fe44_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f258026_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3315af36_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d28cab4_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21fdf3d1_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d32cee7_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63b82c8_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@302a230c_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@427b00bc_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4073dcc2_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e434ec_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c2e04d5_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6df475ca_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a19a012_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef474c4_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14ac7db2_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a57882f_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@315510d1_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eb6a6b9_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4617464a_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1deae979_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@190c07a4_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e713a1d_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dc9876b_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc121e8_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c3ed74f_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@683a4cce_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7838816c_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@163df5b9_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29755dea_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14aabff1_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f01662f_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d8fff86_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a982d96_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7153d2a1_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36d67cf3_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf55c77_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b096cf_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7af0de21_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5155b1af_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a892ab5_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50dff08c_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7198cee6_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bf4ed51_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ab127c8_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e902db6_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bc43c0e_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35581e9_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13d4973a_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45044736_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e515fa9_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4969ab04_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@546f8ac5_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68cbf0d4_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e6505c8_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52e8e65b_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bbb3ed8_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@627ed772_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c225297_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75783492_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ca6401d_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ed1928_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e32119e_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63932fd9_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b40600_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f06c2a9_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ec454c7_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77392a69_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b369833_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@150723f2_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@192a7e56_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@193cd04b_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d74cd9_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cc0d528_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1165c076_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@649eb2cc_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eb1c0f0_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25761415_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35252126_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64503e7_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63c25f1d_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ca3f37_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67db2ec7_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e61f303_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@166178ec_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@419b2b4e_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36afb8cd_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@aefa171_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@157d7e60_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@162d78b3_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d8191d_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36eb5278_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d5f963_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12440b18_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d5b041c_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29a567f0_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61cab5ec_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c60f304_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56168453_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71513099_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e55c9d1_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b9cca19_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29d33c22_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a0f54f3_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a05006_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b6a5558_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@376cd4_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@364c5380_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4689790a_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51d8d4d2_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70e69e6_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79bb3cbe_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70a45f6e_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@686cb2d0_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fdd8bf2_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@360fb8ba_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@372e044e_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@110a4907_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1787ba17_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@337d69a0_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@731d3695_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fe72847_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d640187_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b334278_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20115995_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ecca022_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@724ac0ef_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bbe8d79_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@907c236_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@654343b8_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f0e1982_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bc19e86_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d089df_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fbdfde5_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d2025f0_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dc1c79e_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5069feab_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46f5a757_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dd92408_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36db6786_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35eb7673_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a7035f0_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@221ebc86_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3105e7ba_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@195f1fda_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a6d86ed_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@394df3b2_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@702bf1c6_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20bb3139_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9e3d0ec_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62320953_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@360fba61_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fd24fa0_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ccac472_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@587df581_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67998834_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f7d0939_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46f7fea3_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28aa1e9a_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c54cfd1_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@684602d_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@452a91d8_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24cee231_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57ac296e_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2405e344_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74abe3fb_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64066922_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5969ac61_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d66227_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64ad09ec_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d64062f_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ec8d11_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60582258_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62eacf6f_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a9eb6f5_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@762ff287_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@500ca71f_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49b69635_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@510b685b_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1541da14_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b167fcb_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e844a6d_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bb1311e_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5333a329_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ad009f0_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2481484a_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c677ae8_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77a77668_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e789076_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69265a92_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5baada2_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4315132_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@203c6603_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5775813_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@502ee12f_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ce8693_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52924aec_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3df26cdc_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ea198d6_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b1ff1a_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16e532ab_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@288771bf_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66227051_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40fcf545_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72f3c108_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64475e16_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff2a14c_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cf0168d_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26ac078_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1373fda5_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a1ea327_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ea91eea_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7afefb1d_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13f58711_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3458f624_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_CLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_CLK.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_CLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f7a74edf"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="c30980da"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="90ffcadc"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="7e1eea81"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="77846896"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5ce46e22"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

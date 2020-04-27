@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Thu Apr 23 17:07:43 2020
+// Date        : Mon Apr 27 08:27:35 2020
 // Host        : QuantumNet-L4 running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_sim_netlist.v
@@ -16,11 +16,15 @@
 module skrach_design_clk_wiz_1_3
    (clk_out1,
     clk_out2,
+    clk_out3,
+    clk_out4,
     resetn,
     locked,
     clk_in1);
   output clk_out1;
   output clk_out2;
+  output clk_out3;
+  output clk_out4;
   input resetn;
   output locked;
   input clk_in1;
@@ -28,6 +32,8 @@ module skrach_design_clk_wiz_1_3
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
   wire clk_out2;
+  wire clk_out3;
+  wire clk_out4;
   wire locked;
   wire resetn;
 
@@ -35,6 +41,8 @@ module skrach_design_clk_wiz_1_3
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
+        .clk_out3(clk_out3),
+        .clk_out4(clk_out4),
         .locked(locked),
         .resetn(resetn));
 endmodule
@@ -43,11 +51,15 @@ endmodule
 module skrach_design_clk_wiz_1_3_skrach_design_clk_wiz_1_3_clk_wiz
    (clk_out1,
     clk_out2,
+    clk_out3,
+    clk_out4,
     resetn,
     locked,
     clk_in1);
   output clk_out1;
   output clk_out2;
+  output clk_out3;
+  output clk_out4;
   input resetn;
   output locked;
   input clk_in1;
@@ -56,21 +68,31 @@ module skrach_design_clk_wiz_1_3_skrach_design_clk_wiz_1_3_clk_wiz
   wire clk_in1_skrach_design_clk_wiz_1_3;
   wire clk_out1;
   wire clk_out1_skrach_design_clk_wiz_1_3;
+  wire clk_out1_skrach_design_clk_wiz_1_3_en_clk;
   wire clk_out2;
   wire clk_out2_skrach_design_clk_wiz_1_3;
+  wire clk_out2_skrach_design_clk_wiz_1_3_en_clk;
+  wire clk_out3;
+  wire clk_out3_skrach_design_clk_wiz_1_3;
+  wire clk_out3_skrach_design_clk_wiz_1_3_en_clk;
+  wire clk_out4;
+  wire clk_out4_skrach_design_clk_wiz_1_3;
+  wire clk_out4_skrach_design_clk_wiz_1_3_en_clk;
   wire clkfbout_buf_skrach_design_clk_wiz_1_3;
   wire clkfbout_skrach_design_clk_wiz_1_3;
   wire locked;
   wire reset_high;
   wire resetn;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg1;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg2;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg3;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg4;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED;
@@ -93,34 +115,114 @@ module skrach_design_clk_wiz_1_3_skrach_design_clk_wiz_1_3_clk_wiz
        (.I(clk_in1),
         .O(clk_in1_skrach_design_clk_wiz_1_3));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout1_buf
-       (.I(clk_out1_skrach_design_clk_wiz_1_3),
-        .O(clk_out1));
+  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
+  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
+  BUFGCTRL #(
+    .INIT_OUT(0),
+    .PRESELECT_I0("TRUE"),
+    .PRESELECT_I1("FALSE"),
+    .SIM_DEVICE("7SERIES")) 
+    clkout1_buf
+       (.CE0(seq_reg1[7]),
+        .CE1(1'b0),
+        .I0(clk_out1_skrach_design_clk_wiz_1_3),
+        .I1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b1),
+        .O(clk_out1),
+        .S0(1'b1),
+        .S1(1'b0));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout2_buf
+  BUFH clkout1_buf_en
+       (.I(clk_out1_skrach_design_clk_wiz_1_3),
+        .O(clk_out1_skrach_design_clk_wiz_1_3_en_clk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
+  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
+  BUFGCTRL #(
+    .INIT_OUT(0),
+    .PRESELECT_I0("TRUE"),
+    .PRESELECT_I1("FALSE"),
+    .SIM_DEVICE("7SERIES")) 
+    clkout2_buf
+       (.CE0(seq_reg2[7]),
+        .CE1(1'b0),
+        .I0(clk_out2_skrach_design_clk_wiz_1_3),
+        .I1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b1),
+        .O(clk_out2),
+        .S0(1'b1),
+        .S1(1'b0));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFH clkout2_buf_en
        (.I(clk_out2_skrach_design_clk_wiz_1_3),
-        .O(clk_out2));
+        .O(clk_out2_skrach_design_clk_wiz_1_3_en_clk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
+  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
+  BUFGCTRL #(
+    .INIT_OUT(0),
+    .PRESELECT_I0("TRUE"),
+    .PRESELECT_I1("FALSE"),
+    .SIM_DEVICE("7SERIES")) 
+    clkout3_buf
+       (.CE0(seq_reg3[7]),
+        .CE1(1'b0),
+        .I0(clk_out3_skrach_design_clk_wiz_1_3),
+        .I1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b1),
+        .O(clk_out3),
+        .S0(1'b1),
+        .S1(1'b0));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFH clkout3_buf_en
+       (.I(clk_out3_skrach_design_clk_wiz_1_3),
+        .O(clk_out3_skrach_design_clk_wiz_1_3_en_clk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
+  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
+  BUFGCTRL #(
+    .INIT_OUT(0),
+    .PRESELECT_I0("TRUE"),
+    .PRESELECT_I1("FALSE"),
+    .SIM_DEVICE("7SERIES")) 
+    clkout4_buf
+       (.CE0(seq_reg4[7]),
+        .CE1(1'b0),
+        .I0(clk_out4_skrach_design_clk_wiz_1_3),
+        .I1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b1),
+        .O(clk_out4),
+        .S0(1'b1),
+        .S1(1'b0));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFH clkout4_buf_en
+       (.I(clk_out4_skrach_design_clk_wiz_1_3),
+        .O(clk_out4_skrach_design_clk_wiz_1_3_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(10.000000),
+    .CLKFBOUT_MULT_F(8.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(10.000000),
+    .CLKOUT0_DIVIDE_F(8.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(5),
+    .CLKOUT1_DIVIDE(4),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(65),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
-    .CLKOUT3_DIVIDE(1),
+    .CLKOUT3_DIVIDE(16),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
     .CLKOUT3_USE_FINE_PS("FALSE"),
@@ -163,9 +265,9 @@ module skrach_design_clk_wiz_1_3_skrach_design_clk_wiz_1_3_clk_wiz
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
         .CLKOUT1(clk_out2_skrach_design_clk_wiz_1_3),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_out3_skrach_design_clk_wiz_1_3),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
-        .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
+        .CLKOUT3(clk_out4_skrach_design_clk_wiz_1_3),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
         .CLKOUT4(NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED),
@@ -189,6 +291,326 @@ module skrach_design_clk_wiz_1_3_skrach_design_clk_wiz_1_3_clk_wiz
     mmcm_adv_inst_i_1
        (.I0(resetn),
         .O(reset_high));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[0] 
+       (.C(clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(locked),
+        .Q(seq_reg1[0]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[1] 
+       (.C(clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg1[0]),
+        .Q(seq_reg1[1]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[2] 
+       (.C(clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg1[1]),
+        .Q(seq_reg1[2]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[3] 
+       (.C(clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg1[2]),
+        .Q(seq_reg1[3]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[4] 
+       (.C(clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg1[3]),
+        .Q(seq_reg1[4]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[5] 
+       (.C(clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg1[4]),
+        .Q(seq_reg1[5]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[6] 
+       (.C(clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg1[5]),
+        .Q(seq_reg1[6]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[7] 
+       (.C(clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg1[6]),
+        .Q(seq_reg1[7]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[0] 
+       (.C(clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(locked),
+        .Q(seq_reg2[0]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[1] 
+       (.C(clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg2[0]),
+        .Q(seq_reg2[1]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[2] 
+       (.C(clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg2[1]),
+        .Q(seq_reg2[2]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[3] 
+       (.C(clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg2[2]),
+        .Q(seq_reg2[3]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[4] 
+       (.C(clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg2[3]),
+        .Q(seq_reg2[4]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[5] 
+       (.C(clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg2[4]),
+        .Q(seq_reg2[5]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[6] 
+       (.C(clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg2[5]),
+        .Q(seq_reg2[6]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[7] 
+       (.C(clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg2[6]),
+        .Q(seq_reg2[7]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[0] 
+       (.C(clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg4[7]),
+        .Q(seq_reg3[0]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[1] 
+       (.C(clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg3[0]),
+        .Q(seq_reg3[1]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[2] 
+       (.C(clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg3[1]),
+        .Q(seq_reg3[2]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[3] 
+       (.C(clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg3[2]),
+        .Q(seq_reg3[3]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[4] 
+       (.C(clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg3[3]),
+        .Q(seq_reg3[4]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[5] 
+       (.C(clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg3[4]),
+        .Q(seq_reg3[5]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[6] 
+       (.C(clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg3[5]),
+        .Q(seq_reg3[6]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[7] 
+       (.C(clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg3[6]),
+        .Q(seq_reg3[7]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[0] 
+       (.C(clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg1[7]),
+        .Q(seq_reg4[0]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[1] 
+       (.C(clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg4[0]),
+        .Q(seq_reg4[1]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[2] 
+       (.C(clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg4[1]),
+        .Q(seq_reg4[2]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[3] 
+       (.C(clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg4[2]),
+        .Q(seq_reg4[3]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[4] 
+       (.C(clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg4[3]),
+        .Q(seq_reg4[4]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[5] 
+       (.C(clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg4[4]),
+        .Q(seq_reg4[5]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[6] 
+       (.C(clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg4[5]),
+        .Q(seq_reg4[6]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[7] 
+       (.C(clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+        .CE(1'b1),
+        .CLR(reset_high),
+        .D(seq_reg4[6]),
+        .Q(seq_reg4[7]));
 endmodule
 `ifndef GLBL
 `define GLBL

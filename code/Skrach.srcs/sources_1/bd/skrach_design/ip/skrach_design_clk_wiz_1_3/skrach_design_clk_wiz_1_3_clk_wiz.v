@@ -56,8 +56,10 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1___100.000______0.000______50.0______130.958_____98.575
-// clk_out2___200.000______0.000______50.0______114.829_____98.575
+// clk_out1___100.000______0.000______50.0______144.719____114.212
+// clk_out2___200.000______0.000______50.0______126.455____114.212
+// clk_out3____12.308______0.000______50.0______220.282____114.212
+// clk_out4____50.000______0.000______50.0______167.017____114.212
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -72,6 +74,8 @@ module skrach_design_clk_wiz_1_3_clk_wiz
   // Clock out ports
   output        clk_out1,
   output        clk_out2,
+  output        clk_out3,
+  output        clk_out4,
   // Status and control signals
   input         resetn,
   output        locked,
@@ -112,9 +116,7 @@ wire clk_in2_skrach_design_clk_wiz_1_3;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
-   wire clkout2_unused;
    wire clkout2b_unused;
-   wire clkout3_unused;
    wire clkout3b_unused;
    wire clkout4_unused;
   wire        clkout5_unused;
@@ -122,6 +124,18 @@ wire clk_in2_skrach_design_clk_wiz_1_3;
   wire        clkfbstopped_unused;
   wire        clkinstopped_unused;
   wire        reset_high;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg1 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg2 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg3 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg4 = 0;
 
   MMCME2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
@@ -129,17 +143,25 @@ wire clk_in2_skrach_design_clk_wiz_1_3;
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (10.000),
+    .CLKFBOUT_MULT_F      (8.000),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (10.000),
+    .CLKOUT0_DIVIDE_F     (8.000),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (5),
+    .CLKOUT1_DIVIDE       (4),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
+    .CLKOUT2_DIVIDE       (65),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
+    .CLKOUT2_USE_FINE_PS  ("FALSE"),
+    .CLKOUT3_DIVIDE       (16),
+    .CLKOUT3_PHASE        (0.000),
+    .CLKOUT3_DUTY_CYCLE   (0.500),
+    .CLKOUT3_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (10.000))
   mmcm_adv_inst
     // Output clocks
@@ -150,9 +172,9 @@ wire clk_in2_skrach_design_clk_wiz_1_3;
     .CLKOUT0B            (clkout0b_unused),
     .CLKOUT1             (clk_out2_skrach_design_clk_wiz_1_3),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (clk_out3_skrach_design_clk_wiz_1_3),
     .CLKOUT2B            (clkout2b_unused),
-    .CLKOUT3             (clkout3_unused),
+    .CLKOUT3             (clk_out4_skrach_design_clk_wiz_1_3),
     .CLKOUT3B            (clkout3b_unused),
     .CLKOUT4             (clkout4_unused),
     .CLKOUT5             (clkout5_unused),
@@ -199,14 +221,86 @@ wire clk_in2_skrach_design_clk_wiz_1_3;
 
 
 
-  BUFG clkout1_buf
+
+  BUFGCE clkout1_buf
    (.O   (clk_out1),
+    .CE  (seq_reg1[7]),
     .I   (clk_out1_skrach_design_clk_wiz_1_3));
 
+  BUFH clkout1_buf_en
+   (.O   (clk_out1_skrach_design_clk_wiz_1_3_en_clk),
+    .I   (clk_out1_skrach_design_clk_wiz_1_3));
+  always @(posedge clk_out1_skrach_design_clk_wiz_1_3_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	    seq_reg1 <= 8'h00;
+    end
+    else begin
+        seq_reg1 <= {seq_reg1[6:0],locked_int};
+  
+    end
+  end
 
-  BUFG clkout2_buf
+
+  BUFGCE clkout2_buf
    (.O   (clk_out2),
+    .CE  (seq_reg2[7]),
     .I   (clk_out2_skrach_design_clk_wiz_1_3));
+ 
+  BUFH clkout2_buf_en
+   (.O   (clk_out2_skrach_design_clk_wiz_1_3_en_clk),
+    .I   (clk_out2_skrach_design_clk_wiz_1_3));
+ 
+  always @(posedge clk_out2_skrach_design_clk_wiz_1_3_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	  seq_reg2 <= 8'h00;
+    end
+    else begin
+        seq_reg2 <= {seq_reg2[6:0],locked_int};
+  
+    end
+  end
+
+
+  BUFGCE clkout3_buf
+   (.O   (clk_out3),
+    .CE  (seq_reg3[7]),
+    .I   (clk_out3_skrach_design_clk_wiz_1_3));
+ 
+  BUFH clkout3_buf_en
+   (.O   (clk_out3_skrach_design_clk_wiz_1_3_en_clk),
+    .I   (clk_out3_skrach_design_clk_wiz_1_3));
+ 
+  always @(posedge clk_out3_skrach_design_clk_wiz_1_3_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	  seq_reg3 <= 8'h00;
+    end
+    else begin
+        seq_reg3 <= {seq_reg3[6:0],seq_reg4[7]};
+  
+    end
+  end
+
+
+  BUFGCE clkout4_buf
+   (.O   (clk_out4),
+    .CE  (seq_reg4[7]),
+    .I   (clk_out4_skrach_design_clk_wiz_1_3));
+
+  BUFH clkout4_buf_en
+   (.O   (clk_out4_skrach_design_clk_wiz_1_3_en_clk),
+    .I   (clk_out4_skrach_design_clk_wiz_1_3));
+	
+  always @(posedge clk_out4_skrach_design_clk_wiz_1_3_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	  seq_reg4 <= 8'h00;
+    end
+    else begin
+        seq_reg4 <= {seq_reg4[6:0],seq_reg1[7]};
+  
+    end
+  end
+
+
 
 
 

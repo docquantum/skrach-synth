@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="skrach_design" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1587689637"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1587689637"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1587689637"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1587689637"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1587995130"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1587995130"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1587995130"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1587995130"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/skrach_design_microblaze_0_3/skrach_design_microblaze_0_3.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -135,8 +135,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/skrach_design_lab4_ip_0_1/skrach_design_lab4_ip_0_1.xci" Type="IP">
-        <Instance HierarchyPath="lab4_ip_0"/>
+      <File Name="ip/skrach_design_skrach_core_0_1/skrach_design_skrach_core_0_1.xci" Type="IP">
+        <Instance HierarchyPath="skrach_core_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

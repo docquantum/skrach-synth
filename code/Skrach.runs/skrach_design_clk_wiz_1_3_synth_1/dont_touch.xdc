@@ -12,6 +12,10 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # XDC: The top module name and the constraint reference have the same name: 'skrach_design_clk_wiz_1_3'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
+# XDC: /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_late.xdc
+# XDC: The top module name and the constraint reference have the same name: 'skrach_design_clk_wiz_1_3'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
 # XDC: /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'skrach_design_clk_wiz_1_3'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
@@ -24,6 +28,10 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # XDC: /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3.xdc
+# XDC: The top module name and the constraint reference have the same name: 'skrach_design_clk_wiz_1_3'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_late.xdc
 # XDC: The top module name and the constraint reference have the same name: 'skrach_design_clk_wiz_1_3'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 

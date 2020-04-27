@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
---Date        : Thu Apr 23 19:53:52 2020
+--Date        : Mon Apr 27 08:45:24 2020
 --Host        : QuantumNet-L4 running 64-bit Arch Linux
 --Command     : generate_target skrach_design_wrapper.bd
 --Design      : skrach_design_wrapper
@@ -48,8 +48,13 @@ architecture STRUCTURE of skrach_design_wrapper is
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC;
     rx_0 : in STD_LOGIC;
-    usb_uart_rxd : in STD_LOGIC;
-    usb_uart_txd : out STD_LOGIC;
+    ac_lrclk_0 : out STD_LOGIC;
+    ac_bclk_0 : out STD_LOGIC;
+    ac_dac_sdata_0 : out STD_LOGIC;
+    sda_0 : inout STD_LOGIC;
+    scl_0 : inout STD_LOGIC;
+    ac_adc_sdata_0 : in STD_LOGIC;
+    ac_mclk_0 : out STD_LOGIC;
     DDR3_0_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
     DDR3_0_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
     DDR3_0_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -64,13 +69,8 @@ architecture STRUCTURE of skrach_design_wrapper is
     DDR3_0_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
     DDR3_0_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
     DDR3_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ac_lrclk_0 : out STD_LOGIC;
-    ac_bclk_0 : out STD_LOGIC;
-    ac_dac_sdata_0 : out STD_LOGIC;
-    sda_0 : inout STD_LOGIC;
-    ac_mclk_0 : out STD_LOGIC;
-    scl_0 : inout STD_LOGIC;
-    ac_adc_sdata_0 : in STD_LOGIC
+    usb_uart_rxd : in STD_LOGIC;
+    usb_uart_txd : out STD_LOGIC
   );
   end component skrach_design;
 begin

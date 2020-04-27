@@ -552,17 +552,6 @@
 
 /******************************************************************/
 
-/* Definitions for driver LAB4_IP */
-#define XPAR_LAB4_IP_NUM_INSTANCES 1
-
-/* Definitions for peripheral LAB4_IP_0 */
-#define XPAR_LAB4_IP_0_DEVICE_ID 0
-#define XPAR_LAB4_IP_0_S00_AXI_BASEADDR 0x44A00000
-#define XPAR_LAB4_IP_0_S00_AXI_HIGHADDR 0x44A0FFFF
-
-
-/******************************************************************/
-
 /* Definitions for driver MIG_7SERIES */
 #define XPAR_XMIG7SERIES_NUM_INSTANCES 1U
 
@@ -592,6 +581,17 @@
 #define XPAR_MIG7SERIES_0_DDR_DQ_WIDTH 16U
 #define XPAR_MIG7SERIES_0_BASEADDR 0x80000000U
 #define XPAR_MIG7SERIES_0_HIGHADDR 0x9FFFFFFFU
+
+
+/******************************************************************/
+
+/* Definitions for driver SKRACH_CORE */
+#define XPAR_SKRACH_CORE_NUM_INSTANCES 1
+
+/* Definitions for peripheral SKRACH_CORE_0 */
+#define XPAR_SKRACH_CORE_0_DEVICE_ID 0
+#define XPAR_SKRACH_CORE_0_S_AXI_BASEADDR 0x44A00000
+#define XPAR_SKRACH_CORE_0_S_AXI_HIGHADDR 0x44A0FFFF
 
 
 /******************************************************************/

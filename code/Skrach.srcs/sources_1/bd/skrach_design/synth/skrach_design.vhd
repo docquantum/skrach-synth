@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
---Date        : Thu Apr 23 19:53:51 2020
+--Date        : Mon Apr 27 08:45:23 2020
 --Host        : QuantumNet-L4 running 64-bit Arch Linux
 --Command     : generate_target skrach_design.bd
 --Design      : skrach_design
@@ -1634,7 +1634,7 @@ entity skrach_design is
     usb_uart_txd : out STD_LOGIC
   );
   attribute core_generation_info : string;
-  attribute core_generation_info of skrach_design : entity is "skrach_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=skrach_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=28,da_board_cnt=26,da_clkrst_cnt=4,da_mb_cnt=5,synth_mode=OOC_per_IP}";
+  attribute core_generation_info of skrach_design : entity is "skrach_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=skrach_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=30,da_board_cnt=26,da_clkrst_cnt=4,da_mb_cnt=5,synth_mode=OOC_per_IP}";
   attribute hw_handoff : string;
   attribute hw_handoff of skrach_design : entity is "skrach_design.hwdef";
 end skrach_design;
@@ -1787,10 +1787,12 @@ architecture STRUCTURE of skrach_design is
   component skrach_design_clk_wiz_1_3 is
   port (
     resetn : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC;
-    clk_out2 : out STD_LOGIC
+    clk_out1 : out STD_LOGIC;
+    clk_out2 : out STD_LOGIC;
+    locked : out STD_LOGIC;
+    clk_out3 : out STD_LOGIC;
+    clk_out4 : out STD_LOGIC
   );
   end component skrach_design_clk_wiz_1_3;
   component skrach_design_rst_clk_wiz_1_100M_3 is
@@ -1924,6 +1926,7 @@ architecture STRUCTURE of skrach_design is
   component skrach_design_axi_smc_0 is
   port (
     aclk : in STD_LOGIC;
+    aclk1 : in STD_LOGIC;
     aresetn : in STD_LOGIC;
     S00_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     S00_AXI_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -1958,6 +1961,21 @@ architecture STRUCTURE of skrach_design is
     S00_AXI_rlast : out STD_LOGIC;
     S00_AXI_rvalid : out STD_LOGIC;
     S00_AXI_rready : in STD_LOGIC;
+    S01_AXI_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S01_AXI_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    S01_AXI_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S01_AXI_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S01_AXI_arlock : in STD_LOGIC_VECTOR ( 0 to 0 );
+    S01_AXI_arcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S01_AXI_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S01_AXI_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S01_AXI_arvalid : in STD_LOGIC;
+    S01_AXI_arready : out STD_LOGIC;
+    S01_AXI_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    S01_AXI_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S01_AXI_rlast : out STD_LOGIC;
+    S01_AXI_rvalid : out STD_LOGIC;
+    S01_AXI_rready : in STD_LOGIC;
     M00_AXI_awaddr : out STD_LOGIC_VECTOR ( 28 downto 0 );
     M00_AXI_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     M00_AXI_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1990,23 +2008,7 @@ architecture STRUCTURE of skrach_design is
     M00_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M00_AXI_rlast : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC;
-    M00_AXI_rready : out STD_LOGIC;
-    aclk1 : in STD_LOGIC;
-    S01_AXI_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S01_AXI_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    S01_AXI_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S01_AXI_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    S01_AXI_arlock : in STD_LOGIC_VECTOR ( 0 to 0 );
-    S01_AXI_arcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S01_AXI_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S01_AXI_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S01_AXI_arvalid : in STD_LOGIC;
-    S01_AXI_arready : out STD_LOGIC;
-    S01_AXI_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    S01_AXI_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S01_AXI_rlast : out STD_LOGIC;
-    S01_AXI_rvalid : out STD_LOGIC;
-    S01_AXI_rready : in STD_LOGIC
+    M00_AXI_rready : out STD_LOGIC
   );
   end component skrach_design_axi_smc_0;
   component skrach_design_rst_mig_7series_0_100M_3 is
@@ -2023,8 +2025,10 @@ architecture STRUCTURE of skrach_design is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component skrach_design_rst_mig_7series_0_100M_3;
-  component skrach_design_lab4_ip_0_1 is
+  component skrach_design_skrach_core_0_1 is
   port (
+    clk_12 : in STD_LOGIC;
+    clk_50 : in STD_LOGIC;
     ac_mclk : out STD_LOGIC;
     ac_adc_sdata : in STD_LOGIC;
     ac_dac_sdata : out STD_LOGIC;
@@ -2032,29 +2036,29 @@ architecture STRUCTURE of skrach_design is
     ac_lrclk : out STD_LOGIC;
     scl : inout STD_LOGIC;
     sda : inout STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_awready : out STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_wvalid : in STD_LOGIC;
+    s_axi_wready : out STD_LOGIC;
+    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_bvalid : out STD_LOGIC;
+    s_axi_bready : in STD_LOGIC;
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_arvalid : in STD_LOGIC;
+    s_axi_arready : out STD_LOGIC;
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_rvalid : out STD_LOGIC;
+    s_axi_rready : in STD_LOGIC;
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC
   );
-  end component skrach_design_lab4_ip_0_1;
+  end component skrach_design_skrach_core_0_1;
   signal Net : STD_LOGIC;
   signal Net1 : STD_LOGIC;
   signal ac_adc_sdata_0_1 : STD_LOGIC;
@@ -2094,11 +2098,9 @@ architecture STRUCTURE of skrach_design is
   signal axi_uartlite_0_UART_RxD : STD_LOGIC;
   signal axi_uartlite_0_UART_TxD : STD_LOGIC;
   signal clk_wiz_1_clk_out2 : STD_LOGIC;
+  signal clk_wiz_1_clk_out3 : STD_LOGIC;
+  signal clk_wiz_1_clk_out4 : STD_LOGIC;
   signal clk_wiz_1_locked : STD_LOGIC;
-  signal lab4_ip_0_ac_bclk : STD_LOGIC;
-  signal lab4_ip_0_ac_dac_sdata : STD_LOGIC;
-  signal lab4_ip_0_ac_lrclk : STD_LOGIC;
-  signal lab4_ip_0_ac_mclk : STD_LOGIC;
   signal mdm_1_debug_sys_rst : STD_LOGIC;
   signal microblaze_0_Clk : STD_LOGIC;
   signal microblaze_0_M_AXI_DC_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2272,6 +2274,10 @@ architecture STRUCTURE of skrach_design is
   signal rst_clk_wiz_1_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_mig_7series_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rx_0_1 : STD_LOGIC;
+  signal skrach_core_0_ac_bclk : STD_LOGIC;
+  signal skrach_core_0_ac_dac_sdata : STD_LOGIC;
+  signal skrach_core_0_ac_lrclk : STD_LOGIC;
+  signal skrach_core_0_ac_mclk : STD_LOGIC;
   signal sys_clock_1 : STD_LOGIC;
   signal NLW_axi_uartlite_0_interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_uartlite_1_interrupt_UNCONNECTED : STD_LOGIC;
@@ -2344,10 +2350,10 @@ begin
   DDR3_0_reset_n <= mig_7series_0_DDR3_RESET_N;
   DDR3_0_we_n <= mig_7series_0_DDR3_WE_N;
   ac_adc_sdata_0_1 <= ac_adc_sdata_0;
-  ac_bclk_0 <= lab4_ip_0_ac_bclk;
-  ac_dac_sdata_0 <= lab4_ip_0_ac_dac_sdata;
-  ac_lrclk_0 <= lab4_ip_0_ac_lrclk;
-  ac_mclk_0 <= lab4_ip_0_ac_mclk;
+  ac_bclk_0 <= skrach_core_0_ac_bclk;
+  ac_dac_sdata_0 <= skrach_core_0_ac_dac_sdata;
+  ac_lrclk_0 <= skrach_core_0_ac_lrclk;
+  ac_mclk_0 <= skrach_core_0_ac_mclk;
   axi_uartlite_0_UART_RxD <= usb_uart_rxd;
   reset_1 <= reset;
   rx_0_1 <= rx_0;
@@ -2495,39 +2501,10 @@ clk_wiz_1: component skrach_design_clk_wiz_1_3
       clk_in1 => sys_clock_1,
       clk_out1 => microblaze_0_Clk,
       clk_out2 => clk_wiz_1_clk_out2,
+      clk_out3 => clk_wiz_1_clk_out3,
+      clk_out4 => clk_wiz_1_clk_out4,
       locked => clk_wiz_1_locked,
       resetn => reset_1
-    );
-lab4_ip_0: component skrach_design_lab4_ip_0_1
-     port map (
-      ac_adc_sdata => ac_adc_sdata_0_1,
-      ac_bclk => lab4_ip_0_ac_bclk,
-      ac_dac_sdata => lab4_ip_0_ac_dac_sdata,
-      ac_lrclk => lab4_ip_0_ac_lrclk,
-      ac_mclk => lab4_ip_0_ac_mclk,
-      s00_axi_aclk => microblaze_0_Clk,
-      s00_axi_araddr(3 downto 0) => microblaze_0_axi_periph_M02_AXI_ARADDR(3 downto 0),
-      s00_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
-      s00_axi_arprot(2 downto 0) => microblaze_0_axi_periph_M02_AXI_ARPROT(2 downto 0),
-      s00_axi_arready => microblaze_0_axi_periph_M02_AXI_ARREADY,
-      s00_axi_arvalid => microblaze_0_axi_periph_M02_AXI_ARVALID,
-      s00_axi_awaddr(3 downto 0) => microblaze_0_axi_periph_M02_AXI_AWADDR(3 downto 0),
-      s00_axi_awprot(2 downto 0) => microblaze_0_axi_periph_M02_AXI_AWPROT(2 downto 0),
-      s00_axi_awready => microblaze_0_axi_periph_M02_AXI_AWREADY,
-      s00_axi_awvalid => microblaze_0_axi_periph_M02_AXI_AWVALID,
-      s00_axi_bready => microblaze_0_axi_periph_M02_AXI_BREADY,
-      s00_axi_bresp(1 downto 0) => microblaze_0_axi_periph_M02_AXI_BRESP(1 downto 0),
-      s00_axi_bvalid => microblaze_0_axi_periph_M02_AXI_BVALID,
-      s00_axi_rdata(31 downto 0) => microblaze_0_axi_periph_M02_AXI_RDATA(31 downto 0),
-      s00_axi_rready => microblaze_0_axi_periph_M02_AXI_RREADY,
-      s00_axi_rresp(1 downto 0) => microblaze_0_axi_periph_M02_AXI_RRESP(1 downto 0),
-      s00_axi_rvalid => microblaze_0_axi_periph_M02_AXI_RVALID,
-      s00_axi_wdata(31 downto 0) => microblaze_0_axi_periph_M02_AXI_WDATA(31 downto 0),
-      s00_axi_wready => microblaze_0_axi_periph_M02_AXI_WREADY,
-      s00_axi_wstrb(3 downto 0) => microblaze_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
-      s00_axi_wvalid => microblaze_0_axi_periph_M02_AXI_WVALID,
-      scl => scl_0,
-      sda => sda_0
     );
 mdm_1: component skrach_design_mdm_1_3
      port map (
@@ -2866,5 +2843,38 @@ rst_mig_7series_0_100M: component skrach_design_rst_mig_7series_0_100M_3
       peripheral_aresetn(0) => rst_mig_7series_0_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_mig_7series_0_100M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => mig_7series_0_ui_clk
+    );
+skrach_core_0: component skrach_design_skrach_core_0_1
+     port map (
+      ac_adc_sdata => ac_adc_sdata_0_1,
+      ac_bclk => skrach_core_0_ac_bclk,
+      ac_dac_sdata => skrach_core_0_ac_dac_sdata,
+      ac_lrclk => skrach_core_0_ac_lrclk,
+      ac_mclk => skrach_core_0_ac_mclk,
+      clk_12 => clk_wiz_1_clk_out3,
+      clk_50 => clk_wiz_1_clk_out4,
+      s_axi_aclk => microblaze_0_Clk,
+      s_axi_araddr(5 downto 0) => microblaze_0_axi_periph_M02_AXI_ARADDR(5 downto 0),
+      s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      s_axi_arprot(2 downto 0) => microblaze_0_axi_periph_M02_AXI_ARPROT(2 downto 0),
+      s_axi_arready => microblaze_0_axi_periph_M02_AXI_ARREADY,
+      s_axi_arvalid => microblaze_0_axi_periph_M02_AXI_ARVALID,
+      s_axi_awaddr(5 downto 0) => microblaze_0_axi_periph_M02_AXI_AWADDR(5 downto 0),
+      s_axi_awprot(2 downto 0) => microblaze_0_axi_periph_M02_AXI_AWPROT(2 downto 0),
+      s_axi_awready => microblaze_0_axi_periph_M02_AXI_AWREADY,
+      s_axi_awvalid => microblaze_0_axi_periph_M02_AXI_AWVALID,
+      s_axi_bready => microblaze_0_axi_periph_M02_AXI_BREADY,
+      s_axi_bresp(1 downto 0) => microblaze_0_axi_periph_M02_AXI_BRESP(1 downto 0),
+      s_axi_bvalid => microblaze_0_axi_periph_M02_AXI_BVALID,
+      s_axi_rdata(31 downto 0) => microblaze_0_axi_periph_M02_AXI_RDATA(31 downto 0),
+      s_axi_rready => microblaze_0_axi_periph_M02_AXI_RREADY,
+      s_axi_rresp(1 downto 0) => microblaze_0_axi_periph_M02_AXI_RRESP(1 downto 0),
+      s_axi_rvalid => microblaze_0_axi_periph_M02_AXI_RVALID,
+      s_axi_wdata(31 downto 0) => microblaze_0_axi_periph_M02_AXI_WDATA(31 downto 0),
+      s_axi_wready => microblaze_0_axi_periph_M02_AXI_WREADY,
+      s_axi_wstrb(3 downto 0) => microblaze_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
+      s_axi_wvalid => microblaze_0_axi_periph_M02_AXI_WVALID,
+      scl => scl_0,
+      sda => sda_0
     );
 end STRUCTURE;

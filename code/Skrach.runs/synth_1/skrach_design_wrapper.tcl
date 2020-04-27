@@ -32,10 +32,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {/home/docquantum/.Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
 set_property board_part digilentinc.com:nexys_video:part0:1.1 [current_project]
-set_property ip_repo_paths {
-  /home/docquantum/homework/ce446_solovey/final/code/ip_repo/axi_uartlite_v2_1
-  /home/docquantum/homework/ce446_solovey/lab/ip_repo
-} [current_project]
+set_property ip_repo_paths /home/docquantum/homework/ce446_solovey/final/code/ip_repo [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/docquantum/homework/ce446_solovey/final/code/Skrach.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -55,6 +52,7 @@ set_property used_in_implementation false [get_files -all /home/docquantum/homew
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_mdm_1_3/skrach_design_mdm_1_3_ooc_trace.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_board.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_late.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_rst_clk_wiz_1_100M_3/skrach_design_rst_clk_wiz_1_100M_3_board.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_rst_clk_wiz_1_100M_3/skrach_design_rst_clk_wiz_1_100M_3.xdc]
@@ -69,6 +67,7 @@ set_property used_in_implementation false [get_files -all /home/docquantum/homew
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_mig_7series_0_3/skrach_design_mig_7series_0_3/user_design/constraints/skrach_design_mig_7series_0_3.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_mig_7series_0_3/skrach_design_mig_7series_0_3/user_design/constraints/skrach_design_mig_7series_0_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_mig_7series_0_3/skrach_design_mig_7series_0_3_board.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0_board.xdc]
@@ -95,12 +94,9 @@ set_property used_in_implementation false [get_files -all /home/docquantum/homew
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_27/bd_cd63_m00awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_28/bd_cd63_m00wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_29/bd_cd63_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_rst_mig_7series_0_100M_3/skrach_design_rst_mig_7series_0_100M_3_board.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_rst_mig_7series_0_100M_3/skrach_design_rst_mig_7series_0_100M_3.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_rst_mig_7series_0_100M_3/skrach_design_rst_mig_7series_0_100M_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/final/code/ip_repo/audio_clk_wiz/audio_clk_wiz.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/final/code/ip_repo/audio_clk_wiz/audio_clk_wiz_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/skrach_design_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_microblaze_0_3/data/mb_bootloop_le.elf]
 

@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -33,16 +34,14 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {/home/docquantum/.Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
 set_property board_part digilentinc.com:nexys_video:part0:1.1 [current_project]
-set_property ip_repo_paths {
-  /home/docquantum/homework/ce446_solovey/final/code/ip_repo/axi_uartlite_v2_1
-  /home/docquantum/homework/ce446_solovey/lab/ip_repo
-} [current_project]
+set_property ip_repo_paths /home/docquantum/homework/ce446_solovey/final/code/ip_repo [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/docquantum/homework/ce446_solovey/final/code/Skrach.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3.xci
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_board.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_late.xdc]
 set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_1_3/skrach_design_clk_wiz_1_3_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

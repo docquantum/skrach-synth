@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1587689736">
-  <File Type="VDS-TIMING-PB" Name="skrach_design_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="skrach_design_wrapper_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1587995133">
+  <File Type="PA-TCL" Name="skrach_design_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="skrach_design_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="skrach_design_wrapper.vds"/>
   <File Type="RDS-DCP" Name="skrach_design_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="skrach_design_wrapper_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="skrach_design_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="skrach_design_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="skrach_design_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="skrach_design_wrapper_reports.tcl"/>
-  <File Type="PA-TCL" Name="skrach_design_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/skrach_design/skrach_design.bd">
@@ -60,12 +57,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_lab4_ip_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_clk_wiz_1_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_xbar_3"/>
   <BlockFileSet Type="BlockSrcs" Name="skrach_design_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_skrach_core_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="skrach_design_microblaze_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="skrach_design_dlmb_bram_if_cntlr_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_lmb_bram_3"/>
   <BlockFileSet Type="BlockSrcs" Name="skrach_design_ilmb_bram_if_cntlr_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_xbar_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="skrach_design_clk_wiz_1_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="skrach_design_lmb_bram_3"/>
 </GenRun>

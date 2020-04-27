@@ -54,7 +54,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_a
 # IP: bd/skrach_design/ip/skrach_design_rst_mig_7series_0_100M_3/skrach_design_rst_mig_7series_0_100M_3.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_rst_mig_7series_0_100M_3 || ORIG_REF_NAME==skrach_design_rst_mig_7series_0_100M_3} -quiet] -quiet
 
-# IP: bd/skrach_design/ip/skrach_design_lab4_ip_0_1/skrach_design_lab4_ip_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_lab4_ip_0_1 || ORIG_REF_NAME==skrach_design_lab4_ip_0_1} -quiet] -quiet
+# IP: bd/skrach_design/ip/skrach_design_skrach_core_0_1/skrach_design_skrach_core_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==skrach_design_skrach_core_0_1 || ORIG_REF_NAME==skrach_design_skrach_core_0_1} -quiet] -quiet
 
 # XDC: bd/skrach_design/skrach_design_ooc.xdc
