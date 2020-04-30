@@ -2,17 +2,16 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr 23 17:06:45 2020
-# Process ID: 328414
-# Current directory: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1
+# Start of session at: Wed Apr 29 02:10:40 2020
+# Process ID: 184812
+# Current directory: /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1
 # Command line: vivado -log skrach_design_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source skrach_design_axi_smc_0.tcl
-# Log file: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.vds
-# Journal file: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/vivado.jou
+# Log file: /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.vds
+# Journal file: /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source skrach_design_axi_smc_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/docquantum/homework/ce446_solovey/final/code/ip_repo/axi_uartlite_v2_1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/docquantum/homework/ce446_solovey/lab/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/docquantum/ce446_solovey/final/code/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.1/data/ip'.
 Command: synth_design -top skrach_design_axi_smc_0 -part xc7a200tsbg484-1 -mode out_of_context
 Starting synth_design
@@ -20,20 +19,20 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 329267 
+INFO: Helper process launched with PID 185589 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1832.477 ; gain = 152.719 ; free physical = 313 ; free virtual = 2879
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1832.242 ; gain = 152.688 ; free physical = 391 ; free virtual = 3753
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'skrach_design_axi_smc_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/synth/skrach_design_axi_smc_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:10]
-INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_Y6LIBS' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1135]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_one_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_0/synth/bd_cd63_one_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6157] synthesizing module 'skrach_design_axi_smc_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/synth/skrach_design_axi_smc_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_Y6LIBS' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_one_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_0/synth/bd_cd63_one_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (1#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_one_0' (2#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_0/synth/bd_cd63_one_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr0_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/synth/bd_cd63_psr0_0.vhd:74]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (1#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_one_0' (2#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_0/synth/bd_cd63_one_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr0_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/synth/bd_cd63_psr0_0.vhd:74]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
@@ -43,8 +42,8 @@ INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr0_0' [/home/docquantum/homew
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/synth/bd_cd63_psr0_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/synth/bd_cd63_psr0_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
@@ -58,37 +57,37 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/docquantum/homew
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-INFO: [Synth 8-3491] module 'SRL16' declared at '/opt/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-3491] module 'SRL16' declared at '/opt/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [/opt/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684]
 	Parameter INIT bound to: 16'b0000000000000000 
 INFO: [Synth 8-6155] done synthesizing module 'SRL16' (3#1) [/opt/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -96,28 +95,28 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/docquantum/homework/ce
 	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'bd_cd63_psr0_0' (9#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/synth/bd_cd63_psr0_0.vhd:74]
-WARNING: [Synth 8-7023] instance 'psr0' of module 'bd_cd63_psr0_0' has 10 connections declared, but only 6 given [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1182]
-INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr_aclk_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/synth/bd_cd63_psr_aclk_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_cd63_psr0_0' (9#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/synth/bd_cd63_psr0_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'psr0' of module 'bd_cd63_psr0_0' has 10 connections declared, but only 6 given [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1182]
+INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr_aclk_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/synth/bd_cd63_psr_aclk_0.vhd:74]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
@@ -127,10 +126,10 @@ INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr_aclk_0' [/home/docquantum/h
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/synth/bd_cd63_psr_aclk_0.vhd:129]
-INFO: [Synth 8-256] done synthesizing module 'bd_cd63_psr_aclk_0' (10#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/synth/bd_cd63_psr_aclk_0.vhd:74]
-WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_cd63_psr_aclk_0' has 10 connections declared, but only 6 given [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1189]
-INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr_aclk1_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/synth/bd_cd63_psr_aclk1_0.vhd:74]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/synth/bd_cd63_psr_aclk_0.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'bd_cd63_psr_aclk_0' (10#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/synth/bd_cd63_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_cd63_psr_aclk_0' has 10 connections declared, but only 6 given [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1189]
+INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr_aclk1_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/synth/bd_cd63_psr_aclk1_0.vhd:74]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
@@ -140,17 +139,17 @@ INFO: [Synth 8-638] synthesizing module 'bd_cd63_psr_aclk1_0' [/home/docquantum/
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/synth/bd_cd63_psr_aclk1_0.vhd:129]
-INFO: [Synth 8-256] done synthesizing module 'bd_cd63_psr_aclk1_0' (11#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/synth/bd_cd63_psr_aclk1_0.vhd:74]
-WARNING: [Synth 8-7023] instance 'psr_aclk1' of module 'bd_cd63_psr_aclk1_0' has 10 connections declared, but only 6 given [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1196]
-WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_Y6LIBS does not have driver. [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1157]
-INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_Y6LIBS' (12#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1135]
-INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_10IOOUR' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1205]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00e_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_30/synth/bd_cd63_m00e_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00e_0' (21#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_30/synth/bd_cd63_m00e_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_10IOOUR' (22#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1205]
-INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_1MQ73SV' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1576]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00arn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_25/synth/bd_cd63_m00arn_0.sv:58]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/synth/bd_cd63_psr_aclk1_0.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'bd_cd63_psr_aclk1_0' (11#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/synth/bd_cd63_psr_aclk1_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'psr_aclk1' of module 'bd_cd63_psr_aclk1_0' has 10 connections declared, but only 6 given [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1196]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_Y6LIBS does not have driver. [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1157]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_Y6LIBS' (12#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_10IOOUR' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1205]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00e_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_30/synth/bd_cd63_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00e_0' (21#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_30/synth/bd_cd63_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_10IOOUR' (22#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1205]
+INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_1MQ73SV' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1576]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00arn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_25/synth/bd_cd63_m00arn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -231,13 +230,13 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00arn_0' (40#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_25/synth/bd_cd63_m00arn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00awn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_27/synth/bd_cd63_m00awn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00arn_0' (40#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_25/synth/bd_cd63_m00arn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00awn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_27/synth/bd_cd63_m00awn_0.sv:58]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00awn_0' (41#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_27/synth/bd_cd63_m00awn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00bn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_29/synth/bd_cd63_m00bn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00awn_0' (41#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_27/synth/bd_cd63_m00awn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00bn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_29/synth/bd_cd63_m00bn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized0' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -390,8 +389,8 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00bn_0' (42#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_29/synth/bd_cd63_m00bn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00rn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_26/synth/bd_cd63_m00rn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00bn_0' (42#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_29/synth/bd_cd63_m00bn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00rn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_26/synth/bd_cd63_m00rn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized2' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -471,8 +470,8 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00rn_0' (43#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_26/synth/bd_cd63_m00rn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00wn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_28/synth/bd_cd63_m00wn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00rn_0' (43#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_26/synth/bd_cd63_m00rn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00wn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_28/synth/bd_cd63_m00wn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized3' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized3' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -630,7 +629,7 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00wn_0' (44#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_28/synth/bd_cd63_m00wn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00wn_0' (44#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_28/synth/bd_cd63_m00wn_0.sv:58]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
@@ -640,21 +639,21 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_1MQ73SV' (45#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1576]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00s2a_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_24/synth/bd_cd63_m00s2a_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00s2a_0' (47#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_24/synth/bd_cd63_m00s2a_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s00a2s_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_12/synth/bd_cd63_s00a2s_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s00a2s_0' (49#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_12/synth/bd_cd63_s00a2s_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_70YJ4' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1881]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s00mmu_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_9/synth/bd_cd63_s00mmu_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s00mmu_0' (53#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_9/synth/bd_cd63_s00mmu_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s00sic_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_11/synth/bd_cd63_s00sic_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s00sic_0' (58#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_11/synth/bd_cd63_s00sic_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s00tr_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_10/synth/bd_cd63_s00tr_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s00tr_0' (61#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_10/synth/bd_cd63_s00tr_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_70YJ4' (62#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1881]
-INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_5UA7YI' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:2498]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_sarn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_13/synth/bd_cd63_sarn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_1MQ73SV' (45#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1576]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_m00s2a_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_24/synth/bd_cd63_m00s2a_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_m00s2a_0' (47#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_24/synth/bd_cd63_m00s2a_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s00a2s_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_12/synth/bd_cd63_s00a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s00a2s_0' (49#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_12/synth/bd_cd63_s00a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_70YJ4' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1881]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s00mmu_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_9/synth/bd_cd63_s00mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s00mmu_0' (53#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_9/synth/bd_cd63_s00mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s00sic_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_11/synth/bd_cd63_s00sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s00sic_0' (58#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_11/synth/bd_cd63_s00sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s00tr_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_10/synth/bd_cd63_s00tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s00tr_0' (61#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_10/synth/bd_cd63_s00tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_70YJ4' (62#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1881]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_5UA7YI' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:2498]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_sarn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_13/synth/bd_cd63_sarn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized5' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized5' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -807,16 +806,16 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_sarn_0' (63#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_13/synth/bd_cd63_sarn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_sawn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_15/synth/bd_cd63_sawn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_sarn_0' (63#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_13/synth/bd_cd63_sarn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_sawn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_15/synth/bd_cd63_sawn_0.sv:58]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_sawn_0' (64#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_15/synth/bd_cd63_sawn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_sbn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_17/synth/bd_cd63_sbn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_sawn_0' (64#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_15/synth/bd_cd63_sawn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_sbn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_17/synth/bd_cd63_sbn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized7' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized7' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -969,8 +968,8 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_sbn_0' (65#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_17/synth/bd_cd63_sbn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_srn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_14/synth/bd_cd63_srn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_sbn_0' (65#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_17/synth/bd_cd63_sbn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_srn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_14/synth/bd_cd63_srn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized9' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized9' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -1045,8 +1044,8 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Common 17-14] Message 'Synth 8-5772' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_srn_0' (66#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_14/synth/bd_cd63_srn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_swn_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_16/synth/bd_cd63_swn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_srn_0' (66#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_14/synth/bd_cd63_srn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_swn_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_16/synth/bd_cd63_swn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized10' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized10' [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -1116,39 +1115,39 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized10' [/op
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized10' (66#1) [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized10' (66#1) [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_swn_0' (67#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_16/synth/bd_cd63_swn_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_5UA7YI' (68#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:2498]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s01a2s_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_21/synth/bd_cd63_s01a2s_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s01a2s_0' (69#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_21/synth/bd_cd63_s01a2s_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 's01_entry_pipeline_imp_1781ZPG' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:2794]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s01mmu_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_18/synth/bd_cd63_s01mmu_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s01mmu_0' (70#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_18/synth/bd_cd63_s01mmu_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s01sic_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_20/synth/bd_cd63_s01sic_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s01sic_0' (71#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_20/synth/bd_cd63_s01sic_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s01tr_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_19/synth/bd_cd63_s01tr_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s01tr_0' (72#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_19/synth/bd_cd63_s01tr_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 's01_entry_pipeline_imp_1781ZPG' (73#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:2794]
-INFO: [Synth 8-6157] synthesizing module 's01_nodes_imp_11QKLVG' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:3084]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_sarn_1' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_22/synth/bd_cd63_sarn_1.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_sarn_1' (74#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_22/synth/bd_cd63_sarn_1.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_srn_1' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_23/synth/bd_cd63_srn_1.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_srn_1' (75#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_23/synth/bd_cd63_srn_1.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 's01_nodes_imp_11QKLVG' (76#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:3084]
-INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_Z8D6FY' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:3215]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_arsw_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_4/synth/bd_cd63_arsw_0.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_arsw_0' (79#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_4/synth/bd_cd63_arsw_0.sv:57]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_awsw_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_6/synth/bd_cd63_awsw_0.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_awsw_0' (80#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_6/synth/bd_cd63_awsw_0.sv:57]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_bsw_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_8/synth/bd_cd63_bsw_0.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_bsw_0' (81#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_8/synth/bd_cd63_bsw_0.sv:57]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_rsw_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_5/synth/bd_cd63_rsw_0.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_rsw_0' (82#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_5/synth/bd_cd63_rsw_0.sv:57]
-INFO: [Synth 8-6157] synthesizing module 'bd_cd63_wsw_0' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_7/synth/bd_cd63_wsw_0.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_wsw_0' (83#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_7/synth/bd_cd63_wsw_0.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_Z8D6FY' (84#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:3215]
-WARNING: [Synth 8-7023] instance 'switchboards' of module 'switchboards_imp_Z8D6FY' has 77 connections declared, but only 71 given [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1061]
-INFO: [Synth 8-6155] done synthesizing module 'bd_cd63' (85#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'skrach_design_axi_smc_0' (86#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/synth/skrach_design_axi_smc_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_swn_0' (67#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_16/synth/bd_cd63_swn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_5UA7YI' (68#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:2498]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s01a2s_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_21/synth/bd_cd63_s01a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s01a2s_0' (69#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_21/synth/bd_cd63_s01a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's01_entry_pipeline_imp_1781ZPG' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:2794]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s01mmu_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_18/synth/bd_cd63_s01mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s01mmu_0' (70#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_18/synth/bd_cd63_s01mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s01sic_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_20/synth/bd_cd63_s01sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s01sic_0' (71#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_20/synth/bd_cd63_s01sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_s01tr_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_19/synth/bd_cd63_s01tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_s01tr_0' (72#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_19/synth/bd_cd63_s01tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's01_entry_pipeline_imp_1781ZPG' (73#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:2794]
+INFO: [Synth 8-6157] synthesizing module 's01_nodes_imp_11QKLVG' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:3084]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_sarn_1' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_22/synth/bd_cd63_sarn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_sarn_1' (74#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_22/synth/bd_cd63_sarn_1.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_srn_1' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_23/synth/bd_cd63_srn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_srn_1' (75#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_23/synth/bd_cd63_srn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's01_nodes_imp_11QKLVG' (76#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:3084]
+INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_Z8D6FY' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:3215]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_arsw_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_4/synth/bd_cd63_arsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_arsw_0' (79#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_4/synth/bd_cd63_arsw_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_awsw_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_6/synth/bd_cd63_awsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_awsw_0' (80#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_6/synth/bd_cd63_awsw_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_bsw_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_8/synth/bd_cd63_bsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_bsw_0' (81#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_8/synth/bd_cd63_bsw_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_rsw_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_5/synth/bd_cd63_rsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_rsw_0' (82#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_5/synth/bd_cd63_rsw_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_cd63_wsw_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_7/synth/bd_cd63_wsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63_wsw_0' (83#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_7/synth/bd_cd63_wsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_Z8D6FY' (84#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:3215]
+WARNING: [Synth 8-7023] instance 'switchboards' of module 'switchboards_imp_Z8D6FY' has 77 connections declared, but only 71 given [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:1061]
+INFO: [Synth 8-6155] done synthesizing module 'bd_cd63' (85#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/synth/bd_cd63.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'skrach_design_axi_smc_0' (86#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/synth/skrach_design_axi_smc_0.v:57]
 WARNING: [Synth 8-3331] design sc_util_v1_0_4_pipeline__parameterized7 has unconnected port aclk
 WARNING: [Synth 8-3331] design sc_util_v1_0_4_pipeline__parameterized7 has unconnected port aclken
 WARNING: [Synth 8-3331] design sc_util_v1_0_4_pipeline__parameterized7 has unconnected port areset
@@ -1251,7 +1250,7 @@ WARNING: [Synth 8-3331] design xpm_memory_base__parameterized9 has unconnected p
 WARNING: [Synth 8-3331] design xpm_memory_base__parameterized9 has unconnected port dinb[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2018.102 ; gain = 338.344 ; free physical = 201 ; free virtual = 2536
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2017.898 ; gain = 338.344 ; free physical = 312 ; free virtual = 3401
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1264,10 +1263,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2036.945 ; gain = 357.188 ; free physical = 159 ; free virtual = 2398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2036.742 ; gain = 357.188 ; free physical = 190 ; free virtual = 3245
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2036.945 ; gain = 357.188 ; free physical = 159 ; free virtual = 2398
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2036.742 ; gain = 357.188 ; free physical = 191 ; free virtual = 3244
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1275,22 +1274,22 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/ooc.xdc] for cell 'inst'
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0_board.xdc] for cell 'inst/clk_map/psr0/U0'
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0_board.xdc] for cell 'inst/clk_map/psr0/U0'
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0.xdc] for cell 'inst/clk_map/psr0/U0'
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0.xdc] for cell 'inst/clk_map/psr0/U0'
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0_board.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0_board.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0_board.xdc] for cell 'inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0_board.xdc] for cell 'inst/clk_map/psr0/U0'
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0.xdc] for cell 'inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0.xdc] for cell 'inst/clk_map/psr0/U0'
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0_board.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0_board.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/dont_touch.xdc]
 Sourcing Tcl File [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
@@ -1394,27 +1393,27 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/skrach_design_axi_smc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2663.234 ; gain = 0.000 ; free physical = 2111 ; free virtual = 4072
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2662.039 ; gain = 0.000 ; free physical = 814 ; free virtual = 3692
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 39 instances were transformed.
   FDR => FDRE: 36 instances
   SRL16 => SRL16E: 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2663.234 ; gain = 0.000 ; free physical = 2076 ; free virtual = 4039
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2662.039 ; gain = 0.000 ; free physical = 747 ; free virtual = 3603
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 2535 ; free virtual = 4543
+Finished Constraint Validation : Time (s): cpu = 00:01:14 ; elapsed = 00:01:29 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 408 ; free virtual = 3211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 2535 ; free virtual = 4543
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:14 ; elapsed = 00:01:29 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 411 ; free virtual = 3214
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/dont_touch.xdc, line 163).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/dont_touch.xdc, line 105).
 Applied set_property DONT_TOUCH = true for inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addra_to_rd_clk . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addra_to_rd_clk . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/m00_nodes/m00_b_node/inst/inst_mi_handler/\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addra_to_rd_clk . (constraint file  auto generated constraint, line ).
@@ -1453,9 +1452,9 @@ Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_r_node/inst/inst_m
 Applied set_property DONT_TOUCH = true for inst/s01_nodes/s01_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 2541 ; free virtual = 4548
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:29 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 487 ; free virtual = 3320
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
@@ -1485,7 +1484,7 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_r
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs_reg' using encoding 'one-hot' in module 'sc_mmu_v1_0_7_decerr_slave'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 3263 ; free virtual = 5281
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:27 ; elapsed = 00:01:47 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 1956 ; free virtual = 4745
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4191,7 +4190,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (sc_util_v
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (sc_util_v1_0_4_axi_reg_stall__4:/\skid_buffer_reg[6] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:48 ; elapsed = 00:01:55 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4169 ; free virtual = 6265
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:36 ; elapsed = 00:03:06 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 4094 ; free virtual = 7102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4263,13 +4262,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:02:01 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4048 ; free virtual = 6135
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:43 ; elapsed = 00:03:14 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 4986 ; free virtual = 7829
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:00 ; elapsed = 00:02:08 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 3977 ; free virtual = 6078
+Finished Timing Optimization : Time (s): cpu = 00:02:50 ; elapsed = 00:03:21 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 4869 ; free virtual = 7713
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4351,7 +4350,7 @@ INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr_aclk1/U0/EXT_LPF/AC
 INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr_aclk1/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
 INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr_aclk1/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:07 ; elapsed = 00:02:15 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 3923 ; free virtual = 6018
+Finished Technology Mapping : Time (s): cpu = 00:02:57 ; elapsed = 00:03:29 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5821 ; free virtual = 8574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4396,7 +4395,7 @@ INFO: [Synth 8-5365] Flop inst_mi_handler/gen_normal_area.inst_fifo_node_payld/g
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:08 ; elapsed = 00:02:16 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4207 ; free virtual = 6299
+Finished IO Insertion : Time (s): cpu = 00:02:59 ; elapsed = 00:03:31 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5785 ; free virtual = 8558
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4409,7 +4408,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:08 ; elapsed = 00:02:16 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4801 ; free virtual = 6894
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:59 ; elapsed = 00:03:31 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5785 ; free virtual = 8558
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4421,25 +4420,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:10 ; elapsed = 00:02:18 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4803 ; free virtual = 6895
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:00 ; elapsed = 00:03:32 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5787 ; free virtual = 8542
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:10 ; elapsed = 00:02:18 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4803 ; free virtual = 6895
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:01 ; elapsed = 00:03:32 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5787 ; free virtual = 8542
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:10 ; elapsed = 00:02:18 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4803 ; free virtual = 6895
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:01 ; elapsed = 00:03:33 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5788 ; free virtual = 8542
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:10 ; elapsed = 00:02:18 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4803 ; free virtual = 6895
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:01 ; elapsed = 00:03:33 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5788 ; free virtual = 8542
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -5077,17 +5076,17 @@ Report Instance Areas:
 |582   |          \gen_mi[0].inst_opipe_payld                                                           |sc_util_v1_0_4_pipeline__parameterized12                  |    51|
 +------+------------------------------------------------------------------------------------------------+----------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:10 ; elapsed = 00:02:18 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4803 ; free virtual = 6896
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:01 ; elapsed = 00:03:33 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5788 ; free virtual = 8543
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9240 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:41 ; elapsed = 00:01:52 . Memory (MB): peak = 2663.234 ; gain = 357.188 ; free physical = 4846 ; free virtual = 6949
-Synthesis Optimization Complete : Time (s): cpu = 00:02:10 ; elapsed = 00:02:18 . Memory (MB): peak = 2663.234 ; gain = 983.477 ; free physical = 4846 ; free virtual = 6949
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:18 ; elapsed = 00:02:46 . Memory (MB): peak = 2662.039 ; gain = 357.188 ; free physical = 5842 ; free virtual = 8597
+Synthesis Optimization Complete : Time (s): cpu = 00:03:01 ; elapsed = 00:03:33 . Memory (MB): peak = 2662.039 ; gain = 982.484 ; free physical = 5845 ; free virtual = 8600
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 237 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2663.234 ; gain = 0.000 ; free physical = 4774 ; free virtual = 6871
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2662.039 ; gain = 0.000 ; free physical = 5793 ; free virtual = 8559
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 228 instances were transformed.
   FDR => FDRE: 20 instances
@@ -5097,19 +5096,19 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-539 Infos, 129 Warnings, 0 Critical Warnings and 0 Errors encountered.
+538 Infos, 129 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:19 ; elapsed = 00:02:27 . Memory (MB): peak = 2663.234 ; gain = 1247.047 ; free physical = 4888 ; free virtual = 6986
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2663.234 ; gain = 0.000 ; free physical = 4884 ; free virtual = 6982
+synth_design: Time (s): cpu = 00:03:11 ; elapsed = 00:03:44 . Memory (MB): peak = 2662.039 ; gain = 1248.109 ; free physical = 5907 ; free virtual = 8673
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2662.039 ; gain = 0.000 ; free physical = 5907 ; free virtual = 8673
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP skrach_design_axi_smc_0, cache-ID = c2970c8ab07c5e7e
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP skrach_design_axi_smc_0, cache-ID = 7ede1a7bdfac0fa1
 INFO: [Coretcl 2-1174] Renamed 581 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2687.246 ; gain = 0.000 ; free physical = 4886 ; free virtual = 6999
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2686.051 ; gain = 0.000 ; free physical = 5903 ; free virtual = 8672
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file skrach_design_axi_smc_0_utilization_synth.rpt -pb skrach_design_axi_smc_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 23 17:09:40 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 29 02:15:00 2020...

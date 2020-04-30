@@ -2,6 +2,7 @@
 #include "utils.h"
 #include "midi.h"
 #include "synth.h"
+#include "sleep.h"
 
 void process_midi(MidiMsg msg);
 
@@ -13,11 +14,7 @@ int main()
 
     while(1)
     {
-//    	process_midi(read_midi_msg());
-    	if(read_ready() == 0x1)
-    		xil_printf("x%x\t", read_audio());
-
-
+    	process_midi(read_midi_msg());
     }
 
     teardown();
@@ -29,32 +26,18 @@ void process_midi(MidiMsg msg)
 	switch(msg.status)
 	{
 		case NOTE_ON:
-			//queue another operator
+			xil_printf("Note started on op %d\n\r", (start_operator(msg)).op);
 			break;
 		case NOTE_OFF:
-			//find same note in queue and remove
+			while(stop_operator(msg));
+			xil_printf("Note stopped\n\r");
 			break;
 		case CONTROL_CHANGE:
-			//call function with midi data and adjust regs accordingly
+			adjust_control(msg);
 			break;
 		default:
-			//reset fifos
+			reset_midi_uart();
 			break;
 	}
-//	if(msg.status == NOTE_ON)
-//	    	{
-//	    		noteOnCount++;
-//	//
-//	    	}
-//	    	else if(msg.status == NOTE_OFF)
-//	    	{
-//	    		noteOnCount--;
-//	    	}
-//
-//	    	if(noteOnCount > 0)
-//	    		sel_waveform(1);
-//			else if(noteOnCount == 0)
-//				sel_waveform(0);
-//			else if(noteOnCount < 0)
-//				noteOnCount = 0;
+	print_status();
 }

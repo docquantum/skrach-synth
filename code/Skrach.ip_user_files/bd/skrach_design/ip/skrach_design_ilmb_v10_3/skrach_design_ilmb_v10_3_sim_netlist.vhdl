@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Wed Apr 22 15:03:27 2020
+-- Date        : Wed Apr 29 02:13:17 2020
 -- Host        : QuantumNet-L4 running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode funcsim -rename_top skrach_design_ilmb_v10_3 -prefix
---               skrach_design_ilmb_v10_3_ skrach_design_dlmb_v10_2_sim_netlist.vhdl
--- Design      : skrach_design_dlmb_v10_2
+--               skrach_design_ilmb_v10_3_ skrach_design_dlmb_v10_3_sim_netlist.vhdl
+-- Design      : skrach_design_dlmb_v10_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a200tsbg484-1
@@ -138,7 +138,7 @@ entity skrach_design_ilmb_v10_3 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of skrach_design_ilmb_v10_3 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of skrach_design_ilmb_v10_3 : entity is "skrach_design_dlmb_v10_2,lmb_v10,{}";
+  attribute CHECK_LICENSE_TYPE of skrach_design_ilmb_v10_3 : entity is "skrach_design_dlmb_v10_3,lmb_v10,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of skrach_design_ilmb_v10_3 : entity is "yes";
   attribute x_core_info : string;

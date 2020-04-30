@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date                      : Mon Apr 27 08:50:28 2020
+| Date                      : Thu Apr 30 02:14:39 2020
 | Host                      : QuantumNet-L4 running 64-bit Arch Linux
 | Command                   : report_io -file skrach_design_wrapper_io_placed.rpt
 | Design                    : skrach_design_wrapper

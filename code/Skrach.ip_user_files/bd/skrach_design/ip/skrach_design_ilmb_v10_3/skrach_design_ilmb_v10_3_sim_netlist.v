@@ -1,11 +1,11 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Wed Apr 22 15:03:27 2020
+// Date        : Wed Apr 29 02:13:17 2020
 // Host        : QuantumNet-L4 running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim -rename_top skrach_design_ilmb_v10_3 -prefix
-//               skrach_design_ilmb_v10_3_ skrach_design_dlmb_v10_2_sim_netlist.v
-// Design      : skrach_design_dlmb_v10_2
+//               skrach_design_ilmb_v10_3_ skrach_design_dlmb_v10_3_sim_netlist.v
+// Design      : skrach_design_dlmb_v10_3
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a200tsbg484-1
@@ -104,7 +104,7 @@ module skrach_design_ilmb_v10_3_lmb_v10
         .S(SYS_Rst));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "skrach_design_dlmb_v10_2,lmb_v10,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "lmb_v10,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "skrach_design_dlmb_v10_3,lmb_v10,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "lmb_v10,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module skrach_design_ilmb_v10_3
    (LMB_Clk,

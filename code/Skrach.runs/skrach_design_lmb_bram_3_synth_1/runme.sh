@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1'
+HD_PWD='/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

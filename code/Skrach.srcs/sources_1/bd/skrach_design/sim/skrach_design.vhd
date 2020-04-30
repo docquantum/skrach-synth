@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
---Date        : Mon Apr 27 08:45:24 2020
+--Date        : Thu Apr 30 02:09:46 2020
 --Host        : QuantumNet-L4 running 64-bit Arch Linux
 --Command     : generate_target skrach_design.bd
 --Design      : skrach_design
@@ -538,10 +538,10 @@ architecture STRUCTURE of microblaze_0_local_memory_imp_1WC3RE7 is
   signal NLW_ilmb_v10_LMB_Rst_UNCONNECTED : STD_LOGIC;
   signal NLW_lmb_bram_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_lmb_bram_rstb_busy_UNCONNECTED : STD_LOGIC;
+  attribute BMM_INFO_ADDRESS_SPACE : string;
+  attribute BMM_INFO_ADDRESS_SPACE of dlmb_bram_if_cntlr : label is "byte  0x00000000 32 > skrach_design microblaze_0_local_memory/lmb_bram";
   attribute KEEP_HIERARCHY : string;
   attribute KEEP_HIERARCHY of dlmb_bram_if_cntlr : label is "yes";
-  attribute bmm_info_address_space : string;
-  attribute bmm_info_address_space of dlmb_bram_if_cntlr : label is "byte  0x00000000 32 > skrach_design microblaze_0_local_memory/lmb_bram";
 begin
   DLMB_ce <= microblaze_0_dlmb_CE;
   DLMB_readdbus(0 to 31) <= microblaze_0_dlmb_READDBUS(0 to 31);
@@ -1633,10 +1633,10 @@ entity skrach_design is
     usb_uart_rxd : in STD_LOGIC;
     usb_uart_txd : out STD_LOGIC
   );
-  attribute core_generation_info : string;
-  attribute core_generation_info of skrach_design : entity is "skrach_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=skrach_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=30,da_board_cnt=26,da_clkrst_cnt=4,da_mb_cnt=5,synth_mode=OOC_per_IP}";
-  attribute hw_handoff : string;
-  attribute hw_handoff of skrach_design : entity is "skrach_design.hwdef";
+  attribute CORE_GENERATION_INFO : string;
+  attribute CORE_GENERATION_INFO of skrach_design : entity is "skrach_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=skrach_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=30,da_board_cnt=26,da_clkrst_cnt=9,da_mb_cnt=5,synth_mode=OOC_per_IP}";
+  attribute HW_HANDOFF : string;
+  attribute HW_HANDOFF of skrach_design : entity is "skrach_design.hwdef";
 end skrach_design;
 
 architecture STRUCTURE of skrach_design is
@@ -1784,17 +1784,6 @@ architecture STRUCTURE of skrach_design is
     Dbg_Disable_0 : out STD_LOGIC
   );
   end component skrach_design_mdm_1_3;
-  component skrach_design_clk_wiz_1_3 is
-  port (
-    resetn : in STD_LOGIC;
-    clk_in1 : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC;
-    locked : out STD_LOGIC;
-    clk_out3 : out STD_LOGIC;
-    clk_out4 : out STD_LOGIC
-  );
-  end component skrach_design_clk_wiz_1_3;
   component skrach_design_rst_clk_wiz_1_100M_3 is
   port (
     slowest_sync_clk : in STD_LOGIC;
@@ -2025,10 +2014,20 @@ architecture STRUCTURE of skrach_design is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component skrach_design_rst_mig_7series_0_100M_3;
+  component skrach_design_clk_wiz_0_0 is
+  port (
+    resetn : in STD_LOGIC;
+    clk_in1 : in STD_LOGIC;
+    locked : out STD_LOGIC;
+    clk_12 : out STD_LOGIC;
+    clk_100 : out STD_LOGIC;
+    clk_200 : out STD_LOGIC
+  );
+  end component skrach_design_clk_wiz_0_0;
   component skrach_design_skrach_core_0_1 is
   port (
     clk_12 : in STD_LOGIC;
-    clk_50 : in STD_LOGIC;
+    async_reset : in STD_LOGIC;
     ac_mclk : out STD_LOGIC;
     ac_adc_sdata : in STD_LOGIC;
     ac_dac_sdata : out STD_LOGIC;
@@ -2097,12 +2096,11 @@ architecture STRUCTURE of skrach_design is
   signal axi_smc_M00_AXI_WVALID : STD_LOGIC;
   signal axi_uartlite_0_UART_RxD : STD_LOGIC;
   signal axi_uartlite_0_UART_TxD : STD_LOGIC;
-  signal clk_wiz_1_clk_out2 : STD_LOGIC;
+  signal clk_wiz_0_clk_12 : STD_LOGIC;
+  signal clk_wiz_0_clk_200 : STD_LOGIC;
+  signal clk_wiz_0_locked : STD_LOGIC;
   signal clk_wiz_1_clk_out3 : STD_LOGIC;
-  signal clk_wiz_1_clk_out4 : STD_LOGIC;
-  signal clk_wiz_1_locked : STD_LOGIC;
   signal mdm_1_debug_sys_rst : STD_LOGIC;
-  signal microblaze_0_Clk : STD_LOGIC;
   signal microblaze_0_M_AXI_DC_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_M_AXI_DC_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal microblaze_0_M_AXI_DC_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2310,33 +2308,33 @@ architecture STRUCTURE of skrach_design is
   signal NLW_rst_mig_7series_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_mig_7series_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_mig_7series_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute BMM_INFO_PROCESSOR : string;
+  attribute BMM_INFO_PROCESSOR of microblaze_0 : label is "microblaze-le > skrach_design microblaze_0_local_memory/dlmb_bram_if_cntlr";
   attribute KEEP_HIERARCHY : string;
   attribute KEEP_HIERARCHY of microblaze_0 : label is "yes";
-  attribute bmm_info_processor : string;
-  attribute bmm_info_processor of microblaze_0 : label is "microblaze-le > skrach_design microblaze_0_local_memory/dlmb_bram_if_cntlr";
-  attribute x_interface_info : string;
-  attribute x_interface_info of DDR3_0_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 CAS_N";
-  attribute x_interface_info of DDR3_0_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 RAS_N";
-  attribute x_interface_info of DDR3_0_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 RESET_N";
-  attribute x_interface_info of DDR3_0_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 WE_N";
-  attribute x_interface_info of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW";
-  attribute x_interface_info of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute x_interface_parameter of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN skrach_design_sys_clock, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000";
-  attribute x_interface_info of usb_uart_rxd : signal is "xilinx.com:interface:uart:1.0 usb_uart RxD";
-  attribute x_interface_info of usb_uart_txd : signal is "xilinx.com:interface:uart:1.0 usb_uart TxD";
-  attribute x_interface_info of DDR3_0_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 ADDR";
-  attribute x_interface_parameter of DDR3_0_addr : signal is "XIL_INTERFACENAME DDR3_0, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
-  attribute x_interface_info of DDR3_0_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 BA";
-  attribute x_interface_info of DDR3_0_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 CK_N";
-  attribute x_interface_info of DDR3_0_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 CK_P";
-  attribute x_interface_info of DDR3_0_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 CKE";
-  attribute x_interface_info of DDR3_0_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 DM";
-  attribute x_interface_info of DDR3_0_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 DQ";
-  attribute x_interface_info of DDR3_0_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 DQS_N";
-  attribute x_interface_info of DDR3_0_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 DQS_P";
-  attribute x_interface_info of DDR3_0_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 ODT";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of DDR3_0_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 CAS_N";
+  attribute X_INTERFACE_INFO of DDR3_0_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 RAS_N";
+  attribute X_INTERFACE_INFO of DDR3_0_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 RESET_N";
+  attribute X_INTERFACE_INFO of DDR3_0_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 WE_N";
+  attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN skrach_design_sys_clock, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000";
+  attribute X_INTERFACE_INFO of usb_uart_rxd : signal is "xilinx.com:interface:uart:1.0 usb_uart RxD";
+  attribute X_INTERFACE_INFO of usb_uart_txd : signal is "xilinx.com:interface:uart:1.0 usb_uart TxD";
+  attribute X_INTERFACE_INFO of DDR3_0_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 ADDR";
+  attribute X_INTERFACE_PARAMETER of DDR3_0_addr : signal is "XIL_INTERFACENAME DDR3_0, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
+  attribute X_INTERFACE_INFO of DDR3_0_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 BA";
+  attribute X_INTERFACE_INFO of DDR3_0_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 CK_N";
+  attribute X_INTERFACE_INFO of DDR3_0_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 CK_P";
+  attribute X_INTERFACE_INFO of DDR3_0_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 CKE";
+  attribute X_INTERFACE_INFO of DDR3_0_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 DM";
+  attribute X_INTERFACE_INFO of DDR3_0_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 DQ";
+  attribute X_INTERFACE_INFO of DDR3_0_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 DQS_N";
+  attribute X_INTERFACE_INFO of DDR3_0_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 DQS_P";
+  attribute X_INTERFACE_INFO of DDR3_0_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR3_0 ODT";
 begin
   DDR3_0_addr(14 downto 0) <= mig_7series_0_DDR3_ADDR(14 downto 0);
   DDR3_0_ba(2 downto 0) <= mig_7series_0_DDR3_BA(2 downto 0);
@@ -2442,7 +2440,7 @@ axi_smc: component skrach_design_axi_smc_0
       S01_AXI_rready => microblaze_0_M_AXI_IC_RREADY,
       S01_AXI_rresp(1 downto 0) => microblaze_0_M_AXI_IC_RRESP(1 downto 0),
       S01_AXI_rvalid => microblaze_0_M_AXI_IC_RVALID,
-      aclk => microblaze_0_Clk,
+      aclk => clk_wiz_1_clk_out3,
       aclk1 => mig_7series_0_ui_clk,
       aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0)
     );
@@ -2450,7 +2448,7 @@ axi_uartlite_0: component skrach_design_axi_uartlite_0_3
      port map (
       interrupt => NLW_axi_uartlite_0_interrupt_UNCONNECTED,
       rx => axi_uartlite_0_UART_RxD,
-      s_axi_aclk => microblaze_0_Clk,
+      s_axi_aclk => clk_wiz_1_clk_out3,
       s_axi_araddr(3 downto 0) => microblaze_0_axi_periph_M00_AXI_ARADDR(3 downto 0),
       s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       s_axi_arready => microblaze_0_axi_periph_M00_AXI_ARREADY,
@@ -2475,7 +2473,7 @@ axi_uartlite_1: component skrach_design_axi_uartlite_1_3
      port map (
       interrupt => NLW_axi_uartlite_1_interrupt_UNCONNECTED,
       rx => rx_0_1,
-      s_axi_aclk => microblaze_0_Clk,
+      s_axi_aclk => clk_wiz_1_clk_out3,
       s_axi_araddr(3 downto 0) => microblaze_0_axi_periph_M01_AXI_ARADDR(3 downto 0),
       s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       s_axi_arready => microblaze_0_axi_periph_M01_AXI_ARREADY,
@@ -2496,14 +2494,13 @@ axi_uartlite_1: component skrach_design_axi_uartlite_1_3
       s_axi_wvalid => microblaze_0_axi_periph_M01_AXI_WVALID(0),
       tx => NLW_axi_uartlite_1_tx_UNCONNECTED
     );
-clk_wiz_1: component skrach_design_clk_wiz_1_3
+clk_wiz_0: component skrach_design_clk_wiz_0_0
      port map (
+      clk_100 => clk_wiz_1_clk_out3,
+      clk_12 => clk_wiz_0_clk_12,
+      clk_200 => clk_wiz_0_clk_200,
       clk_in1 => sys_clock_1,
-      clk_out1 => microblaze_0_Clk,
-      clk_out2 => clk_wiz_1_clk_out2,
-      clk_out3 => clk_wiz_1_clk_out3,
-      clk_out4 => clk_wiz_1_clk_out4,
-      locked => clk_wiz_1_locked,
+      locked => clk_wiz_0_locked,
       resetn => reset_1
     );
 mdm_1: component skrach_design_mdm_1_3
@@ -2522,7 +2519,7 @@ mdm_1: component skrach_design_mdm_1_3
 microblaze_0: component skrach_design_microblaze_0_3
      port map (
       Byte_Enable(0 to 3) => microblaze_0_dlmb_1_BE(0 to 3),
-      Clk => microblaze_0_Clk,
+      Clk => clk_wiz_1_clk_out3,
       DCE => microblaze_0_dlmb_1_CE,
       DReady => microblaze_0_dlmb_1_READY,
       DUE => microblaze_0_dlmb_1_UE,
@@ -2650,9 +2647,9 @@ microblaze_0: component skrach_design_microblaze_0_3
     );
 microblaze_0_axi_periph: entity work.skrach_design_microblaze_0_axi_periph_3
      port map (
-      ACLK => microblaze_0_Clk,
+      ACLK => clk_wiz_1_clk_out3,
       ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
-      M00_ACLK => microblaze_0_Clk,
+      M00_ACLK => clk_wiz_1_clk_out3,
       M00_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       M00_AXI_araddr(31 downto 0) => microblaze_0_axi_periph_M00_AXI_ARADDR(31 downto 0),
       M00_AXI_arready(0) => microblaze_0_axi_periph_M00_AXI_ARREADY,
@@ -2671,7 +2668,7 @@ microblaze_0_axi_periph: entity work.skrach_design_microblaze_0_axi_periph_3
       M00_AXI_wready(0) => microblaze_0_axi_periph_M00_AXI_WREADY,
       M00_AXI_wstrb(3 downto 0) => microblaze_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       M00_AXI_wvalid(0) => microblaze_0_axi_periph_M00_AXI_WVALID(0),
-      M01_ACLK => microblaze_0_Clk,
+      M01_ACLK => clk_wiz_1_clk_out3,
       M01_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       M01_AXI_araddr(31 downto 0) => microblaze_0_axi_periph_M01_AXI_ARADDR(31 downto 0),
       M01_AXI_arready(0) => microblaze_0_axi_periph_M01_AXI_ARREADY,
@@ -2690,7 +2687,7 @@ microblaze_0_axi_periph: entity work.skrach_design_microblaze_0_axi_periph_3
       M01_AXI_wready(0) => microblaze_0_axi_periph_M01_AXI_WREADY,
       M01_AXI_wstrb(3 downto 0) => microblaze_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
       M01_AXI_wvalid(0) => microblaze_0_axi_periph_M01_AXI_WVALID(0),
-      M02_ACLK => microblaze_0_Clk,
+      M02_ACLK => clk_wiz_1_clk_out3,
       M02_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       M02_AXI_araddr(31 downto 0) => microblaze_0_axi_periph_M02_AXI_ARADDR(31 downto 0),
       M02_AXI_arprot(2 downto 0) => microblaze_0_axi_periph_M02_AXI_ARPROT(2 downto 0),
@@ -2711,7 +2708,7 @@ microblaze_0_axi_periph: entity work.skrach_design_microblaze_0_axi_periph_3
       M02_AXI_wready => microblaze_0_axi_periph_M02_AXI_WREADY,
       M02_AXI_wstrb(3 downto 0) => microblaze_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
       M02_AXI_wvalid => microblaze_0_axi_periph_M02_AXI_WVALID,
-      S00_ACLK => microblaze_0_Clk,
+      S00_ACLK => clk_wiz_1_clk_out3,
       S00_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       S00_AXI_araddr(31 downto 0) => microblaze_0_M_AXI_DP_ARADDR(31 downto 0),
       S00_AXI_arprot(2 downto 0) => microblaze_0_M_AXI_DP_ARPROT(2 downto 0),
@@ -2754,7 +2751,7 @@ microblaze_0_local_memory: entity work.microblaze_0_local_memory_imp_1WC3RE7
       ILMB_ready => microblaze_0_ilmb_1_READY,
       ILMB_ue => microblaze_0_ilmb_1_UE,
       ILMB_wait => microblaze_0_ilmb_1_WAIT,
-      LMB_Clk => microblaze_0_Clk,
+      LMB_Clk => clk_wiz_1_clk_out3,
       SYS_Rst => rst_clk_wiz_1_100M_bus_struct_reset(0)
     );
 mig_7series_0: component skrach_design_mig_7series_0_3
@@ -2813,7 +2810,7 @@ mig_7series_0: component skrach_design_mig_7series_0_3
       s_axi_wready => axi_smc_M00_AXI_WREADY,
       s_axi_wstrb(3 downto 0) => axi_smc_M00_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => axi_smc_M00_AXI_WVALID,
-      sys_clk_i => clk_wiz_1_clk_out2,
+      sys_clk_i => clk_wiz_0_clk_200,
       sys_rst => reset_1,
       ui_clk => mig_7series_0_ui_clk,
       ui_clk_sync_rst => mig_7series_0_ui_clk_sync_rst
@@ -2822,14 +2819,14 @@ rst_clk_wiz_1_100M: component skrach_design_rst_clk_wiz_1_100M_3
      port map (
       aux_reset_in => '1',
       bus_struct_reset(0) => rst_clk_wiz_1_100M_bus_struct_reset(0),
-      dcm_locked => clk_wiz_1_locked,
+      dcm_locked => clk_wiz_0_locked,
       ext_reset_in => reset_1,
       interconnect_aresetn(0) => NLW_rst_clk_wiz_1_100M_interconnect_aresetn_UNCONNECTED(0),
       mb_debug_sys_rst => mdm_1_debug_sys_rst,
       mb_reset => rst_clk_wiz_1_100M_mb_reset,
       peripheral_aresetn(0) => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_clk_wiz_1_100M_peripheral_reset_UNCONNECTED(0),
-      slowest_sync_clk => microblaze_0_Clk
+      slowest_sync_clk => clk_wiz_1_clk_out3
     );
 rst_mig_7series_0_100M: component skrach_design_rst_mig_7series_0_100M_3
      port map (
@@ -2851,9 +2848,9 @@ skrach_core_0: component skrach_design_skrach_core_0_1
       ac_dac_sdata => skrach_core_0_ac_dac_sdata,
       ac_lrclk => skrach_core_0_ac_lrclk,
       ac_mclk => skrach_core_0_ac_mclk,
-      clk_12 => clk_wiz_1_clk_out3,
-      clk_50 => clk_wiz_1_clk_out4,
-      s_axi_aclk => microblaze_0_Clk,
+      async_reset => reset_1,
+      clk_12 => clk_wiz_0_clk_12,
+      s_axi_aclk => clk_wiz_1_clk_out3,
       s_axi_araddr(5 downto 0) => microblaze_0_axi_periph_M02_AXI_ARADDR(5 downto 0),
       s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       s_axi_arprot(2 downto 0) => microblaze_0_axi_periph_M02_AXI_ARPROT(2 downto 0),

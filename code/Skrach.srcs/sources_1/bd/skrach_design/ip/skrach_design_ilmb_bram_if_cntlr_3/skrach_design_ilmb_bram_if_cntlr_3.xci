@@ -14,7 +14,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.BRAM_PORT.MEM_WIDTH">32</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.BRAM_PORT.READ_LATENCY">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.BRAM_PORT.READ_WRITE_MODE"/>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.LMB_CLK.CLK_DOMAIN">/clk_wiz_1_clk_out1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.LMB_CLK.CLK_DOMAIN">/clk_wiz_0_clk_out1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.LMB_CLK.FREQ_HZ">100000000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.LMB_CLK.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.LMB_CLK.PHASE">0.0</spirit:configurableElementValue>

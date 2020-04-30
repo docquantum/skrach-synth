@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Apr 27 08:46:39 2020
-# Process ID: 1033352
-# Current directory: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/synth_1
+# Start of session at: Thu Apr 30 02:11:00 2020
+# Process ID: 913476
+# Current directory: /home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1
 # Command line: vivado -log skrach_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source skrach_design_wrapper.tcl
-# Log file: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/synth_1/skrach_design_wrapper.vds
-# Journal file: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/synth_1/vivado.jou
+# Log file: /home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/skrach_design_wrapper.vds
+# Journal file: /home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source skrach_design_wrapper.tcl -notrace

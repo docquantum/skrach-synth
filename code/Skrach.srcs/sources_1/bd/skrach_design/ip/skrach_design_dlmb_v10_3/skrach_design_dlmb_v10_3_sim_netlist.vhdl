@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Wed Apr 22 15:03:27 2020
+-- Date        : Wed Apr 29 02:13:18 2020
 -- Host        : QuantumNet-L4 running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim -rename_top skrach_design_dlmb_v10_3 -prefix
---               skrach_design_dlmb_v10_3_ skrach_design_dlmb_v10_2_sim_netlist.vhdl
--- Design      : skrach_design_dlmb_v10_2
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_dlmb_v10_3/skrach_design_dlmb_v10_3_sim_netlist.vhdl
+-- Design      : skrach_design_dlmb_v10_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a200tsbg484-1
@@ -50,6 +50,8 @@ entity skrach_design_dlmb_v10_3_lmb_v10 is
   attribute C_LMB_DWIDTH of skrach_design_dlmb_v10_3_lmb_v10 : entity is 32;
   attribute C_LMB_NUM_SLAVES : integer;
   attribute C_LMB_NUM_SLAVES of skrach_design_dlmb_v10_3_lmb_v10 : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_dlmb_v10_3_lmb_v10 : entity is "lmb_v10";
 end skrach_design_dlmb_v10_3_lmb_v10;
 
 architecture STRUCTURE of skrach_design_dlmb_v10_3_lmb_v10 is
@@ -138,7 +140,7 @@ entity skrach_design_dlmb_v10_3 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of skrach_design_dlmb_v10_3 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of skrach_design_dlmb_v10_3 : entity is "skrach_design_dlmb_v10_2,lmb_v10,{}";
+  attribute CHECK_LICENSE_TYPE of skrach_design_dlmb_v10_3 : entity is "skrach_design_dlmb_v10_3,lmb_v10,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of skrach_design_dlmb_v10_3 : entity is "yes";
   attribute x_core_info : string;

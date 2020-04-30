@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Mon Apr 20 19:51:15 2020
+-- Date        : Mon Apr 27 10:13:05 2020
 -- Host        : QuantumNet-L4 running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode synth_stub -rename_top skrach_design_mig_7series_0_3 -prefix
---               skrach_design_mig_7series_0_3_ skrach_design_mig_7series_0_2_stub.vhdl
--- Design      : skrach_design_mig_7series_0_2
+--               skrach_design_mig_7series_0_3_ skrach_design_mig_7series_0_3_stub.vhdl
+-- Design      : skrach_design_mig_7series_0_3
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a200tsbg484-1
 -- --------------------------------------------------------------------------------

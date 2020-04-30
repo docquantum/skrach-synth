@@ -286,55 +286,39 @@ proc create_root_design { parentCell } {
    CONFIG.C_BAUDRATE {31250} \
  ] $axi_uartlite_1
 
-  # Create instance: clk_wiz_1, and set properties
-  set clk_wiz_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_1 ]
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
    CONFIG.CLKOUT1_DRIVES {BUFGCE} \
-   CONFIG.CLKOUT1_JITTER {144.719} \
-   CONFIG.CLKOUT1_PHASE_ERROR {114.212} \
+   CONFIG.CLKOUT1_JITTER {201.426} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {12.288} \
    CONFIG.CLKOUT2_DRIVES {BUFGCE} \
-   CONFIG.CLKOUT2_JITTER {126.455} \
-   CONFIG.CLKOUT2_PHASE_ERROR {114.212} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200} \
+   CONFIG.CLKOUT2_JITTER {130.958} \
+   CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
    CONFIG.CLKOUT2_USED {true} \
    CONFIG.CLKOUT3_DRIVES {BUFGCE} \
-   CONFIG.CLKOUT3_JITTER {220.282} \
-   CONFIG.CLKOUT3_PHASE_ERROR {114.212} \
-   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {12.288} \
-   CONFIG.CLKOUT3_REQUESTED_PHASE {0} \
-   CONFIG.CLKOUT3_SEQUENCE_NUMBER {3} \
+   CONFIG.CLKOUT3_JITTER {114.829} \
+   CONFIG.CLKOUT3_PHASE_ERROR {98.575} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {200} \
    CONFIG.CLKOUT3_USED {true} \
    CONFIG.CLKOUT4_DRIVES {BUFGCE} \
-   CONFIG.CLKOUT4_JITTER {167.017} \
-   CONFIG.CLKOUT4_PHASE_ERROR {114.212} \
-   CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {50} \
-   CONFIG.CLKOUT4_REQUESTED_PHASE {0} \
-   CONFIG.CLKOUT4_SEQUENCE_NUMBER {2} \
-   CONFIG.CLKOUT4_USED {true} \
    CONFIG.CLKOUT5_DRIVES {BUFGCE} \
    CONFIG.CLKOUT6_DRIVES {BUFGCE} \
    CONFIG.CLKOUT7_DRIVES {BUFGCE} \
    CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
+   CONFIG.CLK_OUT1_PORT {clk_12} \
+   CONFIG.CLK_OUT2_PORT {clk_100} \
+   CONFIG.CLK_OUT3_PORT {clk_200} \
    CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
-   CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {8.000} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {4} \
-   CONFIG.MMCM_CLKOUT2_DIVIDE {65} \
-   CONFIG.MMCM_CLKOUT2_PHASE {0.000} \
-   CONFIG.MMCM_CLKOUT3_DIVIDE {16} \
-   CONFIG.MMCM_CLKOUT3_PHASE {0.000} \
-   CONFIG.MMCM_COMPENSATION {ZHOLD} \
-   CONFIG.NUM_OUT_CLKS {4} \
-   CONFIG.PRIMITIVE {MMCM} \
-   CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {81.375} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {10} \
+   CONFIG.MMCM_CLKOUT2_DIVIDE {5} \
+   CONFIG.NUM_OUT_CLKS {3} \
    CONFIG.RESET_BOARD_INTERFACE {reset} \
    CONFIG.RESET_PORT {resetn} \
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
-   CONFIG.USE_BOARD_FLOW {true} \
-   CONFIG.USE_CLOCK_SEQUENCING {false} \
    CONFIG.USE_SAFE_CLOCK_STARTUP {true} \
- ] $clk_wiz_1
+ ] $clk_wiz_0
 
   # Create instance: mdm_1, and set properties
   set mdm_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mdm:3.2 mdm_1 ]
@@ -402,16 +386,15 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Net [get_bd_ports scl_0] [get_bd_pins skrach_core_0/scl]
   connect_bd_net -net Net1 [get_bd_ports sda_0] [get_bd_pins skrach_core_0/sda]
   connect_bd_net -net ac_adc_sdata_0_1 [get_bd_ports ac_adc_sdata_0] [get_bd_pins skrach_core_0/ac_adc_sdata]
-  connect_bd_net -net clk_wiz_1_clk_out2 [get_bd_pins clk_wiz_1/clk_out2] [get_bd_pins mig_7series_0/sys_clk_i]
-  connect_bd_net -net clk_wiz_1_clk_out3 [get_bd_pins clk_wiz_1/clk_out3] [get_bd_pins skrach_core_0/clk_12]
-  connect_bd_net -net clk_wiz_1_clk_out4 [get_bd_pins clk_wiz_1/clk_out4] [get_bd_pins skrach_core_0/clk_50]
-  connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
+  connect_bd_net -net clk_wiz_0_clk_12 [get_bd_pins clk_wiz_0/clk_12] [get_bd_pins skrach_core_0/clk_12]
+  connect_bd_net -net clk_wiz_0_clk_200 [get_bd_pins clk_wiz_0/clk_200] [get_bd_pins mig_7series_0/sys_clk_i]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
+  connect_bd_net -net clk_wiz_1_clk_out3 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins axi_uartlite_1/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_100] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk] [get_bd_pins skrach_core_0/s_axi_aclk]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
-  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_smc/aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins axi_uartlite_1/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk] [get_bd_pins skrach_core_0/s_axi_aclk]
   connect_bd_net -net mig_7series_0_mmcm_locked [get_bd_pins mig_7series_0/mmcm_locked] [get_bd_pins rst_mig_7series_0_100M/dcm_locked]
   connect_bd_net -net mig_7series_0_ui_clk [get_bd_pins axi_smc/aclk1] [get_bd_pins mig_7series_0/ui_clk] [get_bd_pins rst_mig_7series_0_100M/slowest_sync_clk]
   connect_bd_net -net mig_7series_0_ui_clk_sync_rst [get_bd_pins mig_7series_0/ui_clk_sync_rst] [get_bd_pins rst_mig_7series_0_100M/ext_reset_in]
-  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins clk_wiz_1/resetn] [get_bd_pins mig_7series_0/sys_rst] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins mig_7series_0/sys_rst] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in] [get_bd_pins skrach_core_0/async_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/bus_struct_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins rst_clk_wiz_1_100M/mb_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins axi_uartlite_1/s_axi_aresetn] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn] [get_bd_pins skrach_core_0/s_axi_aresetn]
@@ -421,7 +404,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net skrach_core_0_ac_dac_sdata [get_bd_ports ac_dac_sdata_0] [get_bd_pins skrach_core_0/ac_dac_sdata]
   connect_bd_net -net skrach_core_0_ac_lrclk [get_bd_ports ac_lrclk_0] [get_bd_pins skrach_core_0/ac_lrclk]
   connect_bd_net -net skrach_core_0_ac_mclk [get_bd_ports ac_mclk_0] [get_bd_pins skrach_core_0/ac_mclk]
-  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_1/clk_in1]
+  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x40600000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] SEG_axi_uartlite_0_Reg

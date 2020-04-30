@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Wed Apr 22 15:03:27 2020
+-- Date        : Wed Apr 29 02:12:01 2020
 -- Host        : QuantumNet-L4 running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim -rename_top skrach_design_axi_uartlite_1_3 -prefix
---               skrach_design_axi_uartlite_1_3_ skrach_design_axi_uartlite_1_2_sim_netlist.vhdl
--- Design      : skrach_design_axi_uartlite_1_2
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_uartlite_1_3/skrach_design_axi_uartlite_1_3_sim_netlist.vhdl
+-- Design      : skrach_design_axi_uartlite_1_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a200tsbg484-1
@@ -20,6 +20,8 @@ entity skrach_design_axi_uartlite_1_3_baudrate is
     EN_16x_Baud_reg_0 : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_baudrate : entity is "baudrate";
 end skrach_design_axi_uartlite_1_3_baudrate;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_baudrate is
@@ -244,6 +246,8 @@ entity skrach_design_axi_uartlite_1_3_cdc_sync is
     rx : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_cdc_sync : entity is "cdc_sync";
 end skrach_design_axi_uartlite_1_3_cdc_sync;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_cdc_sync is
@@ -391,6 +395,8 @@ entity skrach_design_axi_uartlite_1_3_cntr_incr_decr_addn_f is
     s_axi_aresetn : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_cntr_incr_decr_addn_f : entity is "cntr_incr_decr_addn_f";
 end skrach_design_axi_uartlite_1_3_cntr_incr_decr_addn_f;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_cntr_incr_decr_addn_f is
@@ -821,6 +827,8 @@ entity skrach_design_axi_uartlite_1_3_dynshreg_f is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_dynshreg_f : entity is "dynshreg_f";
 end skrach_design_axi_uartlite_1_3_dynshreg_f;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_dynshreg_f is
@@ -1193,6 +1201,8 @@ entity skrach_design_axi_uartlite_1_3_pselect_f is
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_pselect_f : entity is "pselect_f";
 end skrach_design_axi_uartlite_1_3_pselect_f;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_pselect_f is
@@ -1283,6 +1293,8 @@ entity skrach_design_axi_uartlite_1_3_address_decoder is
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]_1\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]_2\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_address_decoder : entity is "address_decoder";
 end skrach_design_axi_uartlite_1_3_address_decoder;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_address_decoder is
@@ -1799,6 +1811,8 @@ entity skrach_design_axi_uartlite_1_3_srl_fifo_rbu_f is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_srl_fifo_rbu_f : entity is "srl_fifo_rbu_f";
 end skrach_design_axi_uartlite_1_3_srl_fifo_rbu_f;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_srl_fifo_rbu_f is
@@ -1993,6 +2007,8 @@ entity skrach_design_axi_uartlite_1_3_slave_attachment is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_slave_attachment : entity is "slave_attachment";
 end skrach_design_axi_uartlite_1_3_slave_attachment;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_slave_attachment is
@@ -2424,6 +2440,8 @@ entity skrach_design_axi_uartlite_1_3_srl_fifo_f is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_srl_fifo_f : entity is "srl_fifo_f";
 end skrach_design_axi_uartlite_1_3_srl_fifo_f;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_srl_fifo_f is
@@ -2546,6 +2564,8 @@ entity skrach_design_axi_uartlite_1_3_axi_lite_ipif is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_axi_lite_ipif : entity is "axi_lite_ipif";
 end skrach_design_axi_uartlite_1_3_axi_lite_ipif;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_axi_lite_ipif is
@@ -2614,6 +2634,8 @@ entity skrach_design_axi_uartlite_1_3_uartlite_rx is
     \INFERRED_GEN.cnt_i_reg[0]_0\ : in STD_LOGIC;
     rx : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_uartlite_rx : entity is "uartlite_rx";
 end skrach_design_axi_uartlite_1_3_uartlite_rx;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_uartlite_rx is
@@ -3260,6 +3282,8 @@ entity skrach_design_axi_uartlite_1_3_uartlite_tx is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_uartlite_tx : entity is "uartlite_tx";
 end skrach_design_axi_uartlite_1_3_uartlite_tx;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_uartlite_tx is
@@ -3562,6 +3586,8 @@ entity skrach_design_axi_uartlite_1_3_uartlite_core is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_uartlite_core : entity is "uartlite_core";
 end skrach_design_axi_uartlite_1_3_uartlite_core;
 
 architecture STRUCTURE of skrach_design_axi_uartlite_1_3_uartlite_core is
@@ -3755,6 +3781,8 @@ entity skrach_design_axi_uartlite_1_3_axi_uartlite is
   attribute C_S_AXI_DATA_WIDTH of skrach_design_axi_uartlite_1_3_axi_uartlite : entity is 32;
   attribute C_USE_PARITY : integer;
   attribute C_USE_PARITY of skrach_design_axi_uartlite_1_3_axi_uartlite : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_axi_uartlite_1_3_axi_uartlite : entity is "axi_uartlite";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of skrach_design_axi_uartlite_1_3_axi_uartlite : entity is "yes";
 end skrach_design_axi_uartlite_1_3_axi_uartlite;
@@ -3940,7 +3968,7 @@ entity skrach_design_axi_uartlite_1_3 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of skrach_design_axi_uartlite_1_3 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of skrach_design_axi_uartlite_1_3 : entity is "skrach_design_axi_uartlite_1_2,axi_uartlite,{}";
+  attribute CHECK_LICENSE_TYPE of skrach_design_axi_uartlite_1_3 : entity is "skrach_design_axi_uartlite_1_3,axi_uartlite,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of skrach_design_axi_uartlite_1_3 : entity is "yes";
   attribute x_core_info : string;
@@ -3988,7 +4016,7 @@ architecture STRUCTURE of skrach_design_axi_uartlite_1_3 is
   attribute x_interface_info of tx : signal is "xilinx.com:interface:uart:1.0 UART TxD";
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";

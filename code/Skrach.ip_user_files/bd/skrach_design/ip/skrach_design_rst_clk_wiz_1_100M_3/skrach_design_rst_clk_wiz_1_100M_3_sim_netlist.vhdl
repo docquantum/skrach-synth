@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Wed Apr 22 15:03:21 2020
+-- Date        : Wed Apr 29 02:13:17 2020
 -- Host        : QuantumNet-L4 running 64-bit Arch Linux
--- Command     : write_vhdl -force -mode funcsim -rename_top skrach_design_rst_clk_wiz_1_100M_3 -prefix
---               skrach_design_rst_clk_wiz_1_100M_3_ skrach_design_rst_clk_wiz_1_100M_2_sim_netlist.vhdl
--- Design      : skrach_design_rst_clk_wiz_1_100M_2
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_rst_clk_wiz_1_100M_3/skrach_design_rst_clk_wiz_1_100M_3_sim_netlist.vhdl
+-- Design      : skrach_design_rst_clk_wiz_1_100M_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a200tsbg484-1
@@ -25,6 +25,8 @@ entity skrach_design_rst_clk_wiz_1_100M_3_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_rst_clk_wiz_1_100M_3_cdc_sync : entity is "cdc_sync";
 end skrach_design_rst_clk_wiz_1_100M_3_cdc_sync;
 
 architecture STRUCTURE of skrach_design_rst_clk_wiz_1_100M_3_cdc_sync is
@@ -233,6 +235,8 @@ entity skrach_design_rst_clk_wiz_1_100M_3_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_rst_clk_wiz_1_100M_3_upcnt_n : entity is "upcnt_n";
 end skrach_design_rst_clk_wiz_1_100M_3_upcnt_n;
 
 architecture STRUCTURE of skrach_design_rst_clk_wiz_1_100M_3_upcnt_n is
@@ -397,6 +401,8 @@ entity skrach_design_rst_clk_wiz_1_100M_3_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_rst_clk_wiz_1_100M_3_lpf : entity is "lpf";
 end skrach_design_rst_clk_wiz_1_100M_3_lpf;
 
 architecture STRUCTURE of skrach_design_rst_clk_wiz_1_100M_3_lpf is
@@ -578,6 +584,8 @@ entity skrach_design_rst_clk_wiz_1_100M_3_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_rst_clk_wiz_1_100M_3_sequence_psr : entity is "sequence_psr";
 end skrach_design_rst_clk_wiz_1_100M_3_sequence_psr;
 
 architecture STRUCTURE of skrach_design_rst_clk_wiz_1_100M_3_sequence_psr is
@@ -916,6 +924,8 @@ entity skrach_design_rst_clk_wiz_1_100M_3_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of skrach_design_rst_clk_wiz_1_100M_3_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of skrach_design_rst_clk_wiz_1_100M_3_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of skrach_design_rst_clk_wiz_1_100M_3_proc_sys_reset : entity is "proc_sys_reset";
 end skrach_design_rst_clk_wiz_1_100M_3_proc_sys_reset;
 
 architecture STRUCTURE of skrach_design_rst_clk_wiz_1_100M_3_proc_sys_reset is
@@ -1042,7 +1052,7 @@ entity skrach_design_rst_clk_wiz_1_100M_3 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of skrach_design_rst_clk_wiz_1_100M_3 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of skrach_design_rst_clk_wiz_1_100M_3 : entity is "skrach_design_rst_clk_wiz_1_100M_2,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of skrach_design_rst_clk_wiz_1_100M_3 : entity is "skrach_design_rst_clk_wiz_1_100M_3,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of skrach_design_rst_clk_wiz_1_100M_3 : entity is "yes";
   attribute x_core_info : string;

@@ -61,7 +61,7 @@
 /config/ip/num_si/value=2
 /config/ip/num_mi/value=1
 /config/ip/num_clks/value=2
-/config/aclk/csk/value=_clk_wiz_1_clk_out1:100:0.0
+/config/aclk/csk/value=_clk_wiz_0_clk_out1:100:0.0
 /clocking/S00_Entry/ASSOCIATED_CLK/value=aclk;range=aclk;editable=0
 /clocking/S01_Entry/ASSOCIATED_CLK/value=aclk;range=aclk;editable=0
 /config/aclk1/csk/value=skrach_design_mig_7series_0_3_ui_clk:100:0

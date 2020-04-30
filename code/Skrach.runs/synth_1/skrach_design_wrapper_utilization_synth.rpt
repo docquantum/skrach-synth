@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Mon Apr 27 08:47:24 2020
+| Date         : Thu Apr 30 02:11:42 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_utilization -file skrach_design_wrapper_utilization_synth.rpt -pb skrach_design_wrapper_utilization_synth.pb
 | Design       : skrach_design_wrapper
@@ -172,7 +172,7 @@ Table of Contents
 | skrach_design_ilmb_bram_if_cntlr_3     |    1 |
 | skrach_design_dlmb_v10_3               |    1 |
 | skrach_design_dlmb_bram_if_cntlr_3     |    1 |
-| skrach_design_clk_wiz_1_3              |    1 |
+| skrach_design_clk_wiz_0_0              |    1 |
 | skrach_design_axi_uartlite_1_3         |    1 |
 | skrach_design_axi_uartlite_0_3         |    1 |
 | skrach_design_axi_smc_0                |    1 |

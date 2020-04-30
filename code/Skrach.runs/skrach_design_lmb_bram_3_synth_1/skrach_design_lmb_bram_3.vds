@@ -2,17 +2,16 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr 23 17:06:45 2020
-# Process ID: 328418
-# Current directory: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1
+# Start of session at: Wed Apr 29 02:10:40 2020
+# Process ID: 184873
+# Current directory: /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1
 # Command line: vivado -log skrach_design_lmb_bram_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source skrach_design_lmb_bram_3.tcl
-# Log file: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/skrach_design_lmb_bram_3.vds
-# Journal file: /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/vivado.jou
+# Log file: /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/skrach_design_lmb_bram_3.vds
+# Journal file: /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/vivado.jou
 #-----------------------------------------------------------
 source skrach_design_lmb_bram_3.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/docquantum/homework/ce446_solovey/final/code/ip_repo/axi_uartlite_v2_1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/docquantum/homework/ce446_solovey/lab/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/docquantum/ce446_solovey/final/code/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.1/data/ip'.
 Command: synth_design -top skrach_design_lmb_bram_3 -part xc7a200tsbg484-1 -mode out_of_context
 Starting synth_design
@@ -20,11 +19,11 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 329111 
+INFO: Helper process launched with PID 185430 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1815.082 ; gain = 152.719 ; free physical = 240 ; free virtual = 2653
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 1814.281 ; gain = 152.688 ; free physical = 456 ; free virtual = 3541
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'skrach_design_lmb_bram_3' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/synth/skrach_design_lmb_bram_3.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_lmb_bram_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/synth/skrach_design_lmb_bram_3.vhd:80]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -100,8 +99,8 @@ INFO: [Synth 8-638] synthesizing module 'skrach_design_lmb_bram_3' [/home/docqua
 	Parameter C_COUNT_36K_BRAM bound to: 32 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     20.388 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at '/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/c001/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/synth/skrach_design_lmb_bram_3.vhd:255]
-INFO: [Synth 8-256] done synthesizing module 'skrach_design_lmb_bram_3' (11#1) [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/synth/skrach_design_lmb_bram_3.vhd:80]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ipshared/c001/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/synth/skrach_design_lmb_bram_3.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'skrach_design_lmb_bram_3' (11#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/synth/skrach_design_lmb_bram_3.vhd:80]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_RST[0]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_LAT_RST
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_REG_RST
@@ -204,7 +203,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected p
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[49]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:35 ; elapsed = 00:01:57 . Memory (MB): peak = 2035.066 ; gain = 372.703 ; free physical = 4170 ; free virtual = 6264
+Finished RTL Elaboration : Time (s): cpu = 00:02:24 ; elapsed = 00:03:07 . Memory (MB): peak = 2032.961 ; gain = 371.367 ; free physical = 4049 ; free virtual = 7023
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -217,10 +216,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:57 . Memory (MB): peak = 2049.910 ; gain = 387.547 ; free physical = 4179 ; free virtual = 6272
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:25 ; elapsed = 00:03:08 . Memory (MB): peak = 2044.836 ; gain = 383.242 ; free physical = 4058 ; free virtual = 7040
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:57 . Memory (MB): peak = 2049.910 ; gain = 387.547 ; free physical = 4179 ; free virtual = 6272
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:25 ; elapsed = 00:03:08 . Memory (MB): peak = 2044.836 ; gain = 383.242 ; free physical = 4064 ; free virtual = 7047
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -228,36 +227,36 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/skrach_design_lmb_bram_3_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/skrach_design_lmb_bram_3_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/skrach_design_lmb_bram_3_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_lmb_bram_3/skrach_design_lmb_bram_3_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.691 ; gain = 0.000 ; free physical = 4006 ; free virtual = 6095
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.586 ; gain = 0.000 ; free physical = 4042 ; free virtual = 7004
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2199.691 ; gain = 0.000 ; free physical = 4003 ; free virtual = 6092
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2199.586 ; gain = 0.000 ; free physical = 4040 ; free virtual = 7003
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:42 ; elapsed = 00:02:05 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 4001 ; free virtual = 6093
+Finished Constraint Validation : Time (s): cpu = 00:02:33 ; elapsed = 00:03:17 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4986 ; free virtual = 7829
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:42 ; elapsed = 00:02:05 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 4001 ; free virtual = 6093
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:33 ; elapsed = 00:03:17 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4986 ; free virtual = 7829
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:42 ; elapsed = 00:02:05 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 4006 ; free virtual = 6097
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:33 ; elapsed = 00:03:17 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4988 ; free virtual = 7831
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:44 ; elapsed = 00:02:07 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 4003 ; free virtual = 6098
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:35 ; elapsed = 00:03:19 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4988 ; free virtual = 7780
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -642,7 +641,7 @@ INFO: [Synth 8-3886] merging instance 'U0/inst_blk_mem_gen/gnbram.gnative_mem_ma
 INFO: [Synth 8-3886] merging instance 'U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[18].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[30].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:02:08 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3978 ; free virtual = 6083
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:36 ; elapsed = 00:03:21 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4926 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -654,13 +653,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:02:14 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3950 ; free virtual = 6044
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:42 ; elapsed = 00:03:27 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4905 ; free virtual = 7698
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:51 ; elapsed = 00:02:14 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3948 ; free virtual = 6043
+Finished Timing Optimization : Time (s): cpu = 00:02:42 ; elapsed = 00:03:27 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4902 ; free virtual = 7697
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -672,7 +671,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:51 ; elapsed = 00:02:14 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3947 ; free virtual = 6042
+Finished Technology Mapping : Time (s): cpu = 00:02:42 ; elapsed = 00:03:27 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4901 ; free virtual = 7695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -696,7 +695,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:02:15 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3914 ; free virtual = 6010
+Finished IO Insertion : Time (s): cpu = 00:02:44 ; elapsed = 00:03:29 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4893 ; free virtual = 7687
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -709,7 +708,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:02:15 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3914 ; free virtual = 6010
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:44 ; elapsed = 00:03:29 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4893 ; free virtual = 7687
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -721,25 +720,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:53 ; elapsed = 00:02:16 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3914 ; free virtual = 6010
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:44 ; elapsed = 00:03:29 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4893 ; free virtual = 7687
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:53 ; elapsed = 00:02:16 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3914 ; free virtual = 6010
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:44 ; elapsed = 00:03:29 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4893 ; free virtual = 7687
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:53 ; elapsed = 00:02:16 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3914 ; free virtual = 6010
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:44 ; elapsed = 00:03:29 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4893 ; free virtual = 7687
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:53 ; elapsed = 00:02:16 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3914 ; free virtual = 6010
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:44 ; elapsed = 00:03:29 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4893 ; free virtual = 7687
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -851,34 +850,34 @@ Report Instance Areas:
 |69    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized8  |     1|
 +------+--------------------------------------------------------------+------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:53 ; elapsed = 00:02:16 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3914 ; free virtual = 6010
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:44 ; elapsed = 00:03:29 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4893 ; free virtual = 7687
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 186 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:49 ; elapsed = 00:02:12 . Memory (MB): peak = 2199.691 ; gain = 387.547 ; free physical = 3961 ; free virtual = 6057
-Synthesis Optimization Complete : Time (s): cpu = 00:01:53 ; elapsed = 00:02:16 . Memory (MB): peak = 2199.691 ; gain = 537.328 ; free physical = 3961 ; free virtual = 6057
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:40 ; elapsed = 00:03:25 . Memory (MB): peak = 2199.586 ; gain = 383.242 ; free physical = 4960 ; free virtual = 7734
+Synthesis Optimization Complete : Time (s): cpu = 00:02:44 ; elapsed = 00:03:29 . Memory (MB): peak = 2199.586 ; gain = 537.992 ; free physical = 4960 ; free virtual = 7734
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.691 ; gain = 0.000 ; free physical = 3907 ; free virtual = 6003
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.586 ; gain = 0.000 ; free physical = 4912 ; free virtual = 7683
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-122 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+121 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:23 . Memory (MB): peak = 2199.691 ; gain = 784.992 ; free physical = 4003 ; free virtual = 6098
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.691 ; gain = 0.000 ; free physical = 4003 ; free virtual = 6098
+synth_design: Time (s): cpu = 00:02:51 ; elapsed = 00:03:37 . Memory (MB): peak = 2199.586 ; gain = 785.688 ; free physical = 5004 ; free virtual = 7775
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.586 ; gain = 0.000 ; free physical = 5004 ; free virtual = 7775
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/skrach_design_lmb_bram_3.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/skrach_design_lmb_bram_3.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP skrach_design_lmb_bram_3, cache-ID = a4ec713c316c52b7
 INFO: [Coretcl 2-1174] Renamed 68 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.691 ; gain = 0.000 ; free physical = 3997 ; free virtual = 6099
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.586 ; gain = 0.000 ; free physical = 5033 ; free virtual = 7800
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/skrach_design_lmb_bram_3.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_lmb_bram_3_synth_1/skrach_design_lmb_bram_3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file skrach_design_lmb_bram_3_utilization_synth.rpt -pb skrach_design_lmb_bram_3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 23 17:09:25 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 29 02:14:42 2020...

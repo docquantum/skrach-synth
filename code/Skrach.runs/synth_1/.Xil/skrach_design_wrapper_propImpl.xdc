@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/constrs_1/imports/new/lab4.xdc rfile:../../../Skrach.srcs/constrs_1/imports/new/lab4.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/imports/new/lab4.xdc rfile:../../../Skrach.srcs/constrs_1/imports/new/lab4.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:101 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN T4    IOSTANDARD LVCMOS33 } [get_ports { ac_adc_sdata_0 }]; #IO_L13N_T2_MRCC_34 Sch=ac_adc_sdata #SDATA_IN
 set_property src_info {type:XDC file:1 line:102 export:INPUT save:INPUT read:READ} [current_design]

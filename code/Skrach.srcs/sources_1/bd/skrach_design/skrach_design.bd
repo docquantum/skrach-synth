@@ -18,7 +18,6 @@
         "lmb_bram": ""
       },
       "mdm_1": "",
-      "clk_wiz_1": "",
       "rst_clk_wiz_1_100M": "",
       "axi_uartlite_0": "",
       "axi_uartlite_1": "",
@@ -32,6 +31,7 @@
       "mig_7series_0": "",
       "axi_smc": "",
       "rst_mig_7series_0_100M": "",
+      "clk_wiz_0": "",
       "skrach_core_0": ""
     },
     "interface_ports": {
@@ -278,10 +278,10 @@
           }
         },
         "interface_nets": {
-          "microblaze_0_ilmb_bus": {
+          "microblaze_0_dlmb": {
             "interface_ports": [
-              "ilmb_v10/LMB_Sl_0",
-              "ilmb_bram_if_cntlr/SLMB"
+              "DLMB",
+              "dlmb_v10/LMB_M"
             ]
           },
           "microblaze_0_ilmb": {
@@ -290,22 +290,22 @@
               "ilmb_v10/LMB_M"
             ]
           },
-          "microblaze_0_dlmb_cntlr": {
-            "interface_ports": [
-              "dlmb_bram_if_cntlr/BRAM_PORT",
-              "lmb_bram/BRAM_PORTA"
-            ]
-          },
           "microblaze_0_ilmb_cntlr": {
             "interface_ports": [
               "ilmb_bram_if_cntlr/BRAM_PORT",
               "lmb_bram/BRAM_PORTB"
             ]
           },
-          "microblaze_0_dlmb": {
+          "microblaze_0_dlmb_cntlr": {
             "interface_ports": [
-              "DLMB",
-              "dlmb_v10/LMB_M"
+              "dlmb_bram_if_cntlr/BRAM_PORT",
+              "lmb_bram/BRAM_PORTA"
+            ]
+          },
+          "microblaze_0_ilmb_bus": {
+            "interface_ports": [
+              "ilmb_v10/LMB_Sl_0",
+              "ilmb_bram_if_cntlr/SLMB"
             ]
           },
           "microblaze_0_dlmb_bus": {
@@ -339,147 +339,6 @@
       "mdm_1": {
         "vlnv": "xilinx.com:ip:mdm:3.2",
         "xci_name": "skrach_design_mdm_1_3"
-      },
-      "clk_wiz_1": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "skrach_design_clk_wiz_1_3",
-        "parameters": {
-          "CLKOUT1_DRIVES": {
-            "value": "BUFGCE"
-          },
-          "CLKOUT1_JITTER": {
-            "value": "144.719"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "114.212"
-          },
-          "CLKOUT2_DRIVES": {
-            "value": "BUFGCE"
-          },
-          "CLKOUT2_JITTER": {
-            "value": "126.455"
-          },
-          "CLKOUT2_PHASE_ERROR": {
-            "value": "114.212"
-          },
-          "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "200"
-          },
-          "CLKOUT2_USED": {
-            "value": "true"
-          },
-          "CLKOUT3_DRIVES": {
-            "value": "BUFGCE"
-          },
-          "CLKOUT3_JITTER": {
-            "value": "220.282"
-          },
-          "CLKOUT3_PHASE_ERROR": {
-            "value": "114.212"
-          },
-          "CLKOUT3_REQUESTED_OUT_FREQ": {
-            "value": "12.288"
-          },
-          "CLKOUT3_REQUESTED_PHASE": {
-            "value": "0"
-          },
-          "CLKOUT3_SEQUENCE_NUMBER": {
-            "value": "3"
-          },
-          "CLKOUT3_USED": {
-            "value": "true"
-          },
-          "CLKOUT4_DRIVES": {
-            "value": "BUFGCE"
-          },
-          "CLKOUT4_JITTER": {
-            "value": "167.017"
-          },
-          "CLKOUT4_PHASE_ERROR": {
-            "value": "114.212"
-          },
-          "CLKOUT4_REQUESTED_OUT_FREQ": {
-            "value": "50"
-          },
-          "CLKOUT4_REQUESTED_PHASE": {
-            "value": "0"
-          },
-          "CLKOUT4_SEQUENCE_NUMBER": {
-            "value": "2"
-          },
-          "CLKOUT4_USED": {
-            "value": "true"
-          },
-          "CLKOUT5_DRIVES": {
-            "value": "BUFGCE"
-          },
-          "CLKOUT6_DRIVES": {
-            "value": "BUFGCE"
-          },
-          "CLKOUT7_DRIVES": {
-            "value": "BUFGCE"
-          },
-          "CLK_IN1_BOARD_INTERFACE": {
-            "value": "sys_clock"
-          },
-          "FEEDBACK_SOURCE": {
-            "value": "FDBK_AUTO"
-          },
-          "MMCM_BANDWIDTH": {
-            "value": "OPTIMIZED"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "8.000"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "8.000"
-          },
-          "MMCM_CLKOUT1_DIVIDE": {
-            "value": "4"
-          },
-          "MMCM_CLKOUT2_DIVIDE": {
-            "value": "65"
-          },
-          "MMCM_CLKOUT2_PHASE": {
-            "value": "0.000"
-          },
-          "MMCM_CLKOUT3_DIVIDE": {
-            "value": "16"
-          },
-          "MMCM_CLKOUT3_PHASE": {
-            "value": "0.000"
-          },
-          "MMCM_COMPENSATION": {
-            "value": "ZHOLD"
-          },
-          "NUM_OUT_CLKS": {
-            "value": "4"
-          },
-          "PRIMITIVE": {
-            "value": "MMCM"
-          },
-          "PRIM_SOURCE": {
-            "value": "Single_ended_clock_capable_pin"
-          },
-          "RESET_BOARD_INTERFACE": {
-            "value": "reset"
-          },
-          "RESET_PORT": {
-            "value": "resetn"
-          },
-          "RESET_TYPE": {
-            "value": "ACTIVE_LOW"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
-          },
-          "USE_CLOCK_SEQUENCING": {
-            "value": "false"
-          },
-          "USE_SAFE_CLOCK_STARTUP": {
-            "value": "true"
-          }
-        }
       },
       "rst_clk_wiz_1_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
@@ -856,16 +715,16 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m01_couplers": {
+          "m01_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
-          "m02_couplers_to_microblaze_0_axi_periph": {
+          "m00_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -880,16 +739,16 @@
               "xbar/S00_AXI"
             ]
           },
-          "m00_couplers_to_microblaze_0_axi_periph": {
+          "m02_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "M02_AXI",
+              "m02_couplers/M_AXI"
             ]
           },
-          "m01_couplers_to_microblaze_0_axi_periph": {
+          "xbar_to_m01_couplers": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
             ]
           },
           "xbar_to_m02_couplers": {
@@ -981,16 +840,121 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "skrach_design_rst_mig_7series_0_100M_3"
       },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "skrach_design_clk_wiz_0_0",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "201.426"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "12.288"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "114.829"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT3_REQUESTED_OUT_FREQ": {
+            "value": "200"
+          },
+          "CLKOUT3_USED": {
+            "value": "true"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFGCE"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_12"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "clk_100"
+          },
+          "CLK_OUT3_PORT": {
+            "value": "clk_200"
+          },
+          "FEEDBACK_SOURCE": {
+            "value": "FDBK_AUTO"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "81.375"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "10"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
+            "value": "5"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "3"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_SAFE_CLOCK_STARTUP": {
+            "value": "true"
+          }
+        }
+      },
       "skrach_core_0": {
         "vlnv": "user.org:user:skrach_core:1.0",
         "xci_name": "skrach_design_skrach_core_0_1"
       }
     },
     "interface_nets": {
+      "microblaze_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M02_AXI",
+          "skrach_core_0/S_AXI"
+        ]
+      },
       "axi_smc_M00_AXI": {
         "interface_ports": [
           "axi_smc/M00_AXI",
           "mig_7series_0/S_AXI"
+        ]
+      },
+      "microblaze_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M00_AXI",
+          "axi_uartlite_0/S_AXI"
         ]
       },
       "microblaze_0_axi_periph_M01_AXI": {
@@ -999,10 +963,10 @@
           "axi_uartlite_1/S_AXI"
         ]
       },
-      "microblaze_0_M_AXI_IC": {
+      "microblaze_0_debug": {
         "interface_ports": [
-          "microblaze_0/M_AXI_IC",
-          "axi_smc/S01_AXI"
+          "mdm_1/MBDEBUG_0",
+          "microblaze_0/DEBUG"
         ]
       },
       "microblaze_0_M_AXI_DP": {
@@ -1011,28 +975,16 @@
           "microblaze_0_axi_periph/S00_AXI"
         ]
       },
-      "microblaze_0_dlmb_1": {
-        "interface_ports": [
-          "microblaze_0/DLMB",
-          "microblaze_0_local_memory/DLMB"
-        ]
-      },
       "microblaze_0_ilmb_1": {
         "interface_ports": [
           "microblaze_0/ILMB",
           "microblaze_0_local_memory/ILMB"
         ]
       },
-      "microblaze_0_debug": {
+      "microblaze_0_dlmb_1": {
         "interface_ports": [
-          "mdm_1/MBDEBUG_0",
-          "microblaze_0/DEBUG"
-        ]
-      },
-      "microblaze_0_axi_periph_M02_AXI": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M02_AXI",
-          "skrach_core_0/S_AXI"
+          "microblaze_0/DLMB",
+          "microblaze_0_local_memory/DLMB"
         ]
       },
       "microblaze_0_M_AXI_DC": {
@@ -1041,49 +993,26 @@
           "axi_smc/S00_AXI"
         ]
       },
-      "axi_uartlite_0_UART": {
-        "interface_ports": [
-          "usb_uart",
-          "axi_uartlite_0/UART"
-        ]
-      },
       "mig_7series_0_DDR3": {
         "interface_ports": [
           "DDR3_0",
           "mig_7series_0/DDR3"
         ]
       },
-      "microblaze_0_axi_periph_M00_AXI": {
+      "axi_uartlite_0_UART": {
         "interface_ports": [
-          "microblaze_0_axi_periph/M00_AXI",
-          "axi_uartlite_0/S_AXI"
+          "usb_uart",
+          "axi_uartlite_0/UART"
+        ]
+      },
+      "microblaze_0_M_AXI_IC": {
+        "interface_ports": [
+          "microblaze_0/M_AXI_IC",
+          "axi_smc/S01_AXI"
         ]
       }
     },
     "nets": {
-      "microblaze_0_Clk": {
-        "ports": [
-          "clk_wiz_1/clk_out1",
-          "microblaze_0/Clk",
-          "microblaze_0_local_memory/LMB_Clk",
-          "rst_clk_wiz_1_100M/slowest_sync_clk",
-          "microblaze_0_axi_periph/S00_ACLK",
-          "axi_uartlite_0/s_axi_aclk",
-          "microblaze_0_axi_periph/M00_ACLK",
-          "microblaze_0_axi_periph/ACLK",
-          "axi_uartlite_1/s_axi_aclk",
-          "microblaze_0_axi_periph/M01_ACLK",
-          "axi_smc/aclk",
-          "microblaze_0_axi_periph/M02_ACLK",
-          "skrach_core_0/s_axi_aclk"
-        ]
-      },
-      "clk_wiz_1_locked": {
-        "ports": [
-          "clk_wiz_1/locked",
-          "rst_clk_wiz_1_100M/dcm_locked"
-        ]
-      },
       "rst_clk_wiz_1_100M_mb_reset": {
         "ports": [
           "rst_clk_wiz_1_100M/mb_reset",
@@ -1105,15 +1034,10 @@
       "reset_1": {
         "ports": [
           "reset",
-          "clk_wiz_1/resetn",
           "rst_clk_wiz_1_100M/ext_reset_in",
-          "mig_7series_0/sys_rst"
-        ]
-      },
-      "sys_clock_1": {
-        "ports": [
-          "sys_clock",
-          "clk_wiz_1/clk_in1"
+          "mig_7series_0/sys_rst",
+          "clk_wiz_0/resetn",
+          "skrach_core_0/async_reset"
         ]
       },
       "rx_0_1": {
@@ -1161,12 +1085,6 @@
           "mig_7series_0/aresetn"
         ]
       },
-      "clk_wiz_1_clk_out2": {
-        "ports": [
-          "clk_wiz_1/clk_out2",
-          "mig_7series_0/sys_clk_i"
-        ]
-      },
       "skrach_core_0_ac_mclk": {
         "ports": [
           "skrach_core_0/ac_mclk",
@@ -1211,14 +1129,43 @@
       },
       "clk_wiz_1_clk_out3": {
         "ports": [
-          "clk_wiz_1/clk_out3",
-          "skrach_core_0/clk_12"
+          "clk_wiz_0/clk_100",
+          "rst_clk_wiz_1_100M/slowest_sync_clk",
+          "microblaze_0/Clk",
+          "microblaze_0_local_memory/LMB_Clk",
+          "microblaze_0_axi_periph/S00_ACLK",
+          "axi_smc/aclk",
+          "axi_uartlite_0/s_axi_aclk",
+          "microblaze_0_axi_periph/M00_ACLK",
+          "axi_uartlite_1/s_axi_aclk",
+          "microblaze_0_axi_periph/M01_ACLK",
+          "microblaze_0_axi_periph/ACLK",
+          "microblaze_0_axi_periph/M02_ACLK",
+          "skrach_core_0/s_axi_aclk"
         ]
       },
-      "clk_wiz_1_clk_out4": {
+      "sys_clock_1": {
         "ports": [
-          "clk_wiz_1/clk_out4",
-          "skrach_core_0/clk_50"
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "rst_clk_wiz_1_100M/dcm_locked"
+        ]
+      },
+      "clk_wiz_0_clk_200": {
+        "ports": [
+          "clk_wiz_0/clk_200",
+          "mig_7series_0/sys_clk_i"
+        ]
+      },
+      "clk_wiz_0_clk_12": {
+        "ports": [
+          "clk_wiz_0/clk_12",
+          "skrach_core_0/clk_12"
         ]
       }
     },

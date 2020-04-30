@@ -1,7 +1,6 @@
 #include "midi.h"
 #include "xil_printf.h"
 #include <xuartlite_l.h>
-#include "xuartlite.h"
 #include <math.h>
 #include "xparameters.h"
 
@@ -71,4 +70,9 @@ char * pitch_to_string(int pitch){
 float pitch_to_freq(int pitch)
 {
 	return powf(2, (pitch-69)/12.0) * (440);
+}
+
+void reset_midi_uart(void)
+{
+	XUartLite_SetControlReg(MIDI_REG, XUL_CR_FIFO_RX_RESET);
 }

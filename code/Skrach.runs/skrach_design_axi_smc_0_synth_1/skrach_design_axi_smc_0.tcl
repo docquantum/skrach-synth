@@ -26,48 +26,45 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/docquantum/homework/ce446_solovey/final/code/Skrach.cache/wt [current_project]
-set_property parent.project_path /home/docquantum/homework/ce446_solovey/final/code/Skrach.xpr [current_project]
+set_property webtalk.parent_dir /home/docquantum/ce446_solovey/final/code/Skrach.cache/wt [current_project]
+set_property parent.project_path /home/docquantum/ce446_solovey/final/code/Skrach.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {/home/docquantum/.Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
 set_property board_part digilentinc.com:nexys_video:part0:1.1 [current_project]
-set_property ip_repo_paths {
-  /home/docquantum/homework/ce446_solovey/final/code/ip_repo/axi_uartlite_v2_1
-  /home/docquantum/homework/ce446_solovey/lab/ip_repo
-} [current_project]
+set_property ip_repo_paths /home/docquantum/ce446_solovey/final/code/ip_repo [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/docquantum/homework/ce446_solovey/final/code/Skrach.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0.xci
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_4/bd_cd63_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_5/bd_cd63_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_6/bd_cd63_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_7/bd_cd63_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_8/bd_cd63_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_12/bd_cd63_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_13/bd_cd63_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_14/bd_cd63_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_15/bd_cd63_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_16/bd_cd63_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_17/bd_cd63_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_21/bd_cd63_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_22/bd_cd63_sarn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_23/bd_cd63_srn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_24/bd_cd63_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_25/bd_cd63_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_26/bd_cd63_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_27/bd_cd63_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_28/bd_cd63_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_29/bd_cd63_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/ooc.xdc]
+read_ip -quiet /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0.xci
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_1/bd_cd63_psr0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_2/bd_cd63_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_3/bd_cd63_psr_aclk1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_4/bd_cd63_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_5/bd_cd63_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_6/bd_cd63_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_7/bd_cd63_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_8/bd_cd63_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_12/bd_cd63_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_13/bd_cd63_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_14/bd_cd63_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_15/bd_cd63_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_16/bd_cd63_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_17/bd_cd63_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_21/bd_cd63_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_22/bd_cd63_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_23/bd_cd63_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_24/bd_cd63_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_25/bd_cd63_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_26/bd_cd63_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_27/bd_cd63_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_28/bd_cd63_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/bd_0/ip/ip_29/bd_cd63_m00bn_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -81,7 +78,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-set cached_ip [config_ip_cache -export -no_bom  -dir /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1 -new_name skrach_design_axi_smc_0 -ip [get_ips skrach_design_axi_smc_0]]
+set cached_ip [config_ip_cache -export -no_bom  -dir /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1 -new_name skrach_design_axi_smc_0 -ip [get_ips skrach_design_axi_smc_0]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -122,32 +119,32 @@ write_checkpoint -force -noxdef skrach_design_axi_smc_0.dcp
 create_report "skrach_design_axi_smc_0_synth_1_synth_report_utilization_0" "report_utilization -file skrach_design_axi_smc_0_utilization_synth.rpt -pb skrach_design_axi_smc_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.dcp /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0.dcp
+  file copy -force /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.dcp /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.v
+  write_verilog -force -mode synth_stub /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_sim_netlist.v
+  write_verilog -force -mode funcsim /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -157,47 +154,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.dcp /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0.dcp
+  file copy -force /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0.dcp /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0_stub.v /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.v
+  file rename -force /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0_stub.v /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0_stub.vhdl /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.vhdl
+  file rename -force /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0_stub.vhdl /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0_sim_netlist.v /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_sim_netlist.v
+  file rename -force /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0_sim_netlist.v /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/docquantum/homework/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0_sim_netlist.vhdl /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_sim_netlist.vhdl
+  file rename -force /home/docquantum/ce446_solovey/final/code/Skrach.runs/skrach_design_axi_smc_0_synth_1/skrach_design_axi_smc_0_sim_netlist.vhdl /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir /home/docquantum/homework/ce446_solovey/final/code/Skrach.ip_user_files/ip/skrach_design_axi_smc_0]} {
+if {[file isdir /home/docquantum/ce446_solovey/final/code/Skrach.ip_user_files/ip/skrach_design_axi_smc_0]} {
   catch { 
-    file copy -force /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.v /home/docquantum/homework/ce446_solovey/final/code/Skrach.ip_user_files/ip/skrach_design_axi_smc_0
+    file copy -force /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.v /home/docquantum/ce446_solovey/final/code/Skrach.ip_user_files/ip/skrach_design_axi_smc_0
   }
 }
 
-if {[file isdir /home/docquantum/homework/ce446_solovey/final/code/Skrach.ip_user_files/ip/skrach_design_axi_smc_0]} {
+if {[file isdir /home/docquantum/ce446_solovey/final/code/Skrach.ip_user_files/ip/skrach_design_axi_smc_0]} {
   catch { 
-    file copy -force /home/docquantum/homework/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.vhdl /home/docquantum/homework/ce446_solovey/final/code/Skrach.ip_user_files/ip/skrach_design_axi_smc_0
+    file copy -force /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_axi_smc_0/skrach_design_axi_smc_0_stub.vhdl /home/docquantum/ce446_solovey/final/code/Skrach.ip_user_files/ip/skrach_design_axi_smc_0
   }
 }
 file delete __synthesis_is_running__

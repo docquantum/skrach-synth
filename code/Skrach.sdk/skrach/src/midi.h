@@ -37,8 +37,8 @@ typedef enum StatusType
 typedef struct MidiMsg
 {
 	StatusType status;
-	unsigned int pitch;
-	unsigned int velocity;
+	short pitch;
+	short velocity;
 } MidiMsg;
 
 MidiMsg read_midi_msg(void);
@@ -48,5 +48,7 @@ char * status_type_to_string(StatusType status);
 char * pitch_to_string(int pitch);
 
 float pitch_to_freq(int pitch);
+
+void reset_midi_uart(void);
 
 #endif /* end of protection macro */
