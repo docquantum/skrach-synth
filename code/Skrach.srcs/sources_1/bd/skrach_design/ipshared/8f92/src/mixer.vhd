@@ -6,7 +6,7 @@
 -- Pupr:	Combines up to 12 channels of signed audio data making sure it's
 --          properly scaled as to not overflow. This can be used to create
 --          an aditive synth, or in my case, implement polyphony.
---          It also amplifies the output as this is a final step module.
+--          Also has master amplitude control.
 --
 -- Theory:  Using log2, can find out how many more bits are needed to store
 --          signed data without overflowing. Knowing this, we can add all
@@ -93,8 +93,7 @@ begin
         end if;
     end process;
     
-    -- Use dsp slice to multiply the signal by the amplitude.
-        -- Use DSP slice for multiplication to help with negative slack/register counts
+    -- Use DSP slice for multiplication to help with negative slack/register counts
     reset <= not reset_n;
     multipy_signal : MULT_MACRO
     generic map (

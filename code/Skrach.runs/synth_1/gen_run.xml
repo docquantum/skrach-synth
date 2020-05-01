@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1588230593">
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1588315746">
   <File Type="VDS-TIMING-PB" Name="skrach_design_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="skrach_design_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="skrach_design_wrapper.dcp"/>
@@ -38,10 +38,8 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/new/lab4.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/skrach.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../lab/lab_04/code/lab_04_base/lab_04_base.srcs/constrs_1/new/lab4.xdc"/>
-        <Attr Name="ImportTime" Val="1585841808"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -57,9 +55,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="skrach_design_skrach_core_0_1"/>

@@ -1,3 +1,13 @@
+/**
+ * Daria Solovey
+ * May 1st 2020
+ *
+ * Synth Library
+ *
+ * Interfaces with Skrach Core IP allowing for control of
+ * many of its parameters as well as operator enable and phase.
+ */
+
 #include <xil_io.h>
 #include "xparameters.h"
 #include "synth.h"
@@ -5,6 +15,7 @@
 
 #define SYNTH_BASE 			XPAR_SKRACH_CORE_0_S_AXI_BASEADDR
 #define	AMPL_REG			SYNTH_BASE // amplitude(8) Signed
+#define	WAVE_SEL_REG		SYNTH_BASE+0x1 // amplitude(8) Signed
 #define ATTACK_REG			SYNTH_BASE+0x4 // Att(8) Signed
 #define DECAY_REG			SYNTH_BASE+0x5 // Dec(8) Signed
 #define SUSTAIN_REG			SYNTH_BASE+0x6 // Sus(8) Signed
@@ -33,7 +44,6 @@ void setup_synth(void)
 
 void freq_to_phase(float freq, int op)
 {
-	xil_printf("phase: %u\n\r", (int)roundf(((freq*(2<<18))/48000)));
 	Xil_Out16(OP_PHASE_BASE+(op*2), (int)roundf(((freq*(2<<18))/48000)));
 }
 
@@ -53,6 +63,11 @@ void op_enable_write(int bit, int op)
 void set_ampl(int val)
 {
 	Xil_Out8(AMPL_REG, val);
+}
+
+void set_waveform(WAVE type)
+{
+	Xil_Out8(WAVE_SEL_REG, type);
 }
 
 void set_adsr(ADSR type, int val)
@@ -136,7 +151,6 @@ Operator start_operator(MidiMsg msg)
 	return newOp;
 }
 
-
 int stop_operator(MidiMsg msg)
 {
 	if(msg.status != NOTE_OFF)
@@ -199,6 +213,18 @@ void adjust_control(MidiMsg msg)
 			set_adsr(RELEASE, msg.velocity);
 			break;
 		case S1:
+			set_waveform(SINE);
+			break;
+		case S2:
+			set_waveform(TRIANGLE);
+			break;
+		case S3:
+			set_waveform(SAW);
+			break;
+		case S4:
+			set_waveform(SQUARE);
+			break;
+		case S8:
 			reset_ops();
 			break;
 		default:

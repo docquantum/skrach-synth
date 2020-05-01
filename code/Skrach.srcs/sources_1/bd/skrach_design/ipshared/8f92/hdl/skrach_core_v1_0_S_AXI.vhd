@@ -125,7 +125,7 @@ architecture arch_imp of skrach_core_v1_0_S_AXI is
 	signal byte_index	: integer;
 	signal aw_en	: std_logic;
 	
-	component skrach_core is
+    component skrach_core is
         port (
             -- 100 Mhz System Clock
             clk: in std_logic;
@@ -135,6 +135,8 @@ architecture arch_imp of skrach_core_v1_0_S_AXI is
             opPhase: in unsigned(191 downto 0);
             -- one hot encoding note on/off
             opEnable: in std_logic_vector(11 downto 0);
+            -- Master wave select for operators
+            waveSel: in std_logic_vector(1 downto 0);
             -- ADSR for the operators
             att, dec, sus, rel: in signed(7 downto 0);
             -- Master amplitude
@@ -444,7 +446,7 @@ begin
 	    loc_addr := axi_araddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
 	    case loc_addr is
 	      when b"0000" =>
-	        reg_data_out <= slv_reg0; -- amplitude(8)
+	        reg_data_out <= slv_reg0; -- wavesel(2) & amplitude(8)
 	      when b"0001" =>
 	        reg_data_out <= slv_reg1; -- Rel(8) & Sus(8) & Dec(8) & Att(8)
 	      when b"0010" =>
@@ -488,9 +490,11 @@ begin
 
 
 	-- Add user logic here
+	-- Combine all the phase signals into one
 	opPhase <= unsigned(
 	       slv_reg8 & slv_reg7 & slv_reg6 & slv_reg5 & slv_reg4 & slv_reg3);
-	core: skrach_core
+    -- Instantiation of the synth core
+	core_inst: skrach_core
     port map (
         -- 100 Mhz System Clock
         clk => S_AXI_ACLK,
@@ -500,6 +504,8 @@ begin
         opPhase => opPhase,
         -- one hot encoding note on/off
         opEnable => slv_reg2(11 downto 0),
+        -- master wave select
+        waveSel => slv_reg0(9 downto 8),
         -- ADSR for the operators
         att => signed(slv_reg1(7 downto 0)),
         dec => signed(slv_reg1(15 downto 8)),
@@ -512,6 +518,7 @@ begin
         -- 16 bit audio data
         audioOut => audioDataSig
     );
+    -- Send audio data out (and to debug)
     audioData <= audioDataSig;
 
 	-- User logic ends

@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
---Date        : Thu Apr 30 02:09:45 2020
+--Date        : Fri May  1 01:48:59 2020
 --Host        : QuantumNet-L4 running 64-bit Arch Linux
 --Command     : generate_target skrach_design.bd
 --Design      : skrach_design
@@ -2018,10 +2018,10 @@ architecture STRUCTURE of skrach_design is
   port (
     resetn : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_12 : out STD_LOGIC;
     clk_100 : out STD_LOGIC;
-    clk_200 : out STD_LOGIC
+    clk_200 : out STD_LOGIC;
+    locked : out STD_LOGIC
   );
   end component skrach_design_clk_wiz_0_0;
   component skrach_design_skrach_core_0_1 is

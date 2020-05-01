@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 -- Name:	Daria Solovey
--- Updated:	2020/04/26
+-- Updated:	2020/05/01
 -- File:    adsr.vhd
 -- Module:	Skrach Core
 -- Pupr:	Attack, Decay, Sustain, Release; Envelope controlling
@@ -14,6 +14,9 @@
 --
 --          To get reasonable timings, the clock is divided such that a
 --          value of 1 corresponds to ~16ms and 127 to ~2sec
+--
+-- TODO:    Implement (max) velocity control from external input and also
+--          fix the (127) max amplitude popping bug.
 -- 	
 -- Academic Integrity Statement: I certify that, while others may have 
 -- assisted me in brain storming, debugging and validating this program, 
@@ -123,7 +126,7 @@ begin
     ----------------------------------------------------------------------------
     adsr_state_machine : process(clk, nextIncSig, reset_n)
         variable state: ADSR_STATE := RELEASE_S;
-        variable count: integer := 0;
+        variable count: integer range 0 to 127 := 0;
     begin
         if (rising_edge(clk)) then
             if (reset_n = '0') then
@@ -137,9 +140,11 @@ begin
                     when ATTACK_S =>
                         if (en = '0') then
                             state := RELEASE_S;
+                            count := 0;
                         elsif(attack = 0) then
                             amplitude <= to_signed(126,8);
                             state := DECAY_S;
+                            count := 0;
                         else
                             count := count + 1;
                             if (count = attack) then
@@ -154,9 +159,11 @@ begin
                     when DECAY_S =>
                         if (en = '0') then
                             state := RELEASE_S;
+                            count := 0;
                         elsif(decay = 0) then
                             amplitude <= sustain;
                             state := SUSTAIN_S;
+                            count := 0;
                         else
                             count := count + 1;
                             if (count = decay) then
@@ -170,7 +177,7 @@ begin
                         
                     when SUSTAIN_S =>
                         if(en = '0') then
-                            state := DECAY_S;
+                            state := RELEASE_S;
                         end if;
                         
                     when RELEASE_S =>
@@ -189,7 +196,9 @@ begin
                             end if;
                         end if;
                         
-                    when others => state := RELEASE_S;
+                    when others =>
+                        count := 0;
+                        state := RELEASE_S;
                 end case;
             end if;
         end if;

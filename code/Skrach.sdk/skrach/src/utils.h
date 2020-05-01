@@ -1,3 +1,13 @@
+/**
+ * Daria Solovey
+ * May 1st 2020
+ *
+ * Utils Library
+ *
+ * Basic utilities that helps in set up
+ * of the MicroBlaze.
+ */
+
 #ifndef UTILS_H   /* prevent circular inclusions */
 #define UTILS_H   /* by using protection macros */
 

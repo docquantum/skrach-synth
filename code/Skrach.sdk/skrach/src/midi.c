@@ -1,3 +1,15 @@
+/**
+ * Daria Solovey
+ * May 1st 2020
+ *
+ * MIDI Library
+ *
+ * Interfaces with a UARTLite IP to read and decode
+ * midi signals from external input on the FPGA.
+ * Also implements a few data structures to make
+ * decode easy.
+ */
+
 #include "midi.h"
 #include "xil_printf.h"
 #include <xuartlite_l.h>
@@ -12,13 +24,7 @@ MidiMsg read_midi_msg(void)
 	msg.status = XUartLite_RecvByte(MIDI_REG);
 	msg.pitch = XUartLite_RecvByte(MIDI_REG);
 	msg.velocity = XUartLite_RecvByte(MIDI_REG);
-	xil_printf("_______________\n\r");
-	xil_printf("> status  : 0x%x\n\r", msg.status);
-	xil_printf("> S_type  : %s\n\r", status_type_to_string(msg.status));
-	xil_printf("> pitch   : 0x%x\n\r", msg.pitch);
-	xil_printf("> freq    : %dHz\n\r", (int)pitch_to_freq(msg.pitch));
-	xil_printf("> key     : %s%d\n\r", pitch_to_string(msg.pitch), (msg.pitch/12)-1);
-	xil_printf("> velocity: %d\n\r", msg.velocity);
+	print_midi_packet(msg);
 	return msg;
 }
 
@@ -75,4 +81,15 @@ float pitch_to_freq(int pitch)
 void reset_midi_uart(void)
 {
 	XUartLite_SetControlReg(MIDI_REG, XUL_CR_FIFO_RX_RESET);
+}
+
+void print_midi_packet(MidiMsg msg)
+{
+	xil_printf("_______________\n\r");
+	xil_printf("> status  : 0x%x\n\r", msg.status);
+	xil_printf("> S_type  : %s\n\r", status_type_to_string(msg.status));
+	xil_printf("> pitch   : 0x%x\n\r", msg.pitch);
+	xil_printf("> freq    : %dHz\n\r", (int)pitch_to_freq(msg.pitch));
+	xil_printf("> key     : %s%d\n\r", pitch_to_string(msg.pitch), (msg.pitch/12)-1);
+	xil_printf("> velocity: %d\n\r", msg.velocity);
 }

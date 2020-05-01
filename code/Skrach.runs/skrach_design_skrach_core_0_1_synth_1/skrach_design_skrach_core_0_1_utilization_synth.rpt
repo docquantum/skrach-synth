@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Apr 30 02:10:58 2020
+| Date         : Fri May  1 01:50:22 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_utilization -file skrach_design_skrach_core_0_1_utilization_synth.rpt -pb skrach_design_skrach_core_0_1_utilization_synth.pb
 | Design       : skrach_design_skrach_core_0_1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1914 |     0 |    134600 |  1.42 |
-|   LUT as Logic          | 1914 |     0 |    134600 |  1.42 |
+| Slice LUTs*             | 2034 |     0 |    134600 |  1.51 |
+|   LUT as Logic          | 2034 |     0 |    134600 |  1.51 |
 |   LUT as Memory         |    0 |     0 |     46200 |  0.00 |
-| Slice Registers         | 1731 |     0 |    269200 |  0.64 |
-|   Register as Flip Flop | 1731 |     0 |    269200 |  0.64 |
+| Slice Registers         | 1435 |     0 |    269200 |  0.53 |
+|   Register as Flip Flop | 1435 |     0 |    269200 |  0.53 |
 |   Register as Latch     |    0 |     0 |    269200 |  0.00 |
 | F7 Muxes                |   15 |     0 |     67300 |  0.02 |
 | F8 Muxes                |    0 |     0 |     33650 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 2     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 25    |          Yes |         Set |            - |
-| 1704  |          Yes |       Reset |            - |
+| 1408  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,14 +153,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1704 |        Flop & Latch |
-| LUT6     |  699 |                 LUT |
-| CARRY4   |  506 |          CarryLogic |
-| LUT2     |  490 |                 LUT |
-| LUT4     |  430 |                 LUT |
-| LUT3     |  413 |                 LUT |
-| LUT5     |  193 |                 LUT |
-| LUT1     |   55 |                 LUT |
+| FDRE     | 1408 |        Flop & Latch |
+| LUT6     |  759 |                 LUT |
+| LUT3     |  389 |                 LUT |
+| CARRY4   |  386 |          CarryLogic |
+| LUT5     |  361 |                 LUT |
+| LUT4     |  346 |                 LUT |
+| LUT1     |  223 |                 LUT |
+| LUT2     |  166 |                 LUT |
 | FDSE     |   25 |        Flop & Latch |
 | MUXF7    |   15 |               MuxFx |
 | DSP48E1  |   13 |    Block Arithmetic |

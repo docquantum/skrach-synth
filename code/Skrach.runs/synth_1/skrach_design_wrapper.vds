@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr 30 02:11:00 2020
-# Process ID: 913476
+# Start of session at: Fri May  1 01:50:24 2020
+# Process ID: 703054
 # Current directory: /home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1
 # Command line: vivado -log skrach_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source skrach_design_wrapper.tcl
 # Log file: /home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/skrach_design_wrapper.vds
@@ -19,25 +19,25 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 913852 
+INFO: Helper process launched with PID 703626 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1871.156 ; gain = 152.719 ; free physical = 472 ; free virtual = 3495
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1871.156 ; gain = 152.719 ; free physical = 953 ; free virtual = 7630
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'skrach_design_wrapper' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/hdl/skrach_design_wrapper.vhd:45]
 INFO: [Synth 8-3491] module 'skrach_design' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1607' bound to instance 'skrach_design_i' of component 'skrach_design' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/hdl/skrach_design_wrapper.vhd:77]
 INFO: [Synth 8-638] synthesizing module 'skrach_design' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1642]
-INFO: [Synth 8-3491] module 'skrach_design_axi_smc_0' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'skrach_design_axi_smc_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2360]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_axi_smc_0' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_axi_smc_0_stub.vhdl:95]
-INFO: [Synth 8-3491] module 'skrach_design_axi_uartlite_0_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_axi_uartlite_0_3_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'skrach_design_axi_uartlite_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2447]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_axi_uartlite_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_axi_uartlite_0_3_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'skrach_design_axi_uartlite_1_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_axi_uartlite_1_3_stub.vhdl:5' bound to instance 'axi_uartlite_1' of component 'skrach_design_axi_uartlite_1_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2472]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_axi_uartlite_1_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_axi_uartlite_1_3_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'skrach_design_clk_wiz_0_0' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'skrach_design_clk_wiz_0_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2497]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_clk_wiz_0_0' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_clk_wiz_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'skrach_design_mdm_1_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_mdm_1_3_stub.vhdl:5' bound to instance 'mdm_1' of component 'skrach_design_mdm_1_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2506]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_mdm_1_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_mdm_1_3_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'skrach_design_microblaze_0_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_microblaze_0_3_stub.vhdl:5' bound to instance 'microblaze_0' of component 'skrach_design_microblaze_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2519]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_microblaze_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_microblaze_0_3_stub.vhdl:137]
+INFO: [Synth 8-3491] module 'skrach_design_axi_smc_0' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'skrach_design_axi_smc_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2360]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_axi_smc_0' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_axi_smc_0_stub.vhdl:95]
+INFO: [Synth 8-3491] module 'skrach_design_axi_uartlite_0_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_axi_uartlite_0_3_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'skrach_design_axi_uartlite_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2447]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_axi_uartlite_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_axi_uartlite_0_3_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'skrach_design_axi_uartlite_1_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_axi_uartlite_1_3_stub.vhdl:5' bound to instance 'axi_uartlite_1' of component 'skrach_design_axi_uartlite_1_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2472]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_axi_uartlite_1_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_axi_uartlite_1_3_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'skrach_design_clk_wiz_0_0' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'skrach_design_clk_wiz_0_0' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2497]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_clk_wiz_0_0' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_clk_wiz_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'skrach_design_mdm_1_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_mdm_1_3_stub.vhdl:5' bound to instance 'mdm_1' of component 'skrach_design_mdm_1_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2506]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_mdm_1_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_mdm_1_3_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'skrach_design_microblaze_0_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_microblaze_0_3_stub.vhdl:5' bound to instance 'microblaze_0' of component 'skrach_design_microblaze_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2519]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_microblaze_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_microblaze_0_3_stub.vhdl:137]
 INFO: [Synth 8-638] synthesizing module 'skrach_design_microblaze_0_axi_periph_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1083]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_C4LHUS' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_C4LHUS' (1#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:57]
@@ -47,33 +47,33 @@ INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_1IZ57WT' [/home/docqua
 INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_1IZ57WT' (3#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:263]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_EJVIE3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:932]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_EJVIE3' (4#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:932]
-INFO: [Synth 8-3491] module 'skrach_design_xbar_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_xbar_3_stub.vhdl:5' bound to instance 'xbar' of component 'skrach_design_xbar_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1523]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_xbar_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_xbar_3_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'skrach_design_xbar_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_xbar_3_stub.vhdl:5' bound to instance 'xbar' of component 'skrach_design_xbar_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1523]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_xbar_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_xbar_3_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'skrach_design_microblaze_0_axi_periph_3' (5#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1083]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1WC3RE7' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:353]
-INFO: [Synth 8-3491] module 'skrach_design_dlmb_bram_if_cntlr_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_dlmb_bram_if_cntlr_3_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'skrach_design_dlmb_bram_if_cntlr_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:567]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_dlmb_bram_if_cntlr_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_dlmb_bram_if_cntlr_3_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'skrach_design_dlmb_v10_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_dlmb_v10_3_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'skrach_design_dlmb_v10_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:621]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_dlmb_v10_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_dlmb_v10_3_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'skrach_design_ilmb_bram_if_cntlr_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_ilmb_bram_if_cntlr_3_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'skrach_design_ilmb_bram_if_cntlr_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:649]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_ilmb_bram_if_cntlr_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_ilmb_bram_if_cntlr_3_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'skrach_design_ilmb_v10_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_ilmb_v10_3_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'skrach_design_ilmb_v10_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:703]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_ilmb_v10_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_ilmb_v10_3_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'skrach_design_lmb_bram_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_lmb_bram_3_stub.vhdl:5' bound to instance 'lmb_bram' of component 'skrach_design_lmb_bram_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:731]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_lmb_bram_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_lmb_bram_3_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'skrach_design_dlmb_bram_if_cntlr_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_dlmb_bram_if_cntlr_3_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'skrach_design_dlmb_bram_if_cntlr_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:567]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_dlmb_bram_if_cntlr_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_dlmb_bram_if_cntlr_3_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'skrach_design_dlmb_v10_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_dlmb_v10_3_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'skrach_design_dlmb_v10_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:621]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_dlmb_v10_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_dlmb_v10_3_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'skrach_design_ilmb_bram_if_cntlr_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_ilmb_bram_if_cntlr_3_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'skrach_design_ilmb_bram_if_cntlr_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:649]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_ilmb_bram_if_cntlr_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_ilmb_bram_if_cntlr_3_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'skrach_design_ilmb_v10_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_ilmb_v10_3_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'skrach_design_ilmb_v10_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:703]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_ilmb_v10_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_ilmb_v10_3_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'skrach_design_lmb_bram_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_lmb_bram_3_stub.vhdl:5' bound to instance 'lmb_bram' of component 'skrach_design_lmb_bram_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:731]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_lmb_bram_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_lmb_bram_3_stub.vhdl:27]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1WC3RE7' (6#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:353]
 WARNING: [Synth 8-5640] Port 'app_sr_active' is missing in component declaration [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1853]
 WARNING: [Synth 8-5640] Port 'app_ref_ack' is missing in component declaration [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1853]
 WARNING: [Synth 8-5640] Port 'app_zq_ack' is missing in component declaration [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1853]
 WARNING: [Synth 8-5640] Port 'device_temp' is missing in component declaration [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1853]
-INFO: [Synth 8-3491] module 'skrach_design_mig_7series_0_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_mig_7series_0_3_stub.vhdl:5' bound to instance 'mig_7series_0' of component 'skrach_design_mig_7series_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2757]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_mig_7series_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_mig_7series_0_3_stub.vhdl:73]
-INFO: [Synth 8-3491] module 'skrach_design_rst_clk_wiz_1_100M_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_rst_clk_wiz_1_100M_3_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'skrach_design_rst_clk_wiz_1_100M_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2818]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_rst_clk_wiz_1_100M_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_rst_clk_wiz_1_100M_3_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'skrach_design_rst_mig_7series_0_100M_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_rst_mig_7series_0_100M_3_stub.vhdl:5' bound to instance 'rst_mig_7series_0_100M' of component 'skrach_design_rst_mig_7series_0_100M_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2831]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_rst_mig_7series_0_100M_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_rst_mig_7series_0_100M_3_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'skrach_design_skrach_core_0_1' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_skrach_core_0_1_stub.vhdl:5' bound to instance 'skrach_core_0' of component 'skrach_design_skrach_core_0_1' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2844]
-INFO: [Synth 8-638] synthesizing module 'skrach_design_skrach_core_0_1' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-913476-QuantumNet-L4/realtime/skrach_design_skrach_core_0_1_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'skrach_design_mig_7series_0_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_mig_7series_0_3_stub.vhdl:5' bound to instance 'mig_7series_0' of component 'skrach_design_mig_7series_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2757]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_mig_7series_0_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_mig_7series_0_3_stub.vhdl:73]
+INFO: [Synth 8-3491] module 'skrach_design_rst_clk_wiz_1_100M_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_rst_clk_wiz_1_100M_3_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'skrach_design_rst_clk_wiz_1_100M_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2818]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_rst_clk_wiz_1_100M_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_rst_clk_wiz_1_100M_3_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'skrach_design_rst_mig_7series_0_100M_3' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_rst_mig_7series_0_100M_3_stub.vhdl:5' bound to instance 'rst_mig_7series_0_100M' of component 'skrach_design_rst_mig_7series_0_100M_3' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2831]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_rst_mig_7series_0_100M_3' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_rst_mig_7series_0_100M_3_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'skrach_design_skrach_core_0_1' declared at '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_skrach_core_0_1_stub.vhdl:5' bound to instance 'skrach_core_0' of component 'skrach_design_skrach_core_0_1' [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:2844]
+INFO: [Synth 8-638] synthesizing module 'skrach_design_skrach_core_0_1' [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/.Xil/Vivado-703054-QuantumNet-L4/realtime/skrach_design_skrach_core_0_1_stub.vhdl:41]
 INFO: [Synth 8-256] done synthesizing module 'skrach_design' (7#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/synth/skrach_design.vhd:1642]
 INFO: [Synth 8-256] done synthesizing module 'skrach_design_wrapper' (8#1) [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/hdl/skrach_design_wrapper.vhd:45]
 WARNING: [Synth 8-3331] design s00_couplers_imp_EJVIE3 has unconnected port M_ACLK
@@ -101,7 +101,7 @@ WARNING: [Synth 8-3331] design skrach_design_microblaze_0_axi_periph_3 has uncon
 WARNING: [Synth 8-3331] design skrach_design_microblaze_0_axi_periph_3 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design skrach_design_microblaze_0_axi_periph_3 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1931.875 ; gain = 213.438 ; free physical = 475 ; free virtual = 3518
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1931.875 ; gain = 213.438 ; free physical = 975 ; free virtual = 7653
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -114,10 +114,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1938.812 ; gain = 220.375 ; free physical = 473 ; free virtual = 3514
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1937.812 ; gain = 219.375 ; free physical = 976 ; free virtual = 7650
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1938.812 ; gain = 220.375 ; free physical = 473 ; free virtual = 3514
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1937.812 ; gain = 219.375 ; free physical = 976 ; free virtual = 7650
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -155,29 +155,29 @@ Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_
 Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_skrach_core_0_1/skrach_design_skrach_core_0_1/skrach_design_skrach_core_0_1_in_context.xdc] for cell 'skrach_design_i/skrach_core_0'
 Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_0_0/skrach_design_clk_wiz_0_0/skrach_design_clk_wiz_0_0_in_context.xdc] for cell 'skrach_design_i/clk_wiz_0'
 Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_clk_wiz_0_0/skrach_design_clk_wiz_0_0/skrach_design_clk_wiz_0_0_in_context.xdc] for cell 'skrach_design_i/clk_wiz_0'
-Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/imports/new/lab4.xdc]
-Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/imports/new/lab4.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/imports/new/lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/skrach_design_wrapper_propImpl.xdc].
+Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/new/skrach.xdc]
+Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/new/skrach.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/new/skrach.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/skrach_design_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/skrach_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.469 ; gain = 0.000 ; free physical = 379 ; free virtual = 3414
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.469 ; gain = 0.000 ; free physical = 874 ; free virtual = 7549
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2088.469 ; gain = 0.000 ; free physical = 379 ; free virtual = 3414
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2088.469 ; gain = 0.000 ; free physical = 874 ; free virtual = 7549
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'skrach_design_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 467 ; free virtual = 3489
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 967 ; free virtual = 7592
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 467 ; free virtual = 3489
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 967 ; free virtual = 7592
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -299,10 +299,10 @@ Applied set_property DONT_TOUCH = true for skrach_design_i/rst_mig_7series_0_100
 Applied set_property DONT_TOUCH = true for skrach_design_i/skrach_core_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for skrach_design_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 467 ; free virtual = 3489
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 965 ; free virtual = 7591
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 466 ; free virtual = 3490
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 967 ; free virtual = 7593
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -346,7 +346,7 @@ WARNING: [Synth 8-3331] design skrach_design_microblaze_0_axi_periph_3 has uncon
 WARNING: [Synth 8-3331] design skrach_design_microblaze_0_axi_periph_3 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design skrach_design_microblaze_0_axi_periph_3 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 460 ; free virtual = 3488
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 962 ; free virtual = 7591
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -367,13 +367,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'skrach_design_i/clk_wiz_0
 INFO: [Synth 8-5578] Moved timing constraint from pin 'skrach_design_i/clk_wiz_0/clk_200' to pin 'skrach_design_i/clk_wiz_0/bbstub_clk_200/O'
 INFO: [Synth 8-5819] Moved 8 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 356 ; free virtual = 3395
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 915 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 356 ; free virtual = 3395
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 915 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -385,7 +385,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 364 ; free virtual = 3391
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 915 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -409,7 +409,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 362 ; free virtual = 3392
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 916 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -422,7 +422,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 362 ; free virtual = 3392
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 916 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,25 +434,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 362 ; free virtual = 3392
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 916 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 362 ; free virtual = 3392
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 916 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 362 ; free virtual = 3392
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 916 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 362 ; free virtual = 3392
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 916 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -514,25 +514,25 @@ Report Instance Areas:
 |4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1WC3RE7   |   496|
 +------+------------------------------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 362 ; free virtual = 3392
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 916 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2094.406 ; gain = 220.375 ; free physical = 415 ; free virtual = 3446
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 415 ; free virtual = 3446
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2094.406 ; gain = 219.375 ; free physical = 963 ; free virtual = 7612
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2094.406 ; gain = 375.969 ; free physical = 963 ; free virtual = 7612
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2094.406 ; gain = 0.000 ; free physical = 365 ; free virtual = 3396
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2094.406 ; gain = 0.000 ; free physical = 832 ; free virtual = 7553
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 71 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2094.406 ; gain = 633.539 ; free physical = 453 ; free virtual = 3483
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2094.406 ; gain = 0.000 ; free physical = 453 ; free virtual = 3483
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2094.406 ; gain = 632.539 ; free physical = 920 ; free virtual = 7642
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2094.406 ; gain = 0.000 ; free physical = 920 ; free virtual = 7642
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/docquantum/ce446_solovey/final/code/Skrach.runs/synth_1/skrach_design_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file skrach_design_wrapper_utilization_synth.rpt -pb skrach_design_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 02:11:43 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri May  1 01:51:05 2020...

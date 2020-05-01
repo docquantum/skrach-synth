@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
 -- Name:	Daria Solovey
--- Updated:	2020/04/25
+-- Updated:	2020/05/01
 -- File:    oscillator.vhd
 -- Module:	Skrach Core
 -- Pupr:	Using LUTs and basic math, generates signals as output. Can create
---          Sine, Triangle, Saw, and Square data at 1024, 16 bit samples.
+--          Sine, Triangle, Saw, and Square data at 2048, 16 bit samples.
 --
 -- Notes:   With system clock rates, requires for the "nextSample" signal
 --          to be high to increment throught the LUT or through processes for
@@ -60,6 +60,7 @@ architecture implementation of oscillator is
     signal sine, saw, triangle, square: signed(15 downto 0) := to_signed(0, 16);
     signal sampleCount, counterPhase: unsigned(17 downto 0); -- Q11.7
     signal counterCtrl: std_logic_vector(1 downto 0);
+    signal triangle_sig: signed(31 downto 0):= to_signed(0, 32);
 begin
 
     ----------------------------------------------------------------------------
@@ -97,8 +98,6 @@ begin
     ----------------------------------------------------------------------------
     -- Square wave: Low for 1024 samples, High for the other 1024
     ----------------------------------------------------------------------------
-    -- if sample count < 1024, output min signed
-    -- if sample count >= 1024. output max signed
     square <=
         to_signed(-32767, 16) when (sampleCount < 2**17) else
         to_signed(32767, 16);
@@ -106,11 +105,9 @@ begin
     ----------------------------------------------------------------------------
     -- Triangle wave: 2 * phaseInc up for 1024 samples, down for the other 1024
     ----------------------------------------------------------------------------
-    -- if sample count < 1024, increment
-    -- if sample count >= 1024, decrement
-    
-    -- NOT IMPLEMENTED
-    triangle <= sine;
+    triangle <= triangle_sig(15 downto 0) when (sampleCount < 2**17) else
+        -triangle_sig(15 downto 0);
+    triangle_sig <= signed(2*sampleCount(17 downto 2) - 32768);
     
     ----------------------------------------------------------------------------
     -- Sine wave: Grabs sample from look up table via sample count index

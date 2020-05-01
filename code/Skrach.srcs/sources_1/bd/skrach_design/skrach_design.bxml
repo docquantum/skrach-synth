@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="skrach_design" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1588230590"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1588230590"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1588230590"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1588230590"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1588315744"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1588315744"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1588315744"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1588315744"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/skrach_design_microblaze_0_3/skrach_design_microblaze_0_3.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>

@@ -1,20 +1,18 @@
 --------------------------------------------------------------------------------
 -- Name:	Daria Solovey
--- Updated:	2020/04/26
+-- Updated:	2020/05/01
 -- File:    skrach_core.vhd
 -- Module:	Skrach Core
 -- Pupr:	Essentially the data path, combining all the operators
 --          together with control signals for each one. Audio codec
---          is assumed to be outside of this module.
+--          is assumed to be outside of this module. Hard coded to
+--          12 operators, would be nice if there was a way to make
+--          that attribute generic, but would take quite a bit of
+--          engineering and VHDL specifics I do not know.
 --
--- Theory:  Change amplitude at the slope of the given signals where when
---          in Attack, the amplitude ramps up to max, in decay, it goes
---          down to the level defined in sustain. If the key is released
---          at any time during the attack, decay, or sustain operations,
---          release kicks in lowering amplitude down to 0.
+-- TODO:    Implement an adjustable filter that is the last part of
+--          the audio pipeline -> Mixer goes into filter.
 --
---          To get reasonable timings, the clock is divided such that a
---          value of 1 corresponds to ~16ms and 127 to ~2sec
 -- 	
 -- Academic Integrity Statement: I certify that, while others may have 
 -- assisted me in brain storming, debugging and validating this program, 
@@ -30,7 +28,7 @@ use IEEE.NUMERIC_STD.ALL;
 use work.skrach_parts.all;
 
 entity skrach_core is
-  port (
+    port (
         -- 100 Mhz System Clock
         clk: in std_logic;
         -- Active low reset
@@ -39,6 +37,8 @@ entity skrach_core is
         opPhase: in unsigned(191 downto 0);
         -- one hot encoding note on/off
         opEnable: in std_logic_vector(11 downto 0);
+        -- Master wave select for operators
+        waveSel: in std_logic_vector(1 downto 0);
         -- ADSR for the operators
         att, dec, sus, rel: in signed(7 downto 0);
         -- Master amplitude
@@ -47,7 +47,7 @@ entity skrach_core is
         nextSample: in std_logic;
         -- 16 bit audio data
         audioOut: out signed(15 downto 0)
-  );
+    );
 end skrach_core;
 
 architecture implementation of skrach_core is
@@ -60,7 +60,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(15 downto 0),
         att => att,
         dec => dec,
@@ -75,7 +75,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(31 downto 16),
         att => att,
         dec => dec,
@@ -90,7 +90,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(47 downto 32),
         att => att,
         dec => dec,
@@ -105,7 +105,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(63 downto 48),
         att => att,
         dec => dec,
@@ -120,7 +120,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(79 downto 64),
         att => att,
         dec => dec,
@@ -135,7 +135,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(95 downto 80),
         att => att,
         dec => dec,
@@ -150,7 +150,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(111 downto 96),
         att => att,
         dec => dec,
@@ -165,7 +165,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(127 downto 112),
         att => att,
         dec => dec,
@@ -180,7 +180,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(143 downto 128),
         att => att,
         dec => dec,
@@ -195,7 +195,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(159 downto 144),
         att => att,
         dec => dec,
@@ -210,7 +210,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(175 downto 160),
         att => att,
         dec => dec,
@@ -225,7 +225,7 @@ begin
         clk => clk,
         reset_n => reset_n,
         nextSample => nextSample,
-        waveSel => "00",
+        waveSel => waveSel,
         phaseInc => opPhase(191 downto 176),
         att => att,
         dec => dec,

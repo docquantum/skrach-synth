@@ -285,7 +285,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e2531727</spirit:value>
+            <spirit:value>b97db515</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -304,7 +304,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e2531727</spirit:value>
+            <spirit:value>b97db515</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1076,8 +1076,8 @@
       <xilinx:displayName>skrach_core_v1.0</xilinx:displayName>
       <xilinx:vendorDisplayName>Quantum Fidelity</xilinx:vendorDisplayName>
       <xilinx:vendorURL>https://docquantum.me</xilinx:vendorURL>
-      <xilinx:coreRevision>26</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-04-30T07:09:10Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>30</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-05-01T06:48:20Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@218a9d32_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@8ae1e87_ARCHIVE_LOCATION">/home/docquantum/homework/ce446_solovey/ip_repo/skrach_core_1.0</xilinx:tag>
@@ -1516,13 +1516,120 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@53bec36a_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@19de6603_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@59b62661_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ca1321f_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781bfca4_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23fc6f88_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb9ec01_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30b41807_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27f22e32_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e33688e_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27db2c18_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9506997_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@293c829c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ffae88f_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a2b13c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eed0eb8_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ff3ce_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37dc0eaa_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2752314a_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ccc139b_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52b5f026_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f408c45_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22740cec_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46262f1_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48cc8702_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a3fc7a8_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e33ff68_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78c2b173_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@358fb8e7_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38e3f70d_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e654883_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f5212a_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4082cad9_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@636cfea3_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56f729e3_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6867d769_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73354b8d_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@308a9c78_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f402e20_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cd6ecab_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bf62e6a_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@212110c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a2288cc_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f284ade_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74c5bed6_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c89f1df_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75f4663e_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@427863e2_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1537b15a_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@139f7d6e_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5552d17a_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da9f1b5_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@219690f_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79e0bfdb_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cb8e417_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6384eb_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df80cf7_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cbd6222_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63806eb3_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ba0057f_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11b51d_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eaac960_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a224604_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@691acfbe_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f4a99c3_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@382aecbe_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54524e1b_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58d95328_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@299bb24c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a8b613_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f75ca5d_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47217909_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@738cbf2d_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@152e99b0_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a05396b_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5155292b_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10009f72_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72075158_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e725cd_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@596ae67a_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@631abe77_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12b09c61_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@466d64bd_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6946d4dc_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d2291f7_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7374a8a0_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e57f48c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d7d736c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e2a514_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@619106e1_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62a3707d_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4306c91c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c86cfa9_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b828a2_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46c15bd9_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6661c4da_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c19b77f_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@334bc204_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fd51a1c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff18739_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1915bef9_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14e7447b_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a8e9454_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@521d7cf5_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ddc6baa_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@93977c3_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51ab243_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c02295c_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bd42bd6_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56afea94_ARCHIVE_LOCATION">/home/docquantum/ce446_solovey/final/code/ip_repo/skrach_core_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="247b394f"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="c30980da"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9f07fb07"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="47fde9ac"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="040b168b"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="77846896"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="5ce46e22"/>

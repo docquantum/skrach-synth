@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1588230594">
+<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1588315748">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="skrach_design_wrapper.drc"/>
   <File Type="BG-BGN" Name="skrach_design_wrapper.bgn"/>
@@ -98,10 +98,8 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/new/lab4.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/skrach.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../lab/lab_04/code/lab_04_base/lab_04_base.srcs/constrs_1/new/lab4.xdc"/>
-        <Attr Name="ImportTime" Val="1585841808"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -117,9 +115,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

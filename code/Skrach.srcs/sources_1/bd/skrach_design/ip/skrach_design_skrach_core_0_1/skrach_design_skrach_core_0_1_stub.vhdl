@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Thu Apr 30 02:10:58 2020
+-- Date        : Fri May  1 01:50:22 2020
 -- Host        : QuantumNet-L4 running 64-bit Arch Linux
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/ip/skrach_design_skrach_core_0_1/skrach_design_skrach_core_0_1_stub.vhdl

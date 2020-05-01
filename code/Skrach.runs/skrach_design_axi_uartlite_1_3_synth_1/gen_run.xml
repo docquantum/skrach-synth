@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="skrach_design_axi_uartlite_1_3_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1588144233">
-  <File Type="RDS-UTIL-PB" Name="skrach_design_axi_uartlite_1_3_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="skrach_design_axi_uartlite_1_3_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="skrach_design_axi_uartlite_1_3_utilization_synth.pb"/>
   <File Type="RDS-RDS" Name="skrach_design_axi_uartlite_1_3.vds"/>
   <File Type="RDS-DCP" Name="skrach_design_axi_uartlite_1_3.dcp"/>
   <File Type="PA-TCL" Name="skrach_design_axi_uartlite_1_3.tcl"/>

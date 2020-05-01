@@ -1,3 +1,15 @@
+/**
+ * Daria Solovey
+ * May 1st 2020
+ *
+ * MIDI Library
+ *
+ * Interfaces with a UARTLite IP to read and decode
+ * midi signals from external input on the FPGA.
+ * Also implements a few data structures to make
+ * decode easy.
+ */
+
 #ifndef MIDI_H   /* prevent circular inclusions */
 #define MIDI_H   /* by using protection macros */
 
@@ -50,5 +62,7 @@ char * pitch_to_string(int pitch);
 float pitch_to_freq(int pitch);
 
 void reset_midi_uart(void);
+
+void print_midi_packet(MidiMsg msg);
 
 #endif /* end of protection macro */

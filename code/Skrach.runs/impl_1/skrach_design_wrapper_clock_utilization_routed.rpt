@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Apr 30 02:16:44 2020
+| Date         : Fri May  1 01:56:18 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_clock_utilization -file skrach_design_wrapper_clock_utilization_routed.rpt
 | Design       : skrach_design_wrapper
@@ -60,10 +60,10 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                         | Driver Pin                                                                                                | Net                                                                                              |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y2  | n/a          |                 6 |        7262 |               0 |       10.000 | clk_100_skrach_design_clk_wiz_0_0                             | skrach_design_i/clk_wiz_0/inst/clkout2_buf/O                                                              | skrach_design_i/clk_wiz_0/inst/clk_100                                                           |
+| g0        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y2  | n/a          |                 6 |        6963 |               0 |       10.000 | clk_100_skrach_design_clk_wiz_0_0                             | skrach_design_i/clk_wiz_0/inst/clkout2_buf/O                                                              | skrach_design_i/clk_wiz_0/inst/clk_100                                                           |
 | g1        | src0      | BUFH/O          | None       | BUFHCE_X0Y25   | X0Y2         |                 1 |           8 |               0 |       10.000 | clk_100_skrach_design_clk_wiz_0_0                             | skrach_design_i/clk_wiz_0/inst/clkout2_buf_en/O                                                           | skrach_design_i/clk_wiz_0/inst/clk_100_skrach_design_clk_wiz_0_0_en_clk                          |
 | g2        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 4 |        6815 |               0 |       10.000 | clk_pll_i                                                     | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O  | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK      |
-| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 2 |         235 |               0 |       33.333 | skrach_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O                                  | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK                               |
+| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 3 |         235 |               0 |       33.333 | skrach_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O                                  | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK                               |
 | g4        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y0  | n/a          |                 2 |          63 |               0 |        5.000 | clk_200_skrach_design_clk_wiz_0_0                             | skrach_design_i/clk_wiz_0/inst/clkout3_buf/O                                                              | skrach_design_i/clk_wiz_0/inst/clk_200                                                           |
 | g5        | src0      | BUFH/O          | None       | BUFHCE_X0Y26   | X0Y2         |                 1 |           8 |               0 |        5.000 | clk_200_skrach_design_clk_wiz_0_0                             | skrach_design_i/clk_wiz_0/inst/clkout3_buf_en/O                                                           | skrach_design_i/clk_wiz_0/inst/clk_200_skrach_design_clk_wiz_0_0_en_clk                          |
 | g6        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y1  | n/a          |                 2 |          35 |               0 |       81.375 | clk_12_skrach_design_clk_wiz_0_0                              | skrach_design_i/clk_wiz_0/inst/clkout1_buf/O                                                              | skrach_design_i/clk_wiz_0/inst/clk_12                                                            |
@@ -119,14 +119,14 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2700 |    0 |   800 |    0 |    60 |    0 |    30 |    0 |    60 |
 | X1Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2500 |    0 |   800 |    0 |    40 |    0 |    20 |    0 |    40 |
-| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4200 |    0 |  1400 |    0 |   100 |   19 |    50 |    0 |   100 |
-| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   16 |  4000 |    8 |  1400 |    0 |    80 |    5 |    40 |    0 |    80 |
-| X0Y2              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2297 |  3600 |  914 |  1400 |    0 |   100 |   41 |    50 |   13 |   100 |
-| X1Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    1 |    50 | 4146 |  4000 | 1831 |  1400 |    0 |    80 |   16 |    40 |    5 |    80 |
-| X0Y3              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  430 |  3600 |  189 |  1400 |    0 |   100 |    0 |    50 |    0 |   100 |
-| X1Y3              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    4 |    50 | 6264 |  4000 | 2136 |  1400 |    0 |    80 |    0 |    40 |    0 |    80 |
+| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  337 |  4200 |  140 |  1400 |    0 |   100 |    7 |    50 |    6 |   100 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  447 |  4000 |  185 |  1400 |    0 |    80 |    8 |    40 |    7 |    80 |
+| X0Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  621 |  3600 |  257 |  1400 |    0 |   100 |   23 |    50 |    0 |   100 |
+| X1Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    1 |    50 | 3405 |  4000 | 1461 |  1400 |    0 |    80 |   28 |    40 |    5 |    80 |
+| X0Y3              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  316 |  3600 |  123 |  1400 |    0 |   100 |    8 |    50 |    0 |   100 |
+| X1Y3              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    4 |    50 | 7400 |  4000 | 2572 |  1400 |    0 |    80 |    7 |    40 |    0 |    80 |
 | X0Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     1 |    0 |    50 |    0 |    50 |    0 |  2550 |    0 |   750 |    0 |    50 |    0 |    25 |    0 |    60 |
-| X1Y4              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     0 |    0 |    50 |    0 |    50 |  242 |  2500 |   91 |   800 |    0 |    40 |    0 |    20 |    0 |    40 |
+| X1Y4              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     0 |    0 |    50 |    0 |    50 |  570 |  2500 |  221 |   800 |    0 |    40 |    0 |    20 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -139,9 +139,9 @@ All Modules
 |    | X0 | X1 |
 +----+----+----+
 | Y4 |  0 |  1 |
-| Y3 |  3 |  4 |
-| Y2 |  6 |  5 |
-| Y1 |  1 |  1 |
+| Y3 |  3 |  5 |
+| Y2 |  5 |  5 |
+| Y1 |  1 |  2 |
 | Y0 |  0 |  0 |
 +----+----+----+
 
@@ -152,7 +152,7 @@ All Modules
 +-----------+-----------------+-------------------+-----------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                             | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                    |
 +-----------+-----------------+-------------------+-----------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------+
-| g0        | BUFGCTRL/O      | n/a               | clk_100_skrach_design_clk_wiz_0_0 |      10.000 | {0.000 5.000} |        7055 |        0 |              0 |        0 | skrach_design_i/clk_wiz_0/inst/clk_100 |
+| g0        | BUFGCTRL/O      | n/a               | clk_100_skrach_design_clk_wiz_0_0 |      10.000 | {0.000 5.000} |        6756 |        0 |              0 |        0 | skrach_design_i/clk_wiz_0/inst/clk_100 |
 +-----------+-----------------+-------------------+-----------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -160,15 +160,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-------+-------+
-|    | X0    | X1    |
-+----+-------+-------+
-| Y4 |     0 |     0 |
-| Y3 |    85 |   765 |
-| Y2 |  2277 |  3888 |
-| Y1 |    19 |    21 |
-| Y0 |     0 |     0 |
-+----+-------+-------+
++----+------+-------+
+|    | X0   | X1    |
++----+------+-------+
+| Y4 |    0 |     0 |
+| Y3 |    8 |  1851 |
+| Y2 |  598 |  3511 |
+| Y1 |  350 |   438 |
+| Y0 |    0 |     0 |
++----+------+-------+
 
 
 8. Device Cell Placement Summary for Global Clock g1
@@ -213,9 +213,9 @@ All Modules
 +----+------+-------+
 |    | X0   | X1    |
 +----+------+-------+
-| Y4 |    0 |   242 |
-| Y3 |  300 |  5752 |
-| Y2 |    0 |   381 |
+| Y4 |    0 |   570 |
+| Y3 |  271 |  5831 |
+| Y2 |    0 |     3 |
 | Y1 |    0 |     0 |
 | Y0 |    0 |     0 |
 +----+------+-------+
@@ -239,8 +239,8 @@ All Modules
 |    | X0  | X1   |
 +----+-----+------+
 | Y4 |   0 |    0 |
-| Y3 |   0 |    0 |
-| Y2 |  57 |  178 |
+| Y3 |   0 |   34 |
+| Y2 |  50 |  151 |
 | Y1 |   0 |    0 |
 | Y0 |   0 |    0 |
 +----+-----+------+
@@ -310,15 +310,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+----+
-|    | X0  | X1 |
-+----+-----+----+
-| Y4 |   0 |  0 |
-| Y3 |   0 |  0 |
-| Y2 |  34 |  1 |
-| Y1 |   0 |  0 |
-| Y0 |   0 |  0 |
-+----+-----+----+
++----+----+-----+
+|    | X0 | X1  |
++----+----+-----+
+| Y4 |  0 |   0 |
+| Y3 |  0 |   0 |
+| Y2 |  0 |  10 |
+| Y1 |  0 |  25 |
+| Y0 |  0 |   0 |
++----+----+-----+
 
 
 14. Device Cell Placement Summary for Global Clock g7
@@ -399,11 +399,11 @@ All Modules
 17. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                    |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |          19 |               0 |  0 |      0 |   19 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100 |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                    |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| g0        | n/a   | BUFGCTRL/O      | None       |         350 |               0 | 337 |      0 |    7 |   6 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -412,11 +412,12 @@ All Modules
 18. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                    |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |          21 |               0 | 16 |      0 |    5 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100 |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                    |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| g0        | n/a   | BUFGCTRL/O      | None       |         438 |               0 | 423 |      0 |    8 |   7 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100 |
+| g6        | n/a   | BUFGCTRL/O      | None       |          25 |               0 |  24 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_12  |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -425,16 +426,15 @@ All Modules
 19. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                     |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |        2277 |               0 | 2183 |     40 |   41 |  13 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100                                  |
-| g3        | n/a   | BUFG/O          | None       |          57 |               0 |   57 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK      |
-| g6        | n/a   | BUFGCTRL/O      | None       |          34 |               0 |   33 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_12                                   |
-| g1        | n/a   | BUFH/O          | None       |           8 |               0 |    8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100_skrach_design_clk_wiz_0_0_en_clk |
-| g7        | n/a   | BUFH/O          | None       |           8 |               0 |    8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_12_skrach_design_clk_wiz_0_0_en_clk  |
-| g5        | n/a   | BUFH/O          | None       |           8 |               0 |    8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_200_skrach_design_clk_wiz_0_0_en_clk |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                     |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
+| g0        | n/a   | BUFGCTRL/O      | None       |         598 |               0 | 547 |     28 |   23 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100                                  |
+| g3        | n/a   | BUFG/O          | None       |          50 |               0 |  50 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK      |
+| g1        | n/a   | BUFH/O          | None       |           8 |               0 |   8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100_skrach_design_clk_wiz_0_0_en_clk |
+| g7        | n/a   | BUFH/O          | None       |           8 |               0 |   8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_12_skrach_design_clk_wiz_0_0_en_clk  |
+| g5        | n/a   | BUFH/O          | None       |           8 |               0 |   8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_200_skrach_design_clk_wiz_0_0_en_clk |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -446,10 +446,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |        3888 |               0 | 3627 |    240 |   16 |   5 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100                                                      |
-| g2        | n/a   | BUFG/O          | None       |         381 |               0 |  366 |     15 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK |
-| g3        | n/a   | BUFG/O          | None       |         178 |               0 |  153 |     25 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK                          |
-| g6        | n/a   | BUFGCTRL/O      | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_12                                                       |
+| g0        | n/a   | BUFGCTRL/O      | None       |        3511 |               0 | 3264 |    214 |   28 |   5 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100                                                      |
+| g2        | n/a   | BUFG/O          | None       |           3 |               0 |    3 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK |
+| g3        | n/a   | BUFG/O          | None       |         151 |               0 |  129 |     22 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK                          |
+| g6        | n/a   | BUFGCTRL/O      | None       |          10 |               0 |    9 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_12                                                       |
 | g8        | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clkfbout_buf_skrach_design_clk_wiz_0_0                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -463,8 +463,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |          85 |               0 |  85 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100                                                      |
-| g2        | n/a   | BUFG/O          | None       |         300 |               0 | 300 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK |
+| g0        | n/a   | BUFGCTRL/O      | None       |           8 |               0 |   0 |      0 |    8 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100                                                      |
+| g2        | n/a   | BUFG/O          | None       |         271 |               0 | 271 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK |
 | g4        | n/a   | BUFGCTRL/O      | None       |          46 |               0 |  45 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_200                                                      |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -478,8 +478,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                              |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |         765 |               0 |  722 |     43 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100                                                           |
-| g2        | n/a   | BUFG/O          | None       |        5752 |               0 | 5527 |    195 |    0 |   0 |  0 |    1 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK      |
+| g0        | n/a   | BUFGCTRL/O      | None       |        1851 |               0 | 1763 |     81 |    7 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/clk_wiz_0/inst/clk_100                                                           |
+| g2        | n/a   | BUFG/O          | None       |        5831 |               0 | 5591 |    210 |    0 |   0 |  0 |    1 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK      |
+| g3        | n/a   | BUFG/O          | None       |          34 |               0 |   31 |      3 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK                               |
 | g4        | n/a   | BUFGCTRL/O      | None       |          17 |               0 |   15 |      0 |    0 |   0 |  0 |    0 |   1 |       0 | skrach_design_i/clk_wiz_0/inst/clk_200                                                           |
 | g9        | n/a   | BUFH/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/pll_clk3 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------+
@@ -494,7 +495,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g2        | n/a   | BUFG/O          | None       |         242 |               0 | 242 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK |
+| g2        | n/a   | BUFG/O          | None       |         570 |               0 | 570 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/u_ddr3_infrastructure/CLK |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -532,7 +533,7 @@ resize_pblock [get_pblocks {CLKAG_skrach_design_i/mig_7series_0/u_skrach_design_
 #startgroup
 create_pblock {CLKAG_skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK}
 add_cells_to_pblock [get_pblocks  {CLKAG_skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK"}]]]
-resize_pblock [get_pblocks {CLKAG_skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_skrach_design_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Ext_JTAG_DRCK}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
 # Clock net "skrach_design_i/clk_wiz_0/inst/clk_200_skrach_design_clk_wiz_0_0_en_clk" driven by instance "skrach_design_i/clk_wiz_0/inst/clkout3_buf_en" located at site "BUFHCE_X0Y26"
@@ -560,7 +561,7 @@ resize_pblock [get_pblocks {CLKAG_skrach_design_i/clk_wiz_0/inst/clk_12_skrach_d
 #startgroup
 create_pblock {CLKAG_skrach_design_i/clk_wiz_0/inst/clk_12}
 add_cells_to_pblock [get_pblocks  {CLKAG_skrach_design_i/clk_wiz_0/inst/clk_12}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="skrach_design_i/clk_wiz_0/inst/clk_12"}]]]
-resize_pblock [get_pblocks {CLKAG_skrach_design_i/clk_wiz_0/inst/clk_12}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_skrach_design_i/clk_wiz_0/inst/clk_12}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "skrach_design_i/clk_wiz_0/inst/clk_100_skrach_design_clk_wiz_0_0_en_clk" driven by instance "skrach_design_i/clk_wiz_0/inst/clkout2_buf_en" located at site "BUFHCE_X0Y25"

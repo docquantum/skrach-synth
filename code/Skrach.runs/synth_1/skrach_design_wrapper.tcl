@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 2
 create_project -in_memory -part xc7a200tsbg484-1
 
@@ -108,8 +107,8 @@ set_property used_in_implementation false [get_files -all /home/docquantum/ce446
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/imports/new/lab4.xdc
-set_property used_in_implementation false [get_files /home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/imports/new/lab4.xdc]
+read_xdc /home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/new/skrach.xdc
+set_property used_in_implementation false [get_files /home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/new/skrach.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

@@ -65,7 +65,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 2
   create_project -in_memory -part xc7a200tsbg484-1
   set_property board_part_repo_paths {/home/docquantum/.Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
@@ -84,7 +83,7 @@ set rc [catch {
   set_param project.isImplRun true
   add_files /home/docquantum/ce446_solovey/final/code/Skrach.srcs/sources_1/bd/skrach_design/skrach_design.bd
   set_param project.isImplRun false
-  read_xdc /home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/imports/new/lab4.xdc
+  read_xdc /home/docquantum/ce446_solovey/final/code/Skrach.srcs/constrs_1/new/skrach.xdc
   set_param project.isImplRun true
   link_design -top skrach_design_wrapper -part xc7a200tsbg484-1
   set_param project.isImplRun false

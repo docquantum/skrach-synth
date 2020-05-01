@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Apr 30 02:16:22 2020
+| Date         : Fri May  1 01:55:57 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_drc -file skrach_design_wrapper_drc_routed.rpt -pb skrach_design_wrapper_drc_routed.pb -rpx skrach_design_wrapper_drc_routed.rpx
 | Design       : skrach_design_wrapper
@@ -141,67 +141,67 @@ Related violations: <none>
 
 AVAL-4#1 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/mix_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/mix_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#2 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op1/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op1/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#3 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op10/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op10/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#4 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op11/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op11/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#5 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op12/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op12/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#6 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op2/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op2/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#7 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op3/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op3/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#8 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op4/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op4/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#9 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op5/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op5/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#10 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op6/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op6/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#11 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op7/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op7/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#12 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op8/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op8/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-4#13 Advisory
 enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core/op9/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+skrach_design_i/skrach_core_0/U0/skrach_core_v1_0_S_AXI_inst/core_inst/op9/adsr_inst/multipy_signal/bl.DSP48E_2: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 

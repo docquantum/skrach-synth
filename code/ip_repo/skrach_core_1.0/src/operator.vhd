@@ -1,12 +1,13 @@
 --------------------------------------------------------------------------------
 -- Name:	Daria Solovey
--- Updated:	2020/04/26
+-- Updated:	2020/05/01
 -- File:    operator.vhd
 -- Module:	Skrach Core
 -- Pupr:	Self enclosed module with an oscillator and ADSR envelope.
---          More functaionlity should be added such as LFO with FM for
---          virbrato, as well as signal in to be modulated by another
---          signal. 
+--          
+-- TODO:    More functaionlity should be added such as LFO with FM for
+--          virbrato, as well as signal input to be modulated by another
+--          signal.
 -- 	
 -- Academic Integrity Statement: I certify that, while others may have 
 -- assisted me in brain storming, debugging and validating this program, 

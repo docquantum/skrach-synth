@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Apr 30 02:16:30 2020
+| Date         : Fri May  1 01:56:05 2020
 | Host         : QuantumNet-L4 running 64-bit Arch Linux
 | Command      : report_methodology -file skrach_design_wrapper_methodology_drc_routed.rpt -pb skrach_design_wrapper_methodology_drc_routed.pb -rpx skrach_design_wrapper_methodology_drc_routed.rpx
 | Design       : skrach_design_wrapper
@@ -75,62 +75,62 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X68Y171 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X71Y177 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X64Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X71Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X66Y168 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X70Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X66Y170 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X69Y177 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X67Y172 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X72Y172 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X65Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X70Y171 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X66Y178 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X68Y171 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X66Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X71Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X67Y174 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X69Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X63Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X68Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X66Y176 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X70Y173 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X69Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X72Y175 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell skrach_design_i/mig_7series_0/u_skrach_design_mig_7series_0_3_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -140,7 +140,7 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -2.220 ns between skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/LRCLK_reg/C (clocked by clk_12_skrach_design_clk_wiz_0_0) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/lr_clk_sync_inst/sreg_reg[0]/D (clocked by clk_100_skrach_design_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.232 ns between skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/audio_inout/LRCLK_reg/C (clocked by clk_12_skrach_design_clk_wiz_0_0) and skrach_design_i/skrach_core_0/U0/audio_codec_wrapper_i/lr_clk_sync_inst/sreg_reg[0]/D (clocked by clk_100_skrach_design_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
