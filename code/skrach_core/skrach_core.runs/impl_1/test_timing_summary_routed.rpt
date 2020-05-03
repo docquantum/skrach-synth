@@ -1,0 +1,1644 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Thu Apr 30 01:55:31 2020
+| Host         : QuantumNet-L4 running 64-bit Arch Linux
+| Command      : report_timing_summary -max_paths 10 -file test_timing_summary_routed.rpt -pb test_timing_summary_routed.pb -rpx test_timing_summary_routed.rpx -warn_on_violation
+| Design       : test
+| Device       : 7a200t-sbg484
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 305 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 1089 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 6 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     75.557        0.000                      0                   74        0.122        0.000                      0                   74        3.000        0.000                       0                    50  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                                                       Waveform(ns)       Period(ns)      Frequency(MHz)
+-----                                                       ------------       ----------      --------------
+audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1  {0.000 5.000}      10.000          100.000         
+  clk_out1_clk_wiz_0                                        {0.000 40.690}     81.380          12.288          
+  clkfbout_clk_wiz_0                                        {0.000 25.000}     50.000          20.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                                                           WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                                                           -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1                                                                                                                                                    3.000        0.000                       0                     1  
+  clk_out1_clk_wiz_0                                             75.557        0.000                      0                   73        0.122        0.000                      0                   73       40.190        0.000                       0                    46  
+  clkfbout_clk_wiz_0                                                                                                                                                                                         47.845        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group          From Clock          To Clock                WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------          ----------          --------                -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**   clk_out1_clk_wiz_0  clk_out1_clk_wiz_0       77.810        0.000                      0                    1        0.921        0.000                      0                    1  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+  To Clock:  audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_clk_wiz_0
+  To Clock:  clk_out1_clk_wiz_0
+
+Setup :            0  Failing Endpoints,  Worst Slack       75.557ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.122ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       40.190ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             75.557ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/CE0
+                            (rising edge-triggered cell BUFGCTRL clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        5.395ns  (logic 0.456ns (8.452%)  route 4.939ns (91.548%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.085ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.091ns = ( 81.289 - 81.380 ) 
+    Source Clock Delay      (SCD):    -0.134ns
+    Clock Pessimism Removal (CPR):    -0.128ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           1.649    -1.144    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.127    -1.017 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.883    -0.134    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y2          FDCE (Prop_fdce_C_Q)         0.456     0.322 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[7]/Q
+                         net (fo=1, routed)           4.939     5.261    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1[7]
+    BUFGCTRL_X0Y0        BUFGCTRL                                     r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/CE0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL                                     r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/I0
+                         clock pessimism             -0.128    81.161    
+                         clock uncertainty           -0.184    80.977    
+    BUFGCTRL_X0Y0        BUFGCTRL (Setup_bufgctrl_I0_CE0)
+                                                     -0.159    80.818    audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf
+  -------------------------------------------------------------------
+                         required time                         80.818    
+                         arrival time                          -5.261    
+  -------------------------------------------------------------------
+                         slack                                 75.557    
+
+Slack (MET) :             76.029ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/OE_L_int_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        5.291ns  (logic 1.676ns (31.677%)  route 3.615ns (68.323%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=2 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.849     4.696    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X142Y100       LUT2 (Prop_lut2_I0_O)        0.329     5.025 r  audio_codec_wrapper_i/audio_inout/Cnt_Lrclk[4]_i_1/O
+                         net (fo=7, routed)           0.943     5.968    audio_codec_wrapper_i/audio_inout/BCLK_Fall_int
+    SLICE_X142Y99        LUT6 (Prop_lut6_I0_O)        0.124     6.092 r  audio_codec_wrapper_i/audio_inout/OE_L_int_i_2/O
+                         net (fo=2, routed)           0.830     6.922    audio_codec_wrapper_i/audio_inout/OE_R_int1__0
+    SLICE_X142Y98        LUT3 (Prop_lut3_I2_O)        0.124     7.046 r  audio_codec_wrapper_i/audio_inout/OE_L_int_i_1/O
+                         net (fo=1, routed)           0.000     7.046    audio_codec_wrapper_i/audio_inout/OE_L_int_i_1_n_0
+    SLICE_X142Y98        FDRE                                         r  audio_codec_wrapper_i/audio_inout/OE_L_int_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y98        FDRE                                         r  audio_codec_wrapper_i/audio_inout/OE_L_int_reg/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X142Y98        FDRE (Setup_fdre_C_D)        0.077    83.075    audio_codec_wrapper_i/audio_inout/OE_L_int_reg
+  -------------------------------------------------------------------
+                         required time                         83.075    
+                         arrival time                          -7.046    
+  -------------------------------------------------------------------
+                         slack                                 76.029    
+
+Slack (MET) :             76.044ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/OE_R_int_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        5.317ns  (logic 1.702ns (32.012%)  route 3.615ns (67.988%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=2 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.849     4.696    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X142Y100       LUT2 (Prop_lut2_I0_O)        0.329     5.025 r  audio_codec_wrapper_i/audio_inout/Cnt_Lrclk[4]_i_1/O
+                         net (fo=7, routed)           0.943     5.968    audio_codec_wrapper_i/audio_inout/BCLK_Fall_int
+    SLICE_X142Y99        LUT6 (Prop_lut6_I0_O)        0.124     6.092 r  audio_codec_wrapper_i/audio_inout/OE_L_int_i_2/O
+                         net (fo=2, routed)           0.830     6.922    audio_codec_wrapper_i/audio_inout/OE_R_int1__0
+    SLICE_X142Y98        LUT3 (Prop_lut3_I2_O)        0.150     7.072 r  audio_codec_wrapper_i/audio_inout/OE_R_int_i_1/O
+                         net (fo=1, routed)           0.000     7.072    audio_codec_wrapper_i/audio_inout/OE_R_int_i_1_n_0
+    SLICE_X142Y98        FDRE                                         r  audio_codec_wrapper_i/audio_inout/OE_R_int_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y98        FDRE                                         r  audio_codec_wrapper_i/audio_inout/OE_R_int_reg/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X142Y98        FDRE (Setup_fdre_C_D)        0.118    83.116    audio_codec_wrapper_i/audio_inout/OE_R_int_reg
+  -------------------------------------------------------------------
+                         required time                         83.116    
+                         arrival time                          -7.072    
+  -------------------------------------------------------------------
+                         slack                                 76.044    
+
+Slack (MET) :             76.166ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[18]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.908ns  (logic 1.676ns (34.146%)  route 3.232ns (65.854%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.668     4.515    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X143Y99        LUT2 (Prop_lut2_I0_O)        0.329     4.844 r  audio_codec_wrapper_i/audio_inout/Data_In_int[31]_i_2/O
+                         net (fo=1, routed)           0.263     5.107    audio_codec_wrapper_i/audio_inout/p_17_in
+    SLICE_X143Y99        LUT6 (Prop_lut6_I5_O)        0.124     5.231 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_3/O
+                         net (fo=18, routed)          0.373     5.604    audio_codec_wrapper_i/audio_inout/Data_Out_int1__0
+    SLICE_X142Y99        LUT4 (Prop_lut4_I3_O)        0.124     5.728 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1/O
+                         net (fo=17, routed)          0.936     6.664    audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1_n_0
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[18]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[18]/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X140Y97        FDRE (Setup_fdre_C_CE)      -0.169    82.829    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[18]
+  -------------------------------------------------------------------
+                         required time                         82.829    
+                         arrival time                          -6.664    
+  -------------------------------------------------------------------
+                         slack                                 76.166    
+
+Slack (MET) :             76.166ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.908ns  (logic 1.676ns (34.146%)  route 3.232ns (65.854%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.668     4.515    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X143Y99        LUT2 (Prop_lut2_I0_O)        0.329     4.844 r  audio_codec_wrapper_i/audio_inout/Data_In_int[31]_i_2/O
+                         net (fo=1, routed)           0.263     5.107    audio_codec_wrapper_i/audio_inout/p_17_in
+    SLICE_X143Y99        LUT6 (Prop_lut6_I5_O)        0.124     5.231 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_3/O
+                         net (fo=18, routed)          0.373     5.604    audio_codec_wrapper_i/audio_inout/Data_Out_int1__0
+    SLICE_X142Y99        LUT4 (Prop_lut4_I3_O)        0.124     5.728 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1/O
+                         net (fo=17, routed)          0.936     6.664    audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1_n_0
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X140Y97        FDRE (Setup_fdre_C_CE)      -0.169    82.829    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]
+  -------------------------------------------------------------------
+                         required time                         82.829    
+                         arrival time                          -6.664    
+  -------------------------------------------------------------------
+                         slack                                 76.166    
+
+Slack (MET) :             76.166ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[25]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.908ns  (logic 1.676ns (34.146%)  route 3.232ns (65.854%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.668     4.515    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X143Y99        LUT2 (Prop_lut2_I0_O)        0.329     4.844 r  audio_codec_wrapper_i/audio_inout/Data_In_int[31]_i_2/O
+                         net (fo=1, routed)           0.263     5.107    audio_codec_wrapper_i/audio_inout/p_17_in
+    SLICE_X143Y99        LUT6 (Prop_lut6_I5_O)        0.124     5.231 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_3/O
+                         net (fo=18, routed)          0.373     5.604    audio_codec_wrapper_i/audio_inout/Data_Out_int1__0
+    SLICE_X142Y99        LUT4 (Prop_lut4_I3_O)        0.124     5.728 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1/O
+                         net (fo=17, routed)          0.936     6.664    audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1_n_0
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[25]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[25]/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X140Y97        FDRE (Setup_fdre_C_CE)      -0.169    82.829    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[25]
+  -------------------------------------------------------------------
+                         required time                         82.829    
+                         arrival time                          -6.664    
+  -------------------------------------------------------------------
+                         slack                                 76.166    
+
+Slack (MET) :             76.166ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.908ns  (logic 1.676ns (34.146%)  route 3.232ns (65.854%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.668     4.515    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X143Y99        LUT2 (Prop_lut2_I0_O)        0.329     4.844 r  audio_codec_wrapper_i/audio_inout/Data_In_int[31]_i_2/O
+                         net (fo=1, routed)           0.263     5.107    audio_codec_wrapper_i/audio_inout/p_17_in
+    SLICE_X143Y99        LUT6 (Prop_lut6_I5_O)        0.124     5.231 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_3/O
+                         net (fo=18, routed)          0.373     5.604    audio_codec_wrapper_i/audio_inout/Data_Out_int1__0
+    SLICE_X142Y99        LUT4 (Prop_lut4_I3_O)        0.124     5.728 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1/O
+                         net (fo=17, routed)          0.936     6.664    audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1_n_0
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X140Y97        FDRE (Setup_fdre_C_CE)      -0.169    82.829    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]
+  -------------------------------------------------------------------
+                         required time                         82.829    
+                         arrival time                          -6.664    
+  -------------------------------------------------------------------
+                         slack                                 76.166    
+
+Slack (MET) :             76.319ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.719ns  (logic 1.676ns (35.516%)  route 3.043ns (64.484%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.668     4.515    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X143Y99        LUT2 (Prop_lut2_I0_O)        0.329     4.844 r  audio_codec_wrapper_i/audio_inout/Data_In_int[31]_i_2/O
+                         net (fo=1, routed)           0.263     5.107    audio_codec_wrapper_i/audio_inout/p_17_in
+    SLICE_X143Y99        LUT6 (Prop_lut6_I5_O)        0.124     5.231 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_3/O
+                         net (fo=18, routed)          0.373     5.604    audio_codec_wrapper_i/audio_inout/Data_Out_int1__0
+    SLICE_X142Y99        LUT4 (Prop_lut4_I3_O)        0.124     5.728 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1/O
+                         net (fo=17, routed)          0.747     6.474    audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1_n_0
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X141Y97        FDRE (Setup_fdre_C_CE)      -0.205    82.793    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]
+  -------------------------------------------------------------------
+                         required time                         82.793    
+                         arrival time                          -6.474    
+  -------------------------------------------------------------------
+                         slack                                 76.319    
+
+Slack (MET) :             76.319ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.719ns  (logic 1.676ns (35.516%)  route 3.043ns (64.484%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.668     4.515    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X143Y99        LUT2 (Prop_lut2_I0_O)        0.329     4.844 r  audio_codec_wrapper_i/audio_inout/Data_In_int[31]_i_2/O
+                         net (fo=1, routed)           0.263     5.107    audio_codec_wrapper_i/audio_inout/p_17_in
+    SLICE_X143Y99        LUT6 (Prop_lut6_I5_O)        0.124     5.231 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_3/O
+                         net (fo=18, routed)          0.373     5.604    audio_codec_wrapper_i/audio_inout/Data_Out_int1__0
+    SLICE_X142Y99        LUT4 (Prop_lut4_I3_O)        0.124     5.728 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1/O
+                         net (fo=17, routed)          0.747     6.474    audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1_n_0
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X141Y97        FDRE (Setup_fdre_C_CE)      -0.205    82.793    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]
+  -------------------------------------------------------------------
+                         required time                         82.793    
+                         arrival time                          -6.474    
+  -------------------------------------------------------------------
+                         slack                                 76.319    
+
+Slack (MET) :             76.319ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[23]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        4.719ns  (logic 1.676ns (35.516%)  route 3.043ns (64.484%))
+  Logic Levels:           5  (CARRY4=1 LUT2=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.799ns = ( 83.179 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.755ns
+    Clock Pessimism Removal (CPR):    0.003ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.755     1.755    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y101       FDRE                                         r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X142Y101       FDRE (Prop_fdre_C_Q)         0.518     2.273 f  audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/Q
+                         net (fo=5, routed)           0.992     3.266    audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]
+    SLICE_X143Y101       LUT3 (Prop_lut3_I2_O)        0.124     3.390 r  audio_codec_wrapper_i/audio_inout/i__carry_i_2/O
+                         net (fo=1, routed)           0.000     3.390    audio_codec_wrapper_i/audio_inout/i__carry_i_2_n_0
+    SLICE_X143Y101       CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457     3.847 r  audio_codec_wrapper_i/audio_inout/Cnt_Bclk0_inferred__0/i__carry/CO[1]
+                         net (fo=5, routed)           0.668     4.515    audio_codec_wrapper_i/audio_inout/CO[0]
+    SLICE_X143Y99        LUT2 (Prop_lut2_I0_O)        0.329     4.844 r  audio_codec_wrapper_i/audio_inout/Data_In_int[31]_i_2/O
+                         net (fo=1, routed)           0.263     5.107    audio_codec_wrapper_i/audio_inout/p_17_in
+    SLICE_X143Y99        LUT6 (Prop_lut6_I5_O)        0.124     5.231 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_3/O
+                         net (fo=18, routed)          0.373     5.604    audio_codec_wrapper_i/audio_inout/Data_Out_int1__0
+    SLICE_X142Y99        LUT4 (Prop_lut4_I3_O)        0.124     5.728 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1/O
+                         net (fo=17, routed)          0.747     6.474    audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1_n_0
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[23]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.799    83.179    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[23]/C
+                         clock pessimism              0.003    83.182    
+                         clock uncertainty           -0.184    82.998    
+    SLICE_X141Y97        FDRE (Setup_fdre_C_CE)      -0.205    82.793    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[23]
+  -------------------------------------------------------------------
+                         required time                         82.793    
+                         arrival time                          -6.474    
+  -------------------------------------------------------------------
+                         slack                                 76.319    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.122ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.099ns
+    Source Clock Delay      (SCD):    -0.130ns
+    Clock Pessimism Removal (CPR):    0.229ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.486    -0.452    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.020    -0.432 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.302    -0.130    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y2          FDCE (Prop_fdce_C_Q)         0.141     0.011 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[0]/Q
+                         net (fo=1, routed)           0.056     0.067    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1[0]
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.545    -0.473    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.043    -0.430 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.529     0.099    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/C
+                         clock pessimism             -0.229    -0.130    
+    SLICE_X51Y2          FDCE (Hold_fdce_C_D)         0.075    -0.055    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.055    
+                         arrival time                           0.067    
+  -------------------------------------------------------------------
+                         slack                                  0.122    
+
+Slack (MET) :             0.123ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/BCLK_int_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.444ns  (logic 0.186ns (41.846%)  route 0.258ns (58.154%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.201ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.892ns
+    Source Clock Delay      (SCD):    0.685ns
+    Clock Pessimism Removal (CPR):    0.005ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.912    -0.026    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.026    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.685     0.685    audio_codec_wrapper_i/reset_sync_inst/clk_out1
+    SLICE_X141Y99        FDPE                                         r  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X141Y99        FDPE (Prop_fdpe_C_Q)         0.141     0.826 f  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/Q
+                         net (fo=27, routed)          0.258     1.085    audio_codec_wrapper_i/audio_inout/Q_O
+    SLICE_X142Y100       LUT3 (Prop_lut3_I2_O)        0.045     1.130 r  audio_codec_wrapper_i/audio_inout/BCLK_int_i_1/O
+                         net (fo=1, routed)           0.000     1.130    audio_codec_wrapper_i/audio_inout/BCLK_int_i_1_n_0
+    SLICE_X142Y100       FDRE                                         r  audio_codec_wrapper_i/audio_inout/BCLK_int_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.989    -0.029    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.029    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.892     0.892    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X142Y100       FDRE                                         r  audio_codec_wrapper_i/audio_inout/BCLK_int_reg/C
+                         clock pessimism             -0.005     0.887    
+    SLICE_X142Y100       FDRE (Hold_fdre_C_D)         0.120     1.007    audio_codec_wrapper_i/audio_inout/BCLK_int_reg
+  -------------------------------------------------------------------
+                         required time                         -1.007    
+                         arrival time                           1.130    
+  -------------------------------------------------------------------
+                         slack                                  0.123    
+
+Slack (MET) :             0.189ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.183ns  (logic 0.128ns (69.867%)  route 0.055ns (30.133%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.099ns
+    Source Clock Delay      (SCD):    -0.130ns
+    Clock Pessimism Removal (CPR):    0.229ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.486    -0.452    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.020    -0.432 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.302    -0.130    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y2          FDCE (Prop_fdce_C_Q)         0.128    -0.002 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[6]/Q
+                         net (fo=1, routed)           0.055     0.054    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1[6]
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.545    -0.473    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.043    -0.430 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.529     0.099    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[7]/C
+                         clock pessimism             -0.229    -0.130    
+    SLICE_X51Y2          FDCE (Hold_fdce_C_D)        -0.006    -0.136    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[7]
+  -------------------------------------------------------------------
+                         required time                          0.136    
+                         arrival time                           0.054    
+  -------------------------------------------------------------------
+                         slack                                  0.189    
+
+Slack (MET) :             0.216ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.354ns  (logic 0.209ns (59.011%)  route 0.145ns (40.989%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.961ns
+    Source Clock Delay      (SCD):    0.684ns
+    Clock Pessimism Removal (CPR):    0.259ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.912    -0.026    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.026    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.684     0.684    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y96        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X140Y96        FDRE (Prop_fdre_C_Q)         0.164     0.848 r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[19]/Q
+                         net (fo=1, routed)           0.145     0.993    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg_n_0_[19]
+    SLICE_X140Y97        LUT6 (Prop_lut6_I5_O)        0.045     1.038 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[20]_i_1/O
+                         net (fo=1, routed)           0.000     1.038    audio_codec_wrapper_i/audio_inout/Data_Out_int[20]_i_1_n_0
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.989    -0.029    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.029    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.961     0.961    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/C
+                         clock pessimism             -0.259     0.701    
+    SLICE_X140Y97        FDRE (Hold_fdre_C_D)         0.121     0.822    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -0.822    
+                         arrival time                           1.038    
+  -------------------------------------------------------------------
+                         slack                                  0.216    
+
+Slack (MET) :             0.217ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.354ns  (logic 0.209ns (59.011%)  route 0.145ns (40.989%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.961ns
+    Source Clock Delay      (SCD):    0.685ns
+    Clock Pessimism Removal (CPR):    0.259ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.912    -0.026    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.026    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.685     0.685    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X140Y97        FDRE (Prop_fdre_C_Q)         0.164     0.849 r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[27]/Q
+                         net (fo=1, routed)           0.145     0.994    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg_n_0_[27]
+    SLICE_X140Y98        LUT6 (Prop_lut6_I5_O)        0.045     1.039 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[28]_i_1/O
+                         net (fo=1, routed)           0.000     1.039    audio_codec_wrapper_i/audio_inout/Data_Out_int[28]_i_1_n_0
+    SLICE_X140Y98        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.989    -0.029    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.029    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.961     0.961    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y98        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[28]/C
+                         clock pessimism             -0.259     0.701    
+    SLICE_X140Y98        FDRE (Hold_fdre_C_D)         0.121     0.822    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[28]
+  -------------------------------------------------------------------
+                         required time                         -0.822    
+                         arrival time                           1.039    
+  -------------------------------------------------------------------
+                         slack                                  0.217    
+
+Slack (MET) :             0.230ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.247ns  (logic 0.128ns (51.736%)  route 0.119ns (48.264%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.099ns
+    Source Clock Delay      (SCD):    -0.130ns
+    Clock Pessimism Removal (CPR):    0.229ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.486    -0.452    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.020    -0.432 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.302    -0.130    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y2          FDCE (Prop_fdce_C_Q)         0.128    -0.002 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/Q
+                         net (fo=1, routed)           0.119     0.118    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1[1]
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.545    -0.473    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.043    -0.430 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.529     0.099    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[2]/C
+                         clock pessimism             -0.229    -0.130    
+    SLICE_X51Y2          FDCE (Hold_fdce_C_D)         0.017    -0.113    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[2]
+  -------------------------------------------------------------------
+                         required time                          0.113    
+                         arrival time                           0.118    
+  -------------------------------------------------------------------
+                         slack                                  0.230    
+
+Slack (MET) :             0.240ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.344ns  (logic 0.209ns (60.737%)  route 0.135ns (39.263%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.961ns
+    Source Clock Delay      (SCD):    0.685ns
+    Clock Pessimism Removal (CPR):    0.262ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.912    -0.026    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.026    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.685     0.685    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X140Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X140Y97        FDRE (Prop_fdre_C_Q)         0.164     0.849 r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[20]/Q
+                         net (fo=1, routed)           0.135     0.984    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg_n_0_[20]
+    SLICE_X141Y97        LUT6 (Prop_lut6_I5_O)        0.045     1.029 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[21]_i_1/O
+                         net (fo=1, routed)           0.000     1.029    audio_codec_wrapper_i/audio_inout/Data_Out_int[21]_i_1_n_0
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.989    -0.029    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.029    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.961     0.961    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/C
+                         clock pessimism             -0.262     0.698    
+    SLICE_X141Y97        FDRE (Hold_fdre_C_D)         0.091     0.789    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]
+  -------------------------------------------------------------------
+                         required time                         -0.789    
+                         arrival time                           1.029    
+  -------------------------------------------------------------------
+                         slack                                  0.240    
+
+Slack (MET) :             0.241ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.317ns  (logic 0.141ns (44.418%)  route 0.176ns (55.582%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.099ns
+    Source Clock Delay      (SCD):    -0.130ns
+    Clock Pessimism Removal (CPR):    0.229ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.486    -0.452    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.020    -0.432 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.302    -0.130    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y2          FDCE (Prop_fdce_C_Q)         0.141     0.011 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[3]/Q
+                         net (fo=1, routed)           0.176     0.188    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1[3]
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.545    -0.473    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFHCE_X0Y0          BUFH (Prop_bufh_I_O)         0.043    -0.430 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/O
+                         net (fo=8, routed)           0.529     0.099    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk
+    SLICE_X51Y2          FDCE                                         r  audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[4]/C
+                         clock pessimism             -0.229    -0.130    
+    SLICE_X51Y2          FDCE (Hold_fdce_C_D)         0.076    -0.054    audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[4]
+  -------------------------------------------------------------------
+                         required time                          0.054    
+                         arrival time                           0.188    
+  -------------------------------------------------------------------
+                         slack                                  0.241    
+
+Slack (MET) :             0.245ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_1/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/D
+                            (rising edge-triggered cell FDPE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.311ns  (logic 0.141ns (45.298%)  route 0.170ns (54.702%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.961ns
+    Source Clock Delay      (SCD):    0.685ns
+    Clock Pessimism Removal (CPR):    0.275ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.912    -0.026    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.026    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.685     0.685    audio_codec_wrapper_i/reset_sync_inst/clk_out1
+    SLICE_X141Y99        FDPE                                         r  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_1/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X141Y99        FDPE (Prop_fdpe_C_Q)         0.141     0.826 r  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_1/Q
+                         net (fo=1, routed)           0.170     0.996    audio_codec_wrapper_i/reset_sync_inst/d_int
+    SLICE_X141Y99        FDPE                                         r  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.989    -0.029    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.029    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.961     0.961    audio_codec_wrapper_i/reset_sync_inst/clk_out1
+    SLICE_X141Y99        FDPE                                         r  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/C
+                         clock pessimism             -0.275     0.685    
+    SLICE_X141Y99        FDPE (Hold_fdpe_C_D)         0.066     0.751    audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2
+  -------------------------------------------------------------------
+                         required time                         -0.751    
+                         arrival time                           0.996    
+  -------------------------------------------------------------------
+                         slack                                  0.245    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.344ns  (logic 0.186ns (54.053%)  route 0.158ns (45.947%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.961ns
+    Source Clock Delay      (SCD):    0.685ns
+    Clock Pessimism Removal (CPR):    0.275ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.912    -0.026    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.026    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.685     0.685    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X141Y97        FDRE (Prop_fdre_C_Q)         0.141     0.826 r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[21]/Q
+                         net (fo=1, routed)           0.158     0.984    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg_n_0_[21]
+    SLICE_X141Y97        LUT6 (Prop_lut6_I5_O)        0.045     1.029 r  audio_codec_wrapper_i/audio_inout/Data_Out_int[22]_i_1/O
+                         net (fo=1, routed)           0.000     1.029    audio_codec_wrapper_i/audio_inout/Data_Out_int[22]_i_1_n_0
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.989    -0.029    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.029    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.961     0.961    audio_codec_wrapper_i/audio_inout/CLK
+    SLICE_X141Y97        FDRE                                         r  audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]/C
+                         clock pessimism             -0.275     0.685    
+    SLICE_X141Y97        FDRE (Hold_fdre_C_D)         0.092     0.777    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[22]
+  -------------------------------------------------------------------
+                         required time                         -0.777    
+                         arrival time                           1.029    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_clk_wiz_0
+Waveform(ns):       { 0.000 40.690 }
+Period(ns):         81.380
+Sources:            { audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     FIFO36E1/RDCLK      n/a            2.576         81.380      78.804     RAMB36_X7Y19     audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl/RDCLK
+Min Period        n/a     BUFGCTRL/I0         n/a            2.155         81.380      79.225     BUFGCTRL_X0Y0    audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/I0
+Min Period        n/a     BUFH/I              n/a            2.155         81.380      79.225     BUFHCE_X0Y0      audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf_en/I
+Min Period        n/a     ODDR/C              n/a            1.474         81.380      79.906     OLOGIC_X1Y118    audio_codec_wrapper_i/ODDR_inst/C
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         81.380      80.131     MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         81.380      80.380     SLICE_X142Y100   audio_codec_wrapper_i/audio_inout/BCLK_int_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         81.380      80.380     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         81.380      80.380     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         81.380      80.380     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            1.000         81.380      80.380     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[3]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       81.380      131.980    MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X142Y100   audio_codec_wrapper_i/audio_inout/BCLK_int_reg/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[2]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[3]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X142Y101   audio_codec_wrapper_i/audio_inout/Cnt_Bclk_reg[4]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X140Y96    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[15]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X140Y96    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[16]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X140Y96    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[17]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         40.690      40.190     SLICE_X140Y97    audio_codec_wrapper_i/audio_inout/Data_Out_int_reg[18]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[0]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[0]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[2]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[2]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[3]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[3]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[4]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         40.690      40.190     SLICE_X51Y2      audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[4]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_clk_wiz_0
+  To Clock:  clkfbout_clk_wiz_0
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       47.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_clk_wiz_0
+Waveform(ns):       { 0.000 25.000 }
+Period(ns):         50.000
+Sources:            { audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I               n/a            2.155         50.000      47.845     BUFGCTRL_X0Y2    audio_codec_wrapper_i/audiocodec_master_clock/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         50.000      48.751     MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         50.000      48.751     MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       50.000      50.000     MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       50.000      163.360    MMCME2_ADV_X1Y0  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKFBOUT
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk_out1_clk_wiz_0
+  To Clock:  clk_out1_clk_wiz_0
+
+Setup :            0  Failing Endpoints,  Worst Slack       77.810ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.921ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             77.810ns  (required time - arrival time)
+  Source:                 audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl/RST
+                            (recovery check against rising-edge clock clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            81.380ns  (clk_out1_clk_wiz_0 rise@81.380ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.025ns  (logic 0.456ns (44.485%)  route 0.569ns (55.515%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.006ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.835ns = ( 83.216 - 81.380 ) 
+    Source Clock Delay      (SCD):    1.928ns
+    Clock Pessimism Removal (CPR):    0.099ns
+  Clock Uncertainty:      0.184ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.361ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         2.106     2.106    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.900    -2.793 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.697    -0.096    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.928     1.928    audio_codec_wrapper_i/reset_sync_inst/clk_out1
+    SLICE_X141Y99        FDPE                                         r  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X141Y99        FDPE (Prop_fdpe_C_Q)         0.456     2.384 f  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/Q
+                         net (fo=27, routed)          0.569     2.953    audio_codec_wrapper_i/FIFO_BUS_IN_inst/Q_O
+    RAMB36_X7Y19         FIFO36E1                                     f  audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl/RST
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     81.380    81.380 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000    81.380 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.972    83.352    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.637    78.715 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           2.574    81.289    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    81.380 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.835    83.216    audio_codec_wrapper_i/FIFO_BUS_IN_inst/CLK
+    RAMB36_X7Y19         FIFO36E1                                     r  audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl/RDCLK
+                         clock pessimism              0.099    83.315    
+                         clock uncertainty           -0.184    83.131    
+    RAMB36_X7Y19         FIFO36E1 (Recov_fifo36e1_RDCLK_RST)
+                                                     -2.368    80.763    audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl
+  -------------------------------------------------------------------
+                         required time                         80.763    
+                         arrival time                          -2.953    
+  -------------------------------------------------------------------
+                         slack                                 77.810    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.921ns  (arrival time - required time)
+  Source:                 audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Destination:            audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl/RST
+                            (removal check against rising-edge clock clk_out1_clk_wiz_0  {rise@0.000ns fall@40.690ns period=81.380ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.390ns  (logic 0.141ns (36.147%)  route 0.249ns (63.853%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.058ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.003ns
+    Source Clock Delay      (SCD):    0.685ns
+    Clock Pessimism Removal (CPR):    0.259ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         0.745     0.745    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.683    -0.938 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.912    -0.026    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.026    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          0.685     0.685    audio_codec_wrapper_i/reset_sync_inst/clk_out1
+    SLICE_X141Y99        FDPE                                         r  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X141Y99        FDPE (Prop_fdpe_C_Q)         0.141     0.826 f  audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/Q
+                         net (fo=27, routed)          0.249     1.075    audio_codec_wrapper_i/FIFO_BUS_IN_inst/Q_O
+    RAMB36_X7Y19         FIFO36E1                                     f  audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl/RST
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y1        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=306, routed)         1.022     1.022    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.040    -1.018 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=2, routed)           0.989    -0.029    audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.029    -0.000 r  audio_codec_wrapper_i/audiocodec_master_clock/inst/clkout1_buf/O
+                         net (fo=35, routed)          1.003     1.003    audio_codec_wrapper_i/FIFO_BUS_IN_inst/CLK
+    RAMB36_X7Y19         FIFO36E1                                     r  audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl/RDCLK
+                         clock pessimism             -0.259     0.744    
+    RAMB36_X7Y19         FIFO36E1 (Remov_fifo36e1_RDCLK_RST)
+                                                     -0.589     0.155    audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl
+  -------------------------------------------------------------------
+                         required time                         -0.155    
+                         arrival time                           1.075    
+  -------------------------------------------------------------------
+                         slack                                  0.921    
+
+
+
+
+

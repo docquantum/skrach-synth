@@ -52,7 +52,7 @@ Just unnecessary but cool and what I'd love to do functionality:
 |          | 2. Use switches to change type of signal (sine, square, etc) |
 |          | 3. MIDI signals from MIDI peripheral maps to certain functionality in Synth, namely keyboard keys to pitch of the signal |
 
-*Note: Module will need to be split into the relative modules, such as a function generator that generates clean signals, a frequency modulator that changes and combines signals, a UART communication module that interfaces with a MicroBlaze for control and debug, a video module to do video output.
+*Note*: Module will need to be split into the relative modules, such as a function generator that generates clean signals, a frequency modulator that changes and combines signals, a UART communication module that interfaces with a MicroBlaze for control and debug, a video module to do video output.
 
 ## Detailed Architecture
 

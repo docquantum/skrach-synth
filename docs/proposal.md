@@ -30,7 +30,7 @@ Just unnecessary but cool and what I'd love to do functionality:
 
 ## Level-0 Description
 
-![Level-0 Description Image](img/Skrach_Synth_Level_0.png)
+![Level-0 Description Image](img/level_0_diagram.png)
 
 | Module   | Skrach Synth |
 | -------- | ------------- |

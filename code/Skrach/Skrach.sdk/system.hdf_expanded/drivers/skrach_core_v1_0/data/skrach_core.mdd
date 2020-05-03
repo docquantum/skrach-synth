@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER skrach_core
+	OPTION supported_peripherals = (skrach_core);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = skrach_core;
+END DRIVER

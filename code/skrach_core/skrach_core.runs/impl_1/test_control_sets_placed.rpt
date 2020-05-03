@@ -1,0 +1,99 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Thu Apr 30 01:54:35 2020
+| Host         : QuantumNet-L4 running 64-bit Arch Linux
+| Command      : report_control_sets -verbose -file test_control_sets_placed.rpt
+| Design       : test
+| Device       : xc7a200t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    56 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              27 |           16 |
+| No           | No                    | Yes                    |              10 |            2 |
+| No           | Yes                   | No                     |              71 |           22 |
+| Yes          | No                    | No                     |              57 |           23 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             155 |           43 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------+----------------+
+|                                  Clock Signal                                 |                                  Enable Signal                                  |                           Set/Reset Signal                          | Slice Load Count | Bel Load Count |
++-------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------+----------------+
+|  audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1                  |                                                                                 | core/op2/osc_inst/sample_counter/SR[0]                              |                1 |              2 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/initialize_audio/twi_controller/E[0]                      | core/op2/osc_inst/sample_counter/SR[0]                              |                2 |              4 |
+|  audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1                  |                                                                                 |                                                                     |                3 |              4 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/initialize_audio/twi_controller/FSM_gray_state[3]_i_1_n_0 |                                                                     |                2 |              4 |
+|  audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1                  |                                                                                 | audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2_0[0]              |                1 |              5 |
+|  audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1                  | audio_codec_wrapper_i/audio_inout/BCLK_Fall_int                                 | audio_codec_wrapper_i/reset_sync_inst/Q_O                           |                1 |              5 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/initialize_audio/twi_controller/initWord_reg[16][0]       | core/op2/osc_inst/sample_counter/SR[0]                              |                3 |              7 |
+|  audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1_clk_wiz_0_en_clk |                                                                                 | audio_codec_wrapper_i/audiocodec_master_clock/inst/reset_high       |                1 |              8 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte[7]_i_1_n_0       |                                                                     |                3 |              8 |
+|  clk_IBUF_BUFG                                                                |                                                                                 | audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt0_1 |                2 |              8 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt[7]_i_2_n_0         | audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt0_0     |                2 |              8 |
+|  clk_IBUF_BUFG                                                                | reset_n_IBUF                                                                    |                                                                     |                6 |             10 |
+|  audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_out1                  | audio_codec_wrapper_i/audio_inout/Data_Out_int[31]_i_1_n_0                      |                                                                     |                5 |             17 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/initialize_audio/initWord[30]_i_1_n_0                     |                                                                     |                7 |             18 |
+|  clk_IBUF_BUFG                                                                |                                                                                 |                                                                     |               13 |             23 |
+|  clk_IBUF_BUFG                                                                |                                                                                 | core/op2/osc_inst/sample_counter/SR[0]                              |               10 |             26 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/count02_out_0                                             | core/op2/adsr_inst/count[0]_i_1__0_n_0                              |                8 |             32 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/count02_out                                               | core/op1/adsr_inst/count[0]_i_1_n_0                                 |                8 |             32 |
+|  clk_IBUF_BUFG                                                                |                                                                                 | audio_codec_wrapper_i/initialize_audio/delaycnt0                    |                9 |             32 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/lr_clk_sync_inst/sel                                      | audio_codec_wrapper_i/lr_clk_sync_inst/prevState_reg                |                8 |             32 |
+|  clk_IBUF_BUFG                                                                | audio_codec_wrapper_i/ready                                                     | core/op2/osc_inst/sample_counter/SR[0]                              |               11 |             35 |
++-------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------+----------------+
+
+

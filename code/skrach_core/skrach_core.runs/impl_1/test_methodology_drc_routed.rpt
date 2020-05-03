@@ -1,0 +1,1585 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Thu Apr 30 01:55:30 2020
+| Host         : QuantumNet-L4 running 64-bit Arch Linux
+| Command      : report_methodology -file test_methodology_drc_routed.rpt -pb test_methodology_drc_routed.pb -rpx test_methodology_drc_routed.rpx
+| Design       : test
+| Device       : xc7a200tsbg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 309
++-----------+------------------+---------------------------------------------------+------------+
+| Rule      | Severity         | Description                                       | Violations |
++-----------+------------------+---------------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                       | 305        |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin         | 1          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                      | 2          |
+| XDCC-2    | Warning          | Scoped Non-Timing constraint/property overwritten | 1          |
++-----------+------------------+---------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/FIFO_BUS_IN_inst/bl.fifo_36_inst_bl.fifo_36_bl/WRCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/data_i_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/data_i_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/data_i_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/data_i_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/data_i_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/data_i_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/data_i_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/data_i_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delayEn_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/delaycnt_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initA_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initA_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initA_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initA_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initA_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initA_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initA_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initEn_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#51 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#52 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#53 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#54 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#67 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/initWord_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/msg_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/state_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/stb_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#75 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/DONE_O_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#76 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/ERR_O_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#77 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/FSM_gray_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#78 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/FSM_gray_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#79 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/FSM_gray_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#80 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/FSM_gray_state_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#81 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/addrNData_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#82 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/bitCount_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#83 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/bitCount_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/bitCount_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#88 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#89 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#90 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#91 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#92 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busFreeCnt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#93 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busState_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#94 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/busState_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#95 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dScl_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#96 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dSda_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#97 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#98 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#99 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#100 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#101 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#102 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#103 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#104 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/dataByte_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#105 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/ddSda_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#106 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/int_Rst_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#107 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/rScl_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#108 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/rSda_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#109 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#110 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#111 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#112 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#113 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#114 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#115 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#116 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/sclCnt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#117 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/subState_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#118 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/initialize_audio/twi_controller/subState_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#119 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lr_clk_sync_inst/Q_O_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#120 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lr_clk_sync_inst/sreg_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#121 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lr_clk_sync_inst/sreg_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#122 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#123 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#124 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#125 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#126 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#127 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#128 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#129 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#130 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#131 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#132 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#133 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#134 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#135 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#136 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#137 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#138 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#139 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#140 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#141 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#142 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#143 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#144 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#145 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#146 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#147 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#148 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#149 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#150 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#151 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#152 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#153 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/lrclkCount_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#154 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/prevState_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#155 Critical Warning
+Non-clocked sequential cell  
+The clock pin audio_codec_wrapper_i/ready_sig_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#156 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#157 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#158 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#159 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#160 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#161 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#162 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#163 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#164 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#165 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#166 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#167 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#168 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#169 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#170 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#171 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/mixedSigInt_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#172 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/mix_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#173 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/FSM_sequential_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#174 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/FSM_sequential_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#175 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/amplitude_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#176 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#177 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#178 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#179 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#180 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#181 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#182 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#183 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#184 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#185 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#186 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#187 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#188 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#189 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#190 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#191 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#192 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#193 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#194 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#195 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#196 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#197 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#198 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#199 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#200 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#201 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#202 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#203 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#204 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#205 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#206 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#207 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/count_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#208 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#209 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/nextIncSig_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#210 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/adsr_inst/prevState_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#211 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#212 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#213 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#214 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#215 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#216 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#217 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#218 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#219 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#220 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#221 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#222 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#223 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#224 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#225 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#226 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#227 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sample_counter/processCount_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#228 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op1/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#229 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op10/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#230 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op10/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#231 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op11/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#232 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op11/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#233 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op12/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#234 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op12/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#235 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/FSM_sequential_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#236 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/FSM_sequential_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#237 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/amplitude_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#238 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#239 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#240 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#241 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#242 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#243 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#244 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#245 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#246 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#247 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#248 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#249 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#250 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#251 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#252 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#253 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#254 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#255 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#256 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#257 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#258 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#259 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#260 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#261 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#262 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#263 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#264 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#265 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#266 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#267 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#268 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#269 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/count_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#270 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#271 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/nextIncSig_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#272 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/adsr_inst/prevState_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#273 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#274 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#275 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#276 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#277 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#278 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#279 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#280 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#281 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#282 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#283 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#284 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#285 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#286 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#287 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#288 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#289 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#290 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sample_counter/processCount_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#291 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op2/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#292 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op3/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#293 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op3/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#294 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op4/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#295 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op4/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#296 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op5/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#297 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op5/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#298 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op6/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#299 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op6/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#300 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op7/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#301 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op7/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#302 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op8/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#303 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op8/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#304 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op9/adsr_inst/multipy_signal/bl.DSP48E_2/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#305 Critical Warning
+Non-clocked sequential cell  
+The clock pin core/op9/osc_inst/sine_lut_inst/ramb_bl.ramb36_sin_bl.ram36_bl/CLKARDCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1 is created on an inappropriate internal pin audio_codec_wrapper_i/audiocodec_master_clock/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell audio_codec_wrapper_i/count[0]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[0]/CLR, audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[1]/CLR, audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[2]/CLR, audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[3]/CLR, audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[4]/CLR, audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[5]/CLR, audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[6]/CLR, audio_codec_wrapper_i/audiocodec_master_clock/inst/seq_reg1_reg[7]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell core/op4/adsr_inst/multipy_signal/mixedSigInt[19]_i_44, with 2 or more inputs, drives asynchronous preset/clear pin(s) audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_1/PRE, audio_codec_wrapper_i/reset_sync_inst/FDRE_inst_2/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+XDCC-2#1 Warning
+Scoped Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on reset_n overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
+New Source: /home/docquantum/homework/skrach_core/skrach_core.srcs/constrs_1/imports/skrach_core.srcs/skrach_core.xdc (Line: 38)
+Previous Source: /home/docquantum/homework/skrach_core/skrach_core.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc (Line: 4)
+Related violations: <none>
+
+

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr 30 01:53:02 2020
+# Process ID: 887778
+# Current directory: /home/docquantum/homework/skrach_core/skrach_core.runs/synth_1
+# Command line: vivado -log test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test.tcl
+# Log file: /home/docquantum/homework/skrach_core/skrach_core.runs/synth_1/test.vds
+# Journal file: /home/docquantum/homework/skrach_core/skrach_core.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source test.tcl -notrace
