@@ -1,6 +1,6 @@
 > This report was written in LaTeX and then converted using pandoc. View the original [here](docs/final.pdf). A demo of the project and overview is posted on [youtube](https://www.youtube.com/watch?v=nMU6i0qCqv4) as well
 
-<span>***S K R A C H***</span>
+***S K R A C H***
 
 An FPGA MIDI Synthesizer
 
@@ -91,8 +91,9 @@ Future ideas which are not requirements:
 
 ![Level 0 diagram showing I/O and initial system
 overview](docs/img/level_0_diagram.png)
-*Fig 1: Level 0 diagram showing I/O and initial system
-overview*
+
+*(Fig 1: Level 0 diagram showing I/O and initial system
+overview)*
 
 <div id="tab:level_0_table">
 
@@ -130,7 +131,8 @@ The MIDI circuit is credited to MIDI.org, the organization which
 oversees the development of the protocol.
 
 ![Level 1 user interaction graphic](docs/img/level_1_diagram.png)
-*Fig 2: Level 1 user interaction graphic*
+
+*(Fig 2: Level 1 user interaction graphic)*
 
 ## Datapath and Control
 
@@ -139,7 +141,8 @@ mixed together using as single mixer instance. The diagram is simplified
 in that respect.
 
 ![Skrach block diagram](docs/img/datapath_conrol.png)
-*Fig 3: Skrach block diagram*
+
+*(Fig 3: Skrach block diagram)*
 
 The major control pieces are the UART control for user input, and also
 MIDI control which also works over UART. (control)
@@ -266,12 +269,15 @@ contacts in the circuit. Figures [4](#fig:midi_in_schematic),
 final circuit used, as well as logic analyzer results.
 
 ![MIDI in circuit schematic](docs/img/midi_in_schematic.png)
+
 *(Fig 4: MIDI in schematic)*
 
 ![Logic analyzer MIDI key down read](docs/img/logic_analyzer_key_down.png) 
+
 *(Fig 5: Key down event)*
 
 ![Logic analyzer MIDI key up read](docs/img/logic_analyzer_key_up.png)
+
 *(Fig 6: Key up event)*
 
 After the MIDI circuit was deemed complete, a previous project
@@ -290,12 +296,15 @@ decode of essential MIDI messages was fully implemented and data printed
 nicely to console. This is visible in figure the following figures:
 
 ![Note Event](docs/img/midi_decode_note.png)
+
 *(Fig 7a: MIDI Decode note)*
 
 ![Control Event](docs/img/midi_decode_control.png)
+
 *(Fig 7b: MIDI Decode control)*
 
 ![Pitch Event](docs/img/midi_decode_pitch.png)
+
 *(Fig 7c: MIDI decode pitch)*
 
 ## Milestone II
@@ -380,15 +389,19 @@ after 1024. No linear interpolation is performed.
 The signals were confirmed using an oscilloscope as can be seen in the following figures:
 
 ![Sine](docs/img/sine.png)
+
 *(Fig 8a: Sine wave)*
 
 ![Triangle](docs/img/triangle.png)
+
 *(Fig 8b: Triangle wave)*
 
 ![Saw](docs/img/saw.png)
+
 *(Fig 8c: Saw wave)*
 
 ![Square](docs/img/square.png)
+
 *(Fig 8d: Square wave)*
 
 #### Amplitude Envelope (ADSR)
@@ -415,9 +428,11 @@ signals corresponding to values set by the MIDI controller where attack
 is the left most fader, followed by decay, sustain, and release.
 
 ![ADSR 1](docs/img/adsr1.png)
+
 *Fig 9: ADSR 1*
 
 ![ADSR 2](docs/img/adsr2.png)
+
 *Fig 10: ADSR 1*
 
 ### Mixer
@@ -440,9 +455,11 @@ The following figures show multiple signals being added
 together.
 
 ![Two sine waves](docs/img/sine_multi.png)
+
 *Fig 11a: Two sine waves*
 
 ![Two square waves](docs/img/square_multi.png)
+
 *Fig 11b: Two square waves*
 
 ### Audio Codec
@@ -454,13 +471,13 @@ domains.
 
 To start, the audio codec on the Nexys Video FPGA is the Analog Devices
 ADAU1761. It supports a wide variety of sample rates and up to 24bits of
-data per sample. It can be set up using I<sup>2<\sup>C, and audio data is sent
-over serial using I<sup>2<\sup>S. The original implementation used was one
+data per sample. It can be set up using I<sup>2</sup>C, and audio data is sent
+over serial using I<sup>2</sup>S. The original implementation used was one
 that was given for previous assignments; however, it had a number of
 issues, namely timing and setup. Because of this, the audio data was
 distorted, containing an audible compression and crunch within the sound
 on the output. Sample data was also sent one by one when needed as
-dictated by the clocks generated for I<sup>2<\sup>S communication. While the
+dictated by the clocks generated for I<sup>2</sup>S communication. While the
 design worked for basic needs, because of the complexity of the
 synthesizer, these timing issues propagated through the design which
 created negative setup time issues during implementation, indicating
