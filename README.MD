@@ -1,4 +1,6 @@
-<span>Skrach</span>
+> This report was written in LaTeX and then converted using pandoc. View the original [here](docs/final.pdf). A demo of the project and overview is posted on [youtube](https://www.youtube.com/watch?v=nMU6i0qCqv4) as well
+
+<span>***S K R A C H***</span>
 
 An FPGA MIDI Synthesizer
 
@@ -7,7 +9,8 @@ Daria Solovey**
 
 A Technical Report Submitted to the Faculty of the  
 Department of Computer Science and Engineering  
-University of [REDACTED]  
+University of [REDACTED]
+
 Submitted in partial fulfillment for the requirements of  
 CE446–Advanced Embedded Systems  
 May 3rd, 2020
@@ -87,7 +90,9 @@ Future ideas which are not requirements:
 ## Level-0 Design
 
 ![Level 0 diagram showing I/O and initial system
-overview](img/level_0_diagram.png)
+overview](docs/img/level_0_diagram.png)
+*Fig 1: Level 0 diagram showing I/O and initial system
+overview*
 
 <div id="tab:level_0_table">
 
@@ -124,7 +129,8 @@ protocol.
 The MIDI circuit is credited to MIDI.org, the organization which
 oversees the development of the protocol.
 
-![Level 1 user interaction graphic](img/level_1_diagram.png)
+![Level 1 user interaction graphic](docs/img/level_1_diagram.png)
+*Fig 2: Level 1 user interaction graphic*
 
 ## Datapath and Control
 
@@ -132,7 +138,8 @@ Within the Skrach Core there are 12 operators which are instantiated and
 mixed together using as single mixer instance. The diagram is simplified
 in that respect.
 
-![Skrach block diagram](img/datapath_conrol.png)
+![Skrach block diagram](docs/img/datapath_conrol.png)
+*Fig 3: Skrach block diagram*
 
 The major control pieces are the UART control for user input, and also
 MIDI control which also works over UART. (control)
@@ -179,26 +186,24 @@ Q9.7 phase value.
 
 This can be summed up in the following equation:
 
-\[\label{eq:phase}
-    \Phi = \frac{Nf}{F_s}\]
+*Φ = N\*f / F*<sub>*s*</sub> ...(1)
 
-Where \(\Phi\) is the phase, \(N\) is the number of samples per period,
-\(f\) is the desired frequency, and \(F_s\) is the audio sampling
+Where *Φ* is the phase, *N* is the number of samples per period, *f* is
+the desired frequency, and *F*<sub>*s*</sub> is the audio sampling
 frequency.
 
 When reading from the synth the phase and converting to frequency, the
-equation can be rearranged such that \(f\) is on the left hand side, and
-\(\Phi\) is on the right.
+equation can be rearranged such that *f* is on the left hand side, and
+*Φ* is on the right.
 
 Another equation to consider is what frequency corresponds to what
 keyboard key as dictated by a standard 88 key piano. A suitable equation
 was found online in the context of the MIDI protocol (Wolfe, n.d.):
 
-\[\label{eq:midi_freq}
-    f = 2^{\frac{m-69}{12}}(440)\]
+*f = 2*<sup>*(m-69)/12*</sup>*(440)* ...(2)
 
-Where \(f\) is the desired frequency and \(m\) is the midi key assuming
-the note \(A_4\) is at 440Hz.
+Where *f* is the desired frequency and *m* is the midi key assuming the
+note *A*<sub>4</sub> is at 440Hz.
 
 ## Technical Requirements
 
@@ -260,11 +265,14 @@ contacts in the circuit. Figures [4](#fig:midi_in_schematic),
 [5](#fig:logic_key_down), and [6](#fig:logic_key_up) illustrate the
 final circuit used, as well as logic analyzer results.
 
-![MIDI in circuit schematic](img/midi_in_schematic.png)
+![MIDI in circuit schematic](docs/img/midi_in_schematic.png)
+*(Fig 4: MIDI in schematic)*
 
-![Logic analyzer MIDI key down read](img/logic_analyzer_key_down.png)
+![Logic analyzer MIDI key down read](docs/img/logic_analyzer_key_down.png) 
+*(Fig 5: Key down event)*
 
-![Logic analyzer MIDI key up read](img/logic_analyzer_key_up.png)
+![Logic analyzer MIDI key up read](docs/img/logic_analyzer_key_up.png)
+*(Fig 6: Key up event)*
 
 After the MIDI circuit was deemed complete, a previous project
 encompassing a MicroBlaze implementation was used as a starting point
@@ -279,14 +287,16 @@ ultimately, a structure of 3 int variables was created to handle the
 data as a packet involving a control word, pitch, and velocity, as
 dictated by the MIDI protocol. By the second day after the deadline,
 decode of essential MIDI messages was fully implemented and data printed
-nicely to console. This is visible in figure
-[\[fig:midi\_decode\]](#fig:midi_decode)
+nicely to console. This is visible in figure the following figures:
 
-![Note Event](img/midi_decode_note.png)
+![Note Event](docs/img/midi_decode_note.png)
+*(Fig 7a: MIDI Decode note)*
 
-![Control Event](img/midi_decode_control.png)
+![Control Event](docs/img/midi_decode_control.png)
+*(Fig 7b: MIDI Decode control)*
 
-![Pitch Event](img/midi_decode_pitch.png)
+![Pitch Event](docs/img/midi_decode_pitch.png)
+*(Fig 7c: MIDI decode pitch)*
 
 ## Milestone II
 
@@ -296,9 +306,8 @@ MIDI.
 
 The previous assignment IP was modified, removing hardware control since
 the system was begin controlled by the MicroBlaze. Control of the IP was
-implemented within the MicroBlaze, implementing equation
-[\[eq:phase\]](#eq:phase) for the required phase for the signal
-generator as well as equation [\[eq:midi\_freq\]](#eq:midi_freq) for
+implemented within the MicroBlaze, implementing equation 1 for the required phase for the signal
+generator as well as equation 2 for
 MIDI. However, the inclusion of the IP block into the block design broke
 UART communication, this also includes the module related to MIDI
 reading. Because of the circumstances, the implementation was not able
@@ -338,10 +347,10 @@ In summary, the final implementation was able to do the following:
 
 Some advanced functionalities such as frequency modulation and filters
 were not achieved due to lack of time. One basic requirement was also
-not acheived due to the complexity of doing so, which is UART control.
+not achieved due to the complexity of doing so, which is UART control.
 Since there are two UART controllers in the system, either the MIDI or
 USB could be polled, but not both. This would have required setting one
-up on an intterrupt system, and that was not able to be achieved
+up on an interrupt system, and that was not able to be achieved
 properly.
 
 The modules are explained in the following sub-sections:
@@ -368,16 +377,19 @@ then maximum when the counter is above. Similar to the saw wave, the
 triangle is generated by doubling the address counter and negating it
 after 1024. No linear interpolation is performed.
 
-The signals were confirmed using an oscilloscope as can be seen in
-figure [\[fig:oscillator\]](#fig:oscillator).
+The signals were confirmed using an oscilloscope as can be seen in the following figures:
 
-![Sine](img/sine.png)
+![Sine](docs/img/sine.png)
+*(Fig 8a: Sine wave)*
 
-![Triangle](img/triangle.png)
+![Triangle](docs/img/triangle.png)
+*(Fig 8b: Triangle wave)*
 
-![Saw](img/saw.png)
+![Saw](docs/img/saw.png)
+*(Fig 8c: Saw wave)*
 
-![Square](img/square.png)
+![Square](docs/img/square.png)
+*(Fig 8d: Square wave)*
 
 #### Amplitude Envelope (ADSR)
 
@@ -398,13 +410,15 @@ would go to release. If during release, it was enabled again, it would
 jump to attack. If during attack, decay, or sustain it was disabled, it
 would move to release.
 
-Figures [14](#fig:adsr1) and [15](#fig:adsr2) show the amplitude of the
+Figures [9](#fig:adsr1) and [10](#fig:adsr2) show the amplitude of the
 signals corresponding to values set by the MIDI controller where attack
 is the left most fader, followed by decay, sustain, and release.
 
-![ADSR 1](img/adsr1.png)
+![ADSR 1](docs/img/adsr1.png)
+*Fig 9: ADSR 1*
 
-![ADSR 2](img/adsr2.png)
+![ADSR 2](docs/img/adsr2.png)
+*Fig 10: ADSR 1*
 
 ### Mixer
 
@@ -414,7 +428,7 @@ during addition, nor loss of amplitude. Since the human hand has 10
 fingers, 12 operators were instantiated to cover all bases. The mixer
 was built to have 12 inputs and output a single signal. It does so by
 calculating how many extra bits are needed for the sum of all the
-signals. This can be done by taking a \(\log_2\) of the number of
+signals. This can be done by taking a log<sub>2</sub> of the number of
 signals added. Once this number is known, the signals are resized to the
 new size, added together, and then the upper bits are taken. The final
 signal is then multiplied by an amplitude value to allow for master
@@ -422,12 +436,14 @@ volume control. The multiplication is done within a DSP slice on the
 FPGA to reduce the amount of logic and clock cycles needed to do the
 multiplication.
 
-Figure [\[fig:mixer\]](#fig:mixer) shows multiple signals being added
+The following figures show multiple signals being added
 together.
 
-![Two sine waves](img/sine_multi.png)
+![Two sine waves](docs/img/sine_multi.png)
+*Fig 11a: Two sine waves*
 
-![Two square waves](img/square_multi.png)
+![Two square waves](docs/img/square_multi.png)
+*Fig 11b: Two square waves*
 
 ### Audio Codec
 
@@ -438,13 +454,13 @@ domains.
 
 To start, the audio codec on the Nexys Video FPGA is the Analog Devices
 ADAU1761. It supports a wide variety of sample rates and up to 24bits of
-data per sample. It can be set up using I\(^2\)C, and audio data is sent
-over serial using I\(^2\)S. The original implementation used was one
+data per sample. It can be set up using I<sup>2<\sup>C, and audio data is sent
+over serial using I<sup>2<\sup>S. The original implementation used was one
 that was given for previous assignments; however, it had a number of
 issues, namely timing and setup. Because of this, the audio data was
 distorted, containing an audible compression and crunch within the sound
 on the output. Sample data was also sent one by one when needed as
-dictated by the clocks generated for I\(^2\)S communication. While the
+dictated by the clocks generated for I<sup>2<\sup>S communication. While the
 design worked for basic needs, because of the complexity of the
 synthesizer, these timing issues propagated through the design which
 created negative setup time issues during implementation, indicating
@@ -505,7 +521,7 @@ components are available, then the project entails the following steps:
 2.  Connect the MIDI circuit to pin 1 of the JC PMOD port
 
 3.  Launch the SDK for the main project, if the sources aren’t found,
-    import them (Skrach and Skrach\_bsp under the Skrach.sdk folder)
+    import them (Skrach and Skrach_bsp under the Skrach.sdk folder)
 
 4.  Compile, program FPGA with bitstream, and then run the program.
 
@@ -524,10 +540,10 @@ signal generator and code itself, as was done for easy testing early on.
 Demos
 ============
 
-- [Demo](vid/demo.mp4)
-- [Improv 1](vid/improv1.mp4)
-- [Improv 2](vid/improv2.mp4)
-- [Doom](vid/doom.mp4)
+- [Demo](docs/vid/demo.mp4)
+- [Improv 1](docs/vid/improv1.mp4)
+- [Improv 2](docs/vid/improv2.mp4)
+- [Doom](docs/vid/doom.mp4)
 
 - [youtube](https://www.youtube.com/watch?v=nMU6i0qCqv4)
 
@@ -561,4 +577,3 @@ MIDI Numbers and Frequencies. The University New South Wales.
 </div>
 
 </div>
-
