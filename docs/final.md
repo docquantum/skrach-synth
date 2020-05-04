@@ -1,13 +1,13 @@
-**Skrach**
+<span>Skrach</span>
 
 An FPGA MIDI Synthesizer
 
-*by Daria Solovey*
+**by  
+Daria Solovey**
 
 A Technical Report Submitted to the Faculty of the  
 Department of Computer Science and Engineering  
-University of [REDACTED] 
-
+University of [REDACTED]  
 Submitted in partial fulfillment for the requirements of  
 CE446–Advanced Embedded Systems  
 May 3rd, 2020
@@ -89,23 +89,25 @@ Future ideas which are not requirements:
 ![Level 0 diagram showing I/O and initial system
 overview](img/level_0_diagram.png)
 
+<div id="tab:level_0_table">
+
 |   Module | Skrach Synth                                                           |
 | -------: | :--------------------------------------------------------------------- |
 |   Inputs | Serial control over UART (USB)                                         |
 |          | 5 pin MIDI input for control input from MIDI devices                   |
 |          | *Advanced*: Audio input via Mic or Line In                             |
-|          |                                                                        |
 |  Outputs | Audio of the signal being generated on Line Out                        |
 |          | Debug information on serial console over UART                          |
 |          | *Future*: Video showing state of the system and signal being generated |
 |          | *Future*: MIDI Out for clock sync and other related settings/functions |
-|          |                                                                        |
 | Behavior | 1\. Startup generates basic sine wave and output to audio.             |
 |          | 2\. Use switches to change type of signal (sine, square, etc)          |
 |          | 3\. MIDI signals from MIDI peripheral maps to certain functionality in |
 |          | synth, namely keyboard keys to pitch of the signal                     |
 
 Level-0 Functionality
+
+</div>
 
 # Detailed Design
 
@@ -177,24 +179,26 @@ Q9.7 phase value.
 
 This can be summed up in the following equation:
 
-Φ = Nf/F_s
+\[\label{eq:phase}
+    \Phi = \frac{Nf}{F_s}\]
 
-Where *Φ* is the phase, *N* is the number of samples per period, *f* is
-the desired frequency, and *F_s* is the audio sampling
+Where \(\Phi\) is the phase, \(N\) is the number of samples per period,
+\(f\) is the desired frequency, and \(F_s\) is the audio sampling
 frequency.
 
 When reading from the synth the phase and converting to frequency, the
-equation can be rearranged such that *f* is on the left hand side, and
-*Φ* is on the right.
+equation can be rearranged such that \(f\) is on the left hand side, and
+\(\Phi\) is on the right.
 
 Another equation to consider is what frequency corresponds to what
 keyboard key as dictated by a standard 88 key piano. A suitable equation
 was found online in the context of the MIDI protocol (Wolfe, n.d.):
 
-f = 2^((m-69)/12)*(440)
+\[\label{eq:midi_freq}
+    f = 2^{\frac{m-69}{12}}(440)\]
 
-Where *f* is the desired frequency and *m* is the midi key assuming the
-note *A4* is at 440Hz.
+Where \(f\) is the desired frequency and \(m\) is the midi key assuming
+the note \(A_4\) is at 440Hz.
 
 ## Technical Requirements
 
@@ -501,7 +505,7 @@ components are available, then the project entails the following steps:
 2.  Connect the MIDI circuit to pin 1 of the JC PMOD port
 
 3.  Launch the SDK for the main project, if the sources aren’t found,
-    import them (Skrach and Skrach_bsp under the Skrach.sdk folder)
+    import them (Skrach and Skrach\_bsp under the Skrach.sdk folder)
 
 4.  Compile, program FPGA with bitstream, and then run the program.
 
@@ -525,16 +529,35 @@ Demos
 - [Improv 2](vid/improv2.mp4)
 - [Doom](vid/doom.mp4)
 
+- [youtube](https://www.youtube.com/watch?v=nMU6i0qCqv4)
+
+
 References
 ============
+
+<div id="refs" class="references hanging-indent">
+
+<div id="ref-edn_2014">
 
 EDN. 2014. “Synchronizer Techniques for Multi-Clock Domain Socs &
 Fpgas.” EDN. EDN. September 2014.
 <http://www.edn.com/synchronizer-techniques-for-multi-clock-domain-socs-fpgas>.
 
+</div>
+
+<div id="ref-wiki_adsr">
+
 “Envelope (Music).” 2020. Wikipedia. Wikimedia Foundation. April 2020.
 <https://en.wikipedia.org/wiki/Envelope_(music)>.
+
+</div>
+
+<div id="ref-wolfe">
 
 Wolfe, Joe. n.d. “Note Names, Midi Numbers and Frequencies.” Note Names,
 MIDI Numbers and Frequencies. The University New South Wales.
 <https://newt.phys.unsw.edu.au/jw/notes.html>.
+
+</div>
+
+</div>
